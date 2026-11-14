@@ -53,7 +53,8 @@ The initial import currently contains 133 heroes, 89 items and 7 emblems. Battle
 
 ## Data quality
 
-Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [canonical data model](docs/canonical-data-model.md), [import workflow](docs/data-import.md), [formula format](docs/formula-format.md), [skill-source audit](docs/upstream-source-audit.md), [Achedon catalogue comparison](data/research/skill-source-comparison-achedon.json), [local Moonton snapshot instructions](data/imports/moonton/README.md), [source register](data/sources/README.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [canonical data model](docs/canonical-data-model.md), [import workflow](docs/data-import.md), [formula format](docs/formula-format.md), [skill-source audit](docs/upstream-source-audit.md
+- [Live Moonton skill review (2026-11-14)](data/research/patch-conflicts/2026-11-14-moonton-review.json)), [Achedon catalogue comparison](data/research/skill-source-comparison-achedon.json), [local Moonton snapshot instructions](data/imports/moonton/README.md), [source register](data/sources/README.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Combining upstream projects
 
