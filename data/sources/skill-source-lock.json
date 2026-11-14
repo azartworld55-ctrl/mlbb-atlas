@@ -1,0 +1,55 @@
+{
+  "retrieved_at": "2026-11-14",
+  "policy": "Reference and compare sources; do not bulk-copy content until each dataset's license and upstream terms are confirmed. Store source-specific raw snapshots and checksums when a permitted import is performed.",
+  "sources": [
+    {
+      "id": "linconius_build_analyser",
+      "repository": "https://github.com/Linconius/MLBB-Build-Analyser",
+      "role": [
+        "per_hero_json_structure",
+        "formula_dsl",
+        "git_patch_history"
+      ],
+      "audit": "README and docs inspected. One JSON per hero; skill algorithms are hand-authored; only five hero formula sets claimed complete in README. Repository LICENSE file was not found at the expected path during this audit; do not copy code or datasets until license status is confirmed.",
+      "import_status": "architecture_reference_only",
+      "license_status": "unconfirmed"
+    },
+    {
+      "id": "warungerik_hero_scraper",
+      "repository": "https://github.com/warungerik/MLBB-Hero-Scraper",
+      "role": [
+        "moonton_gms_skill_metadata",
+        "skill_names",
+        "skill_descriptions",
+        "cooldowns_costs",
+        "asset_references"
+      ],
+      "api_endpoint_observed": "https://api.gms.moontontech.com/api/gms/source/2669606/2756564",
+      "audit": "Scraper README and source inspected. It posts to a Moonton GMS endpoint and extracts skill metadata and descriptions, not level-by-level damage formulas. Scraper code has MIT license, but repository TERMS.md limits use to educational/research/non-commercial personal use and restricts dataset/assets commercial use. Endpoint access and data redistribution terms remain to be checked.",
+      "import_status": "endpoint_and_schema_reference_only",
+      "license_status": "code_mit_data_and_endpoint_terms_restricted_or_unclear"
+    },
+    {
+      "id": "achedon12_mlbb",
+      "repository": "https://github.com/achedon12/mlbb",
+      "role": [
+        "wiki_and_stats_api_sync",
+        "multilingual_hero_content",
+        "patch_and_reference_cross_checks"
+      ],
+      "audit": "README inspected. Code is MIT; README explicitly states game data extracted from the Mobile Legends Fandom wiki is CC BY-SA and visual assets belong to Moonton. Sync workflow references Wiki and a stats API. Detailed skill damage formulas are not yet established as a complete independent dataset by this audit.",
+      "import_status": "schema_and_provenance_reference_only",
+      "license_status": "code_mit_data_cc_by_sa_assets_moonton"
+    },
+    {
+      "id": "p3hndrx_mlbb_api",
+      "repository": "https://github.com/p3hndrx/MLBB-API",
+      "role": [
+        "existing_hero_item_emblem_seed"
+      ],
+      "import_status": "already_imported",
+      "license_status": "mit",
+      "note": "Existing Atlas normalized hero, item and emblem datasets remain reported and are not assumed current for patch 2.2.23."
+    }
+  ]
+}
