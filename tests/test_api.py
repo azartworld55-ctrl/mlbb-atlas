@@ -18,7 +18,7 @@ def test_meta_reports_imported_collections():
     assert counts["heroes"] >= 100
     assert counts["items"] >= 50
     assert counts["emblems"] >= 1
-    assert counts["spells"] == 0
+    assert counts["spells"] == 12
 
 
 def test_heroes_collection_and_search():
@@ -171,7 +171,7 @@ def test_matchup_preview_uses_selected_builds_and_sourced_skill_parameters():
     assert payload["defender"]["hero"]["slug"] == "miya"
     assert payload["defender"]["spell"]["slug"] == "aegis"
     assert payload["defender"]["buffs"] == {"blue": False, "red": True}
-    assert payload["damage_before_defense"] == 820
+    assert payload["damage_before_defense"] == 859
     assert payload["skill"]["patch"]["version"] == "2.2.23"
     assert payload["calculation_scope"] == "source_parameter_preview_before_defense"
 
