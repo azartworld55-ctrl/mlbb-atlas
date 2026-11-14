@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local-only third-party skill metadata snapshots
+/data/imports/moonton/*.json
+/data/imports/achedon/*.json
