@@ -2,6 +2,12 @@ name: Fetch and compare skill sources
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/fetch_moonton_skills.py'
+      - 'scripts/compare_skill_sources.py'
+      - 'data/heroes/current.json'
+      - '.github/workflows/fetch-skill-sources.yml'
 
 permissions:
   contents: read
