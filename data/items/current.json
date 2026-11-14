@@ -1641,7 +1641,7 @@
     "unique_passive": [
       {
         "unique_passive_name": "Deter",
-        "description": "When hit by a skill, reduces the attacker's Physical Damage by 6% for 2 seconds (this effect stacks up to 3 times).",
+        "description": "When hit by a skill, reduces the attacker's Physical Damage by 8% for 2 seconds (this effect stacks up to 3 times).",
         "modifiers": []
       }
     ],
@@ -1653,8 +1653,23 @@
       "source_revision": "20251130",
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
-      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability. Patch 2.2.23 adjustment is separately recorded in patch_updates from community patch-note references; not independently verified in-game."
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "channel": "original_server",
+        "effective_from": "2026-11-11",
+        "field": "unique_passive.Deter",
+        "before": "Reduces the attacker's Physical Damage by 6%",
+        "after": "Reduces the attacker's Physical Damage by 8%",
+        "confidence": "reported",
+        "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+        "accessed_at": "2026-11-15",
+        "notes": "Community patch-note repost; not independently verified in-game."
+      }
+    ]
   },
   {
     "id": "d002",
@@ -1927,7 +1942,7 @@
     "unique_passive": [
       {
         "unique_passive_name": "Chastise",
-        "description": "Taking damage will reduce the Attack Speed and Attack Speed cap of the attacker to 75% of normal for 2 seconds.",
+        "description": "Taking damage reduces the attacker's Attack Speed and Attack Speed cap to 80% of normal for 2 seconds.",
         "modifiers": []
       },
       {
@@ -1944,8 +1959,23 @@
       "source_revision": "20251130",
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
-      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability. Patch 2.2.23 adjustment is separately recorded in patch_updates from community patch-note references; not independently verified in-game."
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "channel": "original_server",
+        "effective_from": "2026-11-11",
+        "field": "unique_passive.Chastise",
+        "before": "Attack Speed and Attack Speed cap reduced to 75% of normal",
+        "after": "Attack Speed and Attack Speed cap reduced to 80% of normal",
+        "confidence": "reported",
+        "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+        "accessed_at": "2026-11-15",
+        "notes": "Community patch-note repost; 2-second duration retained from existing item description; not independently verified in-game."
+      }
+    ]
   },
   {
     "id": "d008",

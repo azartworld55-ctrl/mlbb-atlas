@@ -3,7 +3,7 @@
   "channel": "original_server",
   "effective_date": "2026-11-11",
   "status": "community_reported_pending_official_confirmation",
-  "retrieved_at": "2026-11-14",
+  "retrieved_at": "2026-11-15",
   "summary": "Popol and Kupa revamp and balance changes affecting 14 heroes.",
   "affected_heroes": [
     "popol_and_kupa",
@@ -84,9 +84,159 @@
       "after": "50%-60%",
       "confidence": "reported",
       "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "masha",
+      "parameter": "Primal Pact Feral claw-strike bonus damage",
+      "before": "(3 + 2% Extra Physical Attack + 0.2 × Hero Level)% Max HP",
+      "after": "(2 + 0.5% Extra Physical Attack + 0.2 × Hero Level)% Max HP",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "masha",
+      "parameter": "Primal Pact Feral-state HP Regen",
+      "before": "4%-10% Max HP",
+      "after": "3%-6% Max HP",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "masha",
+      "parameter": "Claw Strike slow on enemy-hero hit",
+      "before": "No slow effect",
+      "after": "50% slow for 1 second",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "masha",
+      "parameter": "Claw Strike path width",
+      "before": "Previous width",
+      "after": "Reduced by 20%",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "freya",
+      "parameter": "Valkyrie Descent movement speed bonus",
+      "before": "No listed bonus",
+      "after": "30 Movement Speed while Ultimate is active",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "melissa",
+      "parameter": "Eyes on You! Muddles Damage Transfer",
+      "before": "52% at all levels",
+      "after": "50%-60% (endpoints only)",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "melissa",
+      "parameter": "Eyes on You! Attack Effect Inheritance Ratio",
+      "before": "52% at all levels",
+      "after": "50%-60% (endpoints only)",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "item",
+      "entity_id": "d001",
+      "parameter": "Antique Cuirass — Deter Physical Damage reduction",
+      "before": "6%",
+      "after": "8%",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "item",
+      "entity_id": "d007",
+      "parameter": "Chastise Pauldron — Attack Speed and Attack Speed cap reduction",
+      "before": "75% of normal",
+      "after": "80% of normal",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "battle_spell",
+      "entity_id": "sprint",
+      "parameter": "Cooldown",
+      "before": "100s",
+      "after": "75s",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "emblem_talent",
+      "entity_id": "concussive-blast",
+      "parameter": "Damage and minion modifier",
+      "before": "100 + 7% Total HP",
+      "after": "100 + 8% Total HP; deals 50% less damage to minions",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "battlefield",
+      "entity_id": "gold-lane-siege-minion",
+      "parameter": "Extra Gold",
+      "before": "40%",
+      "after": "60%",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "battlefield",
+      "entity_id": "golden-turret",
+      "parameter": "Base Turret HP increase",
+      "before": "1,000",
+      "after": "2,000",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "battlefield",
+      "entity_id": "golden-turret",
+      "parameter": "Outer Turret team Gold",
+      "before": "100",
+      "after": "90",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "entity_type": "battlefield",
+      "entity_id": "golden-turret",
+      "parameter": "Inner Turret team Gold",
+      "before": "140",
+      "after": "120",
+      "confidence": "reported",
+      "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
     }
   ],
-  "source_policy": "These are transcribed community patch-note values, not yet independently confirmed against the live client or an official Moonton patch-note publication. Do not promote them to verified or silently apply them to current hero records.",
+  "source_policy": "Patch 2.2.23 is recorded as community-reported. The full patch-note repost by r/MobileLegendsGame moderator u/Tigreal and the Liquipedia archive agree on the Original Server patch date and listed changes, but neither is a direct Moonton primary-source URL. No direct official Moonton patch-note publication was verified during this run. Values remain reported, not verified in-game. Do not infer intermediate level values from published endpoints or merge Advance Server 2.2.32 changes into Original Server data.",
   "sources": [
     {
       "type": "community_patch_database",
@@ -105,6 +255,71 @@
       "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
       "accessed_at": "2026-11-14",
       "note": "Cross-check for affected hero list and patch narrative."
+    },
+    {
+      "type": "community_patch_post",
+      "url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+      "accessed_at": "2026-11-15",
+      "note": "Full Original Server patch-note repost by r/MobileLegendsGame moderator u/Tigreal, published for the 2026-11-11 update. This is a community repost, not a direct Moonton primary-source publication."
+    }
+  ],
+  "qualitative_changes": [
+    {
+      "entity_type": "hero",
+      "entity_id": "popol-and-kupa",
+      "changes": [
+        "Full revamp: updated Kupa scaling and recovery, Alpha Wolf skill behavior, mounted movement through Skill 2, revised traps/frost zone and a 9-second Enraged state."
+      ],
+      "status": "not_fully_mapped_to_current_skill_records",
+      "note": "Do not overwrite the old multi-form skill catalogue until the full new values and form/group mapping are confirmed."
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "kaja",
+      "changes": [
+        "Soaring turning speed increased; enhanced Basic Attacks and Skill 2 hits on minions extend Soaring; Divine Binding delay slightly increased; Control Immunity no longer avoids the area restriction when it takes effect."
+      ],
+      "status": "reported_no_exact_values"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "karrie",
+      "changes": [
+        "Skill 1 visual/collision behavior optimized; Skill 2 detects nearby enemy heroes throughout the dash, otherwise creeps/minions at the end."
+      ],
+      "status": "reported_behavior_only"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "kagura",
+      "changes": [
+        "Maximum Seimei Umbrella separation visual indicator optimized."
+      ],
+      "status": "visual_only"
+    },
+    {
+      "entity_type": "hero",
+      "entity_id": "uranus",
+      "changes": [
+        "Basic Attack splash damage type changed to Magic Damage."
+      ],
+      "status": "reported_type_change_already_reflected_in_current_description"
+    },
+    {
+      "entity_type": "battlefield",
+      "entity_id": "healing-turtle",
+      "changes": [
+        "Gold and EXP from defeating an enemy lane Turtle increased to roughly match a minion wave; exact numeric values were not stated."
+      ],
+      "status": "reported_no_exact_values"
+    },
+    {
+      "entity_type": "mode_adjustment",
+      "entity_id": "brawl",
+      "changes": [
+        "Mode-specific hero stat adjustments are not merged into the standard hero catalogue."
+      ],
+      "status": "excluded_from_standard_hero_data"
     }
   ]
 }

@@ -416,6 +416,19 @@
         "notes": "Single fixed value reported in patch notes.",
         "scaling_attribute": "physical_attack",
         "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "ultimate_movement_speed_bonus",
+        "kind": "other",
+        "values_by_skill_level": [
+          30
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "Movement Speed",
+        "notes": "New effect: gains 30 Movement Speed while Ultimate is active."
       }
     ],
     "conditions": [],
@@ -658,6 +671,45 @@
         "notes": "Single fixed value reported in patch notes.",
         "scaling_attribute": "physical_attack",
         "scaling_basis": "bonus_physical_attack"
+      },
+      {
+        "key": "slow_on_enemy_hero_hit",
+        "kind": "slow",
+        "values_by_skill_level": [
+          50
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Patch notes report a 50% slow on enemy-hero hit."
+      },
+      {
+        "key": "slow_duration_on_enemy_hero_hit",
+        "kind": "duration",
+        "values_by_skill_level": [
+          1
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Patch notes report a 1-second slow."
+      },
+      {
+        "key": "skill_2_path_width_reduction",
+        "kind": "other",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Patch notes report a 20% reduction in Skill 2 path width; absolute width is not published."
       }
     ],
     "conditions": [],
@@ -1836,6 +1888,177 @@
         "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
         "accessed_at": "2026-11-14",
         "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "masha-masha-1-2.2.23-original",
+    "hero_id": "masha",
+    "skill_id": "masha-1",
+    "skill_name": "Primal Pact",
+    "skill_slot": null,
+    "description": "Patch 2.2.23 reported values for Feral claw-strike bonus damage and Feral-state HP regeneration.",
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "feral_claw_bonus_damage_base_percent",
+        "kind": "other",
+        "values_by_skill_level": [
+          2
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "% of target Max HP",
+        "damage_type": "physical",
+        "notes": "Base coefficient in the patch-note formula (2 + 0.5% Extra Physical Attack + 0.2 × Hero Level)% Max HP."
+      },
+      {
+        "key": "feral_claw_bonus_damage_extra_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          0.5
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "bonus_physical_attack",
+        "damage_type": "physical",
+        "notes": "Coefficient reported in the patch-note formula; not an independently tested formula."
+      },
+      {
+        "key": "feral_claw_bonus_damage_per_hero_level",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          0.2
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "% per hero level",
+        "scaling_attribute": "hero_level",
+        "scaling_basis": "none",
+        "damage_type": "physical",
+        "notes": "Coefficient reported in the patch-note formula."
+      },
+      {
+        "key": "feral_state_hp_regen",
+        "kind": "heal",
+        "values_by_skill_level": [
+          3,
+          6
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "% Max HP",
+        "notes": "Patch notes report a 3%-6% range; intermediate level values are not inferred."
+      }
+    ],
+    "conditions": [
+      "Feral state",
+      "Patch notes do not provide intermediate rank/level mapping for the HP Regen range."
+    ],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-15",
+      "notes": "Transcribed from the 2.2.23 Original Server patch-note repost by r/MobileLegendsGame moderator u/Tigreal and cross-checked against Liquipedia. These are community sources, not a direct Moonton publication; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "accessed_at": "2026-11-15",
+        "details": "Community repost of Original Server patch notes by subreddit moderator u/Tigreal; not a direct Moonton primary-source URL."
+      },
+      {
+        "source_type": "community_wiki",
+        "url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+        "accessed_at": "2026-11-15",
+        "details": "Community-maintained patch archive for version 2.2.23."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "melissa-melissa-3-2.2.23-original",
+    "hero_id": "melissa",
+    "skill_id": "melissa-3",
+    "skill_name": "Eyes on You!",
+    "skill_slot": null,
+    "description": "Muddles Damage Transfer and Attack Effect Inheritance ratios reported for patch 2.2.23.",
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "muddles_damage_transfer_ratio",
+        "kind": "other",
+        "values_by_skill_level": [
+          50,
+          60
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Patch notes change the ratio from 52% at all levels to a 50%-60% range. Intermediate skill-level values are not published and are not inferred."
+      },
+      {
+        "key": "attack_effect_inheritance_ratio",
+        "kind": "other",
+        "values_by_skill_level": [
+          50,
+          60
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Patch notes change the ratio from 52% at all levels to a 50%-60% range. Intermediate skill-level values are not published and are not inferred."
+      }
+    ],
+    "conditions": [
+      "Muddles is present",
+      "Range endpoints only; exact level-by-level values are not available."
+    ],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-15",
+      "notes": "Transcribed from the 2.2.23 Original Server patch-note repost by r/MobileLegendsGame moderator u/Tigreal and cross-checked against Liquipedia. GMS field-level mapping was not independently confirmed; not verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "accessed_at": "2026-11-15",
+        "details": "Community repost of Original Server patch notes by subreddit moderator u/Tigreal; not a direct Moonton primary-source URL."
+      },
+      {
+        "source_type": "community_wiki",
+        "url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+        "accessed_at": "2026-11-15",
+        "details": "Community-maintained patch archive for version 2.2.23."
       }
     ],
     "raw_observations": []
