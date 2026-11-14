@@ -108,3 +108,31 @@ def test_calculator_rejects_invalid_operation_type():
         json={"expression": {"op": [], "args": [{"const": 1}, {"const": 2}]}, "stats": {}},
     )
     assert response.status_code == 422
+
+
+def test_skill_versions_filter_by_hero_and_patch():
+    response = client.get("/api/v1/skill-versions?hero_id=xavier&patch=2.2.23")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["count"] >= 1
+    assert all(row["hero_id"] == "xavier" for row in payload["data"])
+    assert all(row["patch"]["version"] == "2.2.23" for row in payload["data"])
+
+
+def test_skill_versions_filter_by_verification_status():
+    response = client.get("/api/v1/skill-versions?verification_status=reported")
+    assert response.status_code == 200
+    assert response.json()["count"] >= 1
+    assert all(row["verification"]["status"] == "reported" for row in response.json()["data"])
+
+
+def test_skill_version_detail():
+    records = client.get("/api/v1/skill-versions?hero_id=xavier").json()["data"]
+    record_id = records[0]["record_id"]
+    response = client.get(f"/api/v1/skill-versions/{record_id}")
+    assert response.status_code == 200
+    assert response.json()["record_id"] == record_id
+
+
+def test_unknown_skill_version_is_404():
+    assert client.get("/api/v1/skill-versions/not-a-record").status_code == 404
