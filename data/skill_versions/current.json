@@ -1,0 +1,1843 @@
+[
+  {
+    "record_id": "xavier-xavier-1-2.2.23-original",
+    "hero_id": "xavier",
+    "skill_id": "xavier-1",
+    "skill_name": "Transcendence",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "movement_speed_bonus",
+        "kind": "other",
+        "values_by_skill_level": [
+          60
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "xavier-xavier-3-2.2.23-original",
+    "hero_id": "xavier",
+    "skill_id": "xavier-3",
+    "skill_name": "Mystic Field",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "mystic_field_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          440,
+          690
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "total_magic_power_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          130
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "magic_power",
+        "scaling_basis": "total_magic_power"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "lunox-lunox-1-2.2.23-original",
+    "hero_id": "lunox",
+    "skill_id": "lunox-1",
+    "skill_name": "Dreamland Twist",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "order_shift_spell_vamp",
+        "kind": "other",
+        "values_by_skill_level": [
+          10
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "chaos_shift_magic_penetration",
+        "kind": "other",
+        "values_by_skill_level": [
+          10
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "lunox-lunox-3-2.2.23-original",
+    "hero_id": "lunox",
+    "skill_id": "lunox-3",
+    "skill_name": "Chaos Assault",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "chaos_assault_extra_target_max_hp_damage",
+        "kind": "other",
+        "values_by_skill_level": [
+          3.5,
+          5
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "chaos_assault_extra_creep_damage",
+        "kind": "other",
+        "values_by_skill_level": [
+          2.1,
+          3
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "lunox-lunox-8-2.2.23-original",
+    "hero_id": "lunox",
+    "skill_id": "lunox-8",
+    "skill_name": "Power of Chaos: Darkening",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "power_of_chaos_darkening_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          150,
+          300
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "total_magic_power_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          135
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "magic_power",
+        "scaling_basis": "total_magic_power"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "freya-freya-1-2.2.23-original",
+    "hero_id": "freya",
+    "skill_id": "freya-1",
+    "skill_name": "Power of Einherjar",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "sacred_orb_attack_heal_base",
+        "kind": "heal",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "HP",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "sacred_orb_attack_heal_per_hero_level",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          3
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "HP per hero level",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "sacred_orb_attack_heal_total_physical_attack",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "freya-freya-4-2.2.23-original",
+    "hero_id": "freya",
+    "skill_id": "freya-4",
+    "skill_name": "Valkyrie Descent",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "cooldown",
+        "kind": "cooldown",
+        "values_by_skill_level": [
+          60,
+          44
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "seconds",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "valkyrie_state_bonus_basic_attack",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          100,
+          200
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "valkyrie_state_bonus_basic_attack_total_physical_attack",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          70
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "gloo-gloo-2-2.2.23-original",
+    "hero_id": "gloo",
+    "skill_id": "gloo-2",
+    "skill_name": "Slam, Slam",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "goo_explosion_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          230,
+          380
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "goo_explosion_extra_max_hp_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          11
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "max_hp",
+        "scaling_basis": "max_hp"
+      },
+      {
+        "key": "immobilize_duration",
+        "kind": "duration",
+        "values_by_skill_level": [
+          0.6
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "gloo-gloo-4-2.2.23-original",
+    "hero_id": "gloo",
+    "skill_id": "gloo-4",
+    "skill_name": "Grab, Grab",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "damage_transfer",
+        "kind": "other",
+        "values_by_skill_level": [
+          60
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "masha-masha-2-2.2.23-original",
+    "hero_id": "masha",
+    "skill_id": "masha-2",
+    "skill_name": "Feral Swipe",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "feral_swipe_total_physical_attack_bonus",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          55
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "minion_damage_multiplier",
+        "kind": "other",
+        "values_by_skill_level": [
+          150,
+          200
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "masha-masha-3-2.2.23-original",
+    "hero_id": "masha",
+    "skill_id": "masha-3",
+    "skill_name": "Claw Strike",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "claw_strike_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          60,
+          240
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "extra_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          40
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "bonus_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "lukas-lukas-2-2.2.23-original",
+    "hero_id": "lukas",
+    "skill_id": "lukas-2",
+    "skill_name": "Flash Combo",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "pulverize_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          400,
+          800
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "pulverize_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          60
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "spin_damage_per_hit",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          95,
+          235
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "spin_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          25
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "hero_hit_hp_recovery",
+        "kind": "heal",
+        "values_by_skill_level": [
+          8
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [
+      "Base form Flash Combo."
+    ],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "lukas-lukas-5-2.2.23-original",
+    "hero_id": "lukas",
+    "skill_id": "lukas-5",
+    "skill_name": "Flash Combo",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "pulverize_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          400,
+          800
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "pulverize_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          60
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "spin_damage_per_hit",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          95,
+          235
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "spin_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          25
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "hero_hit_hp_recovery",
+        "kind": "heal",
+        "values_by_skill_level": [
+          8
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [
+      "Sacred Beast form Flash Combo; stored as a separate skill-form record."
+    ],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "atlas-atlas-1-2.2.23-original",
+    "hero_id": "atlas",
+    "skill_id": "atlas-1",
+    "skill_name": "Frigid Breath",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "frigid_breath_duration",
+        "kind": "duration",
+        "values_by_skill_level": [
+          4
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "freeze_effect_cooldown",
+        "kind": "cooldown",
+        "values_by_skill_level": [
+          4
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "bonus_defense_base",
+        "kind": "other",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "defense",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "bonus_defense_extra_max_hp_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          0.7
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "karrie-karrie-2-2.2.23-original",
+    "hero_id": "karrie",
+    "skill_id": "karrie-2",
+    "skill_name": "Spinning Lightwheel",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "initial_sphere_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          250
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "initial_sphere_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "sustained_area_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          150
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "sustained_area_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          10
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "karrie-karrie-4-2.2.23-original",
+    "hero_id": "karrie",
+    "skill_id": "karrie-4",
+    "skill_name": "Speedy Lightwheel",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "movement_speed_bonus",
+        "kind": "other",
+        "values_by_skill_level": [
+          30
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "dual_wield_basic_attack_lightwheel_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          50
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "dual_wield_basic_attack_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          50
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "hirara-hirara-2-2.2.16a-original",
+    "hero_id": "hirara",
+    "skill_id": "hirara-2",
+    "skill_name": "Meisen-e",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "cooldown",
+        "kind": "cooldown",
+        "values_by_skill_level": [
+          10,
+          6.5
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "seconds",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "hirara-hirara-3-2.2.16a-original",
+    "hero_id": "hirara",
+    "skill_id": "hirara-3",
+    "skill_name": "Kaerazu",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "kaerazu_crimson_maple_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          165,
+          270
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "extra_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          42,
+          70
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "bonus_physical_attack",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "aulus-aulus-1-2.2.16a-original",
+    "hero_id": "aulus",
+    "skill_id": "aulus-1",
+    "skill_name": "Fighting Spirit",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "enhanced_basic_attack_base_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          120
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "enhanced_basic_attack_per_hero_level",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          12
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage per hero level",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "enhanced_basic_attack_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          75
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "enhanced_basic_attack_heal_base",
+        "kind": "heal",
+        "values_by_skill_level": [
+          15
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "HP",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "enhanced_basic_attack_heal_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          20
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "aulus-aulus-2-2.2.16a-original",
+    "hero_id": "aulus",
+    "skill_id": "aulus-2",
+    "skill_name": "Aulus, Charge!",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "cooldown",
+        "kind": "cooldown",
+        "values_by_skill_level": [
+          15
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "aulus-aulus-4-2.2.16a-original",
+    "hero_id": "aulus",
+    "skill_id": "aulus-4",
+    "skill_name": "Cleaving Axe",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "first_four_strikes_damage_per_strike",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          150,
+          230
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "first_four_strikes_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          60
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      },
+      {
+        "key": "final_slash_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          450,
+          690
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "final_slash_total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          180
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "eudora-eudora-4-2.2.16a-original",
+    "hero_id": "eudora",
+    "skill_id": "eudora-4",
+    "skill_name": "Thunder’s Wrath",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "center_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          540,
+          900
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "center_total_magic_power_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          145
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "magic_power",
+        "scaling_basis": "total_magic_power"
+      },
+      {
+        "key": "outer_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          270,
+          450
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "outer_total_magic_power_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          90
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "magic_power",
+        "scaling_basis": "total_magic_power"
+      },
+      {
+        "key": "delayed_thunderburst_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          300,
+          500
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "magic",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "delayed_thunderburst_total_magic_power_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          100
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "magic_power",
+        "scaling_basis": "total_magic_power"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "kalea-kalea-1-2.2.16a-original",
+    "hero_id": "kalea",
+    "skill_id": "kalea-1",
+    "skill_name": "Surge of Life",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "third_enhanced_basic_attack_base_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          120
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "third_enhanced_basic_attack_per_hero_level",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          12
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "damage per hero level",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "kalea-kalea-4-2.2.16a-original",
+    "hero_id": "kalea",
+    "skill_id": "kalea-4",
+    "skill_name": "Tsunami Slam",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16a",
+      "channel": "original_server",
+      "effective_from": "2026-10-14",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "max_hp_damage_bonus",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          14
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "bruno-bruno-2-2.2.16-original",
+    "hero_id": "bruno",
+    "skill_id": "bruno-2",
+    "skill_name": "Volley Shot",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.16",
+      "channel": "original_server",
+      "effective_from": "2026-09-16",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "volley_shot_base_damage",
+        "kind": "base_damage",
+        "values_by_skill_level": [
+          75,
+          150
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "damage",
+        "damage_type": "physical",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "total_physical_attack_scaling",
+        "kind": "scaling",
+        "values_by_skill_level": [
+          100
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "%",
+        "notes": "Single fixed value reported in patch notes.",
+        "scaling_attribute": "physical_attack",
+        "scaling_basis": "total_physical_attack"
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbb.tools/patch-notes/2.2.16",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  },
+  {
+    "record_id": "aldous-aldous-3-2.2.23-original",
+    "hero_id": "aldous",
+    "skill_id": "aldous-3",
+    "skill_name": "Contract: Explosion",
+    "skill_slot": null,
+    "description": null,
+    "patch": {
+      "version": "2.2.23",
+      "channel": "original_server",
+      "effective_from": "2026-11-11",
+      "effective_until": null
+    },
+    "parameters": [
+      {
+        "key": "cooldown",
+        "kind": "cooldown",
+        "values_by_skill_level": [
+          8
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      },
+      {
+        "key": "damage_reduction",
+        "kind": "other",
+        "values_by_skill_level": [
+          30,
+          55
+        ],
+        "value_semantics": "endpoints",
+        "level_labels": [
+          "first_reported_endpoint",
+          "second_reported_endpoint"
+        ],
+        "unit": "%",
+        "notes": "Only the two published range endpoints are available; intermediate skill-rank values are not inferred."
+      },
+      {
+        "key": "defensive_stance_duration",
+        "kind": "duration",
+        "values_by_skill_level": [
+          2
+        ],
+        "value_semantics": "fixed",
+        "level_labels": [
+          "fixed"
+        ],
+        "unit": "seconds",
+        "notes": "Single fixed value reported in patch notes."
+      }
+    ],
+    "conditions": [],
+    "verification": {
+      "status": "reported",
+      "checked_at": "2026-11-14",
+      "notes": "Transcribed from community mirrors of Original Server patch notes. Sources publish stated fixed values or range endpoints, not every skill-rank value. Missing ranks are not interpolated; not independently verified in-game."
+    },
+    "sources": [
+      {
+        "source_type": "other",
+        "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "accessed_at": "2026-11-14",
+        "details": "Community mirror/archive of Original Server patch notes, not a direct Moonton primary-source URL."
+      }
+    ],
+    "raw_observations": []
+  }
+]
