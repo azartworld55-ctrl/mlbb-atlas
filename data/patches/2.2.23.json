@@ -1,0 +1,110 @@
+{
+  "patch": "2.2.23",
+  "channel": "original_server",
+  "effective_date": "2026-11-11",
+  "status": "community_reported_pending_official_confirmation",
+  "retrieved_at": "2026-11-14",
+  "summary": "Popol and Kupa revamp and balance changes affecting 14 heroes.",
+  "affected_heroes": [
+    "popol_and_kupa",
+    "xavier",
+    "lunox",
+    "freya",
+    "gloo",
+    "masha",
+    "lukas",
+    "aldous",
+    "atlas",
+    "karrie",
+    "kaja",
+    "kagura",
+    "uranus",
+    "melissa"
+  ],
+  "numeric_changes": [
+    {
+      "hero_id": "xavier",
+      "skill_id": "mystic_field",
+      "parameter": "Mystic Field damage",
+      "before": "220-345 + 65% Total Magic Power",
+      "after": "440-690 + 130% Total Magic Power",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "masha",
+      "skill_id": "primal_pact",
+      "parameter": "Extra Physical Damage",
+      "before": "(3 + 1% Extra Physical Attack + 0.3 × Hero Level)% Max HP",
+      "after": "(2 + 0.5% Extra Physical Attack + 0.2 × Hero Level)% Max HP",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "masha",
+      "skill_id": "feral_swipe",
+      "parameter": "Damage bonus",
+      "before": "70%",
+      "after": "55%",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "masha",
+      "skill_id": "claw_strike",
+      "parameter": "Damage",
+      "before": "120-240 + 80% Extra Physical Attack",
+      "after": "60-240 + 40% Extra Physical Attack",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "lunox",
+      "skill_id": "chaos_ultimate",
+      "parameter": "Damage",
+      "before": "250-450 + 100% Total Magic Power",
+      "after": "150-300 + 135% Total Magic Power",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "lunox",
+      "skill_id": "chaos_skill_2",
+      "parameter": "Extra percentage damage",
+      "before": "2.5%-5%",
+      "after": "3.5%-5%",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "hero_id": "melissa",
+      "skill_id": "eyes_on_you",
+      "parameter": "Muddles damage transfer and attack effect inheritance",
+      "before": "52% at all levels",
+      "after": "50%-60%",
+      "confidence": "reported",
+      "source_url": "https://mlbb.tools/patch-notes/2.2.23"
+    }
+  ],
+  "source_policy": "These are transcribed community patch-note values, not yet independently confirmed against the live client or an official Moonton patch-note publication. Do not promote them to verified or silently apply them to current hero records.",
+  "sources": [
+    {
+      "type": "community_patch_database",
+      "url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+      "accessed_at": "2026-11-14",
+      "note": "Confirms patch number and 2026-11-11 release date; contains narrative patch notes."
+    },
+    {
+      "type": "community_patch_database",
+      "url": "https://mlbb.tools/patch-notes/2.2.23",
+      "accessed_at": "2026-11-14",
+      "note": "Structured numerical before/after values for selected heroes."
+    },
+    {
+      "type": "community_patch_database",
+      "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+      "accessed_at": "2026-11-14",
+      "note": "Cross-check for affected hero list and patch narrative."
+    }
+  ]
+}
