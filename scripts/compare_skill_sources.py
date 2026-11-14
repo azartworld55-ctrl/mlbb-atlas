@@ -121,8 +121,8 @@ def parse_cooldown_cost(value: Any) -> tuple[str | None, str | None]:
     """Parse the GMS display string into comparable cooldown and mana-cost values."""
     if not isinstance(value, str):
         return None, None
-    cooldown = re.search(r"\\bCD\\s*:\\s*(\\d+(?:\\.\\d+)?)", value, flags=re.I)
-    mana = re.search(r"\\bMana\\s*Cost\\s*:\\s*(\\d+(?:\\.\\d+)?)", value, flags=re.I)
+    cooldown = re.search(r"\bCD\s*:\s*(\d+(?:\.\d+)?)", value, flags=re.I)
+    mana = re.search(r"\bMana\s*Cost\s*:\s*(\d+(?:\.\d+)?)", value, flags=re.I)
     return (
         str(float(cooldown.group(1))).rstrip("0").rstrip(".") if cooldown else None,
         str(float(mana.group(1))).rstrip("0").rstrip(".") if mana else None,
