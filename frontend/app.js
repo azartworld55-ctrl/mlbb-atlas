@@ -265,7 +265,8 @@ async function setupMatchupCalculator() {
         red: document.getElementById(prefix + '-red').checked
       },
       total_physical_attack: Number(document.getElementById(prefix + '-pa')?.value || 0),
-      total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),\n      total_hp: Number(document.getElementById(prefix + '-hp')?.value || 0),
+      total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),
+      total_hp: Number(document.getElementById(prefix + '-hp')?.value || 0),
       physical_defense: Number(document.getElementById(prefix + '-pd')?.value || 0),
       magic_defense: Number(document.getElementById(prefix + '-md')?.value || 0)
     };
