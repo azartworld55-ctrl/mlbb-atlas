@@ -7,22 +7,24 @@
 <section id="items" class="panel"><p class="eyebrow">DATABASE</p><h2>Equipment</h2><p id="item-status" class="muted">Item records will appear after source review.</p></section>
 <section id="calculator" class="panel matchup-panel">
 <p class="eyebrow">MATCHUP LAB · PATCH-AWARE</p><h2>Герой против героя</h2>
-<p class="muted">Настрой обе стороны отдельно. Предметы и эмблемы добавляют только опубликованные числовые характеристики. Навык рассчитывается по доступной записи параметров; результат пока показывается до защиты противника.</p>
+<p class="muted">Настрой обе стороны отдельно. Укажи пробивание атакующего и защитные параметры противника. Для навыка с одним подтверждённым компонентом калькулятор покажет урон после защиты.</p>
 <div class="matchup-grid">
 <fieldset class="side-config attacker-config"><legend>Твой герой · атакующий</legend>
 <label>Герой<select id="attacker-hero"></select></label><label>Эмблема<select id="attacker-emblem"></select></label><label>Боевой спелл<select id="attacker-spell"></select></label>
 <div class="item-slots" id="attacker-items"></div>
 <div class="buff-row"><label><input type="checkbox" id="attacker-blue"> Синий баф</label><label><input type="checkbox" id="attacker-red"> Красный баф</label></div>
 <div class="stat-grid"><label>Физ. атака до предметов<input id="attacker-pa" type="number" min="0" value="0"></label><label>Маг. сила до предметов<input id="attacker-mp" type="number" min="0" value="0"></label><label>Макс. HP до предметов<input id="attacker-hp" type="number" min="0" value="0"></label></div>
+<div class="stat-grid"><label>Физ. пробивание %<input id="attacker-physical-pen-percent" type="number" min="0" max="100" value="0"></label><label>Физ. пробивание плоское<input id="attacker-physical-pen-flat" type="number" min="0" value="0"></label><label>Маг. пробивание %<input id="attacker-magic-pen-percent" type="number" min="0" max="100" value="0"></label><label>Маг. пробивание плоское<input id="attacker-magic-pen-flat" type="number" min="0" value="0"></label></div>
 </fieldset>
 <fieldset class="side-config defender-config"><legend>Противник · защищающийся</legend>
 <label>Герой<select id="defender-hero"></select></label><label>Эмблема<select id="defender-emblem"></select></label><label>Боевой спелл<select id="defender-spell"></select></label>
 <div class="item-slots" id="defender-items"></div>
 <div class="buff-row"><label><input type="checkbox" id="defender-blue"> Синий баф</label><label><input type="checkbox" id="defender-red"> Красный баф</label></div>
 <div class="stat-grid"><label>Физ. защита<input id="defender-pd" type="number" min="0" value="0"></label><label>Маг. защита<input id="defender-md" type="number" min="0" value="0"></label><label>Макс. HP до предметов<input id="defender-hp" type="number" min="0" value="0"></label></div>
+<div class="stat-grid"><label>Снижение физ. защиты %<input id="defender-physical-def-reduction-percent" type="number" min="0" max="100" value="0"></label><label>Снижение физ. защиты плоское<input id="defender-physical-def-reduction-flat" type="number" min="0" value="0"></label><label>Снижение маг. защиты %<input id="defender-magic-def-reduction-percent" type="number" min="0" max="100" value="0"></label><label>Снижение маг. защиты плоское<input id="defender-magic-def-reduction-flat" type="number" min="0" value="0"></label><label>Общее снижение урона %<input id="defender-damage-reduction-percent" type="number" min="0" max="100" value="0"></label></div>
 </fieldset></div>
-<div class="skill-controls"><label>Навык атакующего<select id="matchup-skill"><option value="">Нет доступных записей навыков</option></select></label><label>Опубликованное значение<select id="matchup-endpoint"><option value="high">Верхняя граница</option><option value="low">Нижняя граница</option></select></label></div>
+<div class="skill-controls"><label>Навык атакующего<select id="matchup-skill"><option value="">Нет доступных записей навыков</option></select></label><label>Тип урона<select id="matchup-damage-type"><option value="magic">Магический</option><option value="physical">Физический</option><option value="true">Чистый</option></select></label><label>Опубликованное значение<select id="matchup-endpoint"><option value="high">Верхняя граница</option><option value="low">Нижняя граница</option></select></label></div>
 <button id="matchup-calculate" type="button">Рассчитать столкновение</button>
 <div id="matchup-result" class="matchup-result" role="status">Выбери героев и настройки обеих сторон.</div>
-<p class="muted small">Важно: бафы и боевые заклинания можно назначить обеим сторонам, но их эффекты пока не включены в формулу. Защита, пробивание, снижение урона, щиты и условные пассивки также пока не применяются. Это честный предварительный расчёт, а не полная симуляция боя.</p>
+<p class="muted small">Бафы и боевые заклинания сохраняются как выбор сборки, но пока не влияют на урон: их точные текущие эффекты требуют отдельной проверки. Условные пассивки и щиты пока не моделируются.</p>
 </section><footer>MLBB Atlas is unofficial and is not affiliated with Moonton.</footer></main><script src="/assets/app.js"></script></body></html>
