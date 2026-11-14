@@ -19,11 +19,13 @@ For each skill, record the patch, hero level, skill level, attacker attributes, 
 - `verified`: replicated and checked against a primary source or controlled test.
 - `unverified`: placeholder or insufficient evidence.
 
-## Current source audit (2026-11-14)
+## Source comparison
 
-The imported hero catalogue contains numeric text in skill descriptions, but it does not provide a reliable per-skill patch history or structured level-by-level values. Its upstream revision is dated 2026-09-29; that is not proof that every value matches the live client today.
+The source roles, limitations, licensing notes and field-level conflict policy are documented in [upstream-source-audit.md](upstream-source-audit.md). Source snapshots must retain their original IDs, raw text, retrieval date and revision. Similar-looking values from projects that share a Wiki/API ancestor are not independent corroboration.
 
-A community patch tracker reports Original Server patch 2.2.23 dated 2026-11-11, while the official patch listing surfaced in this research still showed 2.2.16. Treat 2.2.23 as a candidate patch target only until confirmed against the live client or an official patch entry. Do not silently tag existing skill descriptions as 2.2.23.
+## Current patch target: Original Server 2.2.23
+
+As of 2026-11-14, three community patch references agree that patch 2.2.23 was released on 2026-11-11. This is enough to register 2.2.23 as the **reported research target**, not enough to call every existing skill record current or verified. The numerical patch record is partial and labelled `reported` in [data/patches/2.2.23.json](../data/patches/2.2.23.json). Official Moonton confirmation and live-client checks remain outstanding.
 
 ## Verification
 
