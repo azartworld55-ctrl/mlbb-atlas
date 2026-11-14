@@ -1,0 +1,27 @@
+{
+  "imported_at": "2026-11-14",
+  "upstream_repository": "https://github.com/p3hndrx/MLBB-API",
+  "upstream_license": "MIT",
+  "upstream_files": {
+    "heroes": {
+      "path": "v1/hero-meta-final.json",
+      "blob_sha": "0a2f0abb80d850ce256f9d1b7872cf5b92a23399",
+      "revision": "20260929",
+      "record_count": 134
+    },
+    "items": {
+      "path": "v1/item-meta-final.json",
+      "blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "revision": "20251130",
+      "record_count": 89
+    },
+    "emblems": {
+      "path": "v1/emblem-meta-final.json",
+      "blob_sha": "373f1f3646be74f9bebad081de735df9140d3bc3",
+      "revision": "2026-10-23",
+      "record_count": 7
+    }
+  },
+  "normalization_version": "1",
+  "note": "Imported values are reported, not independently verified. Game assets remain property of their respective rights holders."
+}
