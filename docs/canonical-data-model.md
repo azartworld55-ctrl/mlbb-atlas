@@ -7,7 +7,7 @@ The canonical collections are JSON arrays under `data/<collection>/current.json`
 
 Each skill retains source-provided name, type, icon reference, cooldown, resource cost, description and tags. These values are reported upstream data, not exact level-by-level scaling.
 
-Hero records may also contain `patch_updates[]`, an audit trail of explicitly applied patch-note changes. Each entry records the patch version, source URL, application date and changed fields. This audit trail does not replace the normalized versioned skill records defined by `schema/skill-version.schema.json`; create those only when skill rank, form, parameter kind and per-rank values have been mapped without ambiguity.
+Hero records may also contain `patch_updates[]`, an audit trail of explicitly applied patch-note changes. Each entry records the patch version, source URL, application date and changed fields. The normalized versioned records live in `data/skill_versions/current.json` and follow `schema/skill-version.schema.json`. Parameters distinguish `fixed` values, published `endpoints`, and genuine `per_level` arrays. Endpoint pairs are not complete rank tables: never interpolate missing ranks or label them verified.
 
 ## Item
 `id`, `slug`, `name`, `category`, `tier`, `cost`, `summary`, `modifiers[]`, passive/active effect arrays, build path and provenance.
