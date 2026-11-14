@@ -202,3 +202,58 @@ def test_matchup_rejects_unknown_spell():
         },
     )
     assert response.status_code == 404
+
+
+def test_matchup_applies_defense_reduction_penetration_and_damage_reduction_in_order():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {
+                "hero_id": "xavier",
+                "physical_penetration_percent": 50,
+                "physical_penetration_flat": 10,
+            },
+            "defender": {
+                "hero_id": "miya",
+                "physical_defense": 120,
+                "damage_reduction_percent": 20,
+            },
+            "skill_record_id": "xavier-xavier-3-2.2.23-original",
+            "endpoint": "high",
+            "damage_type": "physical",
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["damage_before_defense"] == 690
+    assert payload["mitigation"]["effective_defense"] == 50
+    assert payload["damage_after_defense"] == 690 * 120 / 170 * 0.8
+    assert payload["mitigation"]["penetration_order"] == "defense reduction → percentage penetration → flat penetration"
+
+
+def test_matchup_true_damage_bypasses_defense():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {"hero_id": "xavier"},
+            "defender": {"hero_id": "miya", "physical_defense": 500, "magic_defense": 500, "damage_reduction_percent": 80},
+            "skill_record_id": "xavier-xavier-3-2.2.23-original",
+            "endpoint": "high",
+            "damage_type": "true",
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["damage_after_defense"] == payload["damage_before_defense"]
+
+
+def test_matchup_rejects_invalid_damage_type():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {"hero_id": "xavier"},
+            "defender": {"hero_id": "miya"},
+            "damage_type": "hybrid",
+        },
+    )
+    assert response.status_code == 422
