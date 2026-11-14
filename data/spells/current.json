@@ -56,8 +56,23 @@
       "source_revision": "2.2.23",
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
-      "notes": "Cooldown updated from the Original Server 2.2.23 patch note (100s to 75s). Other spell records remain community-reported and should be checked against the in-game client."
-    }
+      "notes": "Cooldown updated from the Original Server 2.2.23 patch note (100s to 75s). Other spell records remain community-reported and should be checked against the in-game client. Patch 2.2.23 change is corroborated by the community patch-note repost and Liquipedia; the current 75s value was already present."
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "channel": "original_server",
+        "effective_from": "2026-11-11",
+        "field": "cooldown_seconds",
+        "before": 100,
+        "after": 75,
+        "confidence": "reported",
+        "source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "cross_check_url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+        "accessed_at": "2026-11-15",
+        "notes": "The catalogue already contained 75 seconds; this adds an explicit patch-history record. Community source, not in-game verification."
+      }
+    ]
   },
   {
     "id": "005",
