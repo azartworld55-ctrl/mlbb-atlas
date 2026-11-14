@@ -44,17 +44,19 @@ Run tests with `pytest`.
 - `GET /api/v1/meta`
 - `GET /api/v1/heroes`
 - `GET /api/v1/heroes/{hero_id}`
-- `GET /api/v1/items`
+- `GET /api/v1/items` and `GET /api/v1/items/{item_id}`
+- `GET /api/v1/emblems`
+- `GET /api/v1/spells`
 
-Collections intentionally start empty. The API does not invent missing game values.
+The initial import currently contains 133 heroes, 89 items and 7 emblems. Battle spells remain empty until a suitable source is reviewed. Imported values are labelled `reported`, not independently verified.
 
 ## Data quality
 
-Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [formula format](docs/formula-format.md) and [source register](data/sources/README.md).
+Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [canonical data model](docs/canonical-data-model.md), [import workflow](docs/data-import.md), [formula format](docs/formula-format.md), [source register](data/sources/README.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Combining upstream projects
 
-MLBB Atlas uses existing public projects as research references and potential data sources, not as material to copy indiscriminately. Before importing code, datasets, text or artwork, inspect the exact license and terms, preserve required attribution, and record provenance. A public GitHub repository or topic page is not automatically reusable.
+The first normalized dataset import is derived from [p3hndrx/MLBB-API](https://github.com/p3hndrx/MLBB-API), under its MIT license, with source snapshots, blob SHAs and attribution retained in this repository. The [MLBB-Hero-Scraper](https://github.com/warungerik/MLBB-Hero-Scraper) is documented as a candidate metadata collection reference; its code is not copied. Every other source must be reviewed independently. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Contributing
 
