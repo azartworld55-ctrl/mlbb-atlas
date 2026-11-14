@@ -2,7 +2,7 @@
 
 ## Статус
 
-Изменения подготовлены в [PR #1](https://github.com/azartworld55-ctrl/mlbb-atlas/pull/1), ветка `automation/2026-11-15-patch-2-2-23-data`. На момент создания отчёта PR ещё не влит в `main`. Изменения нельзя считать опубликованными на GitHub Pages до успешного merge и deploy.
+Изменения влиты в `main` через [PR #1](https://github.com/azartworld55-ctrl/mlbb-atlas/pull/1). Итоговый merge-коммит: [c069bfaff54f6dbdfe398ef00b1611424e884fb0](https://github.com/azartworld55-ctrl/mlbb-atlas/commit/c069bfaff54f6dbdfe398ef00b1611424e884fb0). GitHub Actions tests, source comparison и GitHub Pages deploy завершились успешно.
 
 ## Состояние репозитория перед работой
 
@@ -74,7 +74,7 @@
 - JSON-файлы изменённого каталога повторно прочитаны и успешно разобраны.
 - Добавлен regression test `test_patch_2_2_23_updates_are_reflected_in_catalogues`.
 - GitHub Actions `tests` для исходного PR HEAD до добавления этого отчёта завершился успешно: [run 43655505806](https://github.com/azartworld55-ctrl/mlbb-atlas/actions/runs/43655505806).
-- Добавление самого отчёта меняет HEAD PR и запускает новую проверку; её итог следует считать окончательным. Pages deploy для PR не запускался: публикация выполняется после merge в `main`.
+- После добавления отчёта GitHub Actions tests для PR завершился успешно: [run 43655594578](https://github.com/azartworld55-ctrl/mlbb-atlas/actions/runs/43655594578). После merge в `main` повторные проверки завершились успешно: [tests run 43655638112](https://github.com/azartworld55-ctrl/mlbb-atlas/actions/runs/43655638112), [skill-source comparison run 43655638056](https://github.com/azartworld55-ctrl/mlbb-atlas/actions/runs/43655638056), [GitHub Pages deploy run 43655638004](https://github.com/azartworld55-ctrl/mlbb-atlas/actions/runs/43655638004). Pages deployment completed successfully.
 
 ## Коммиты и PR
 
@@ -86,3 +86,12 @@
 - Регрессионный тест: [6d25bfd](https://github.com/azartworld55-ctrl/mlbb-atlas/commit/6d25bfd01213c809e430ac5904634d96f0b3c0a1)
 - Документация аудита источников: [2297539](https://github.com/azartworld55-ctrl/mlbb-atlas/commit/2297539a4457b1166a9b4d65f61bef212d85102d)
 - PR: [Update Original Server patch 2.2.23 data](https://github.com/azartworld55-ctrl/mlbb-atlas/pull/1)
+
+
+## Итог после merge
+
+- PR #1 закрыт со статусом merged.
+- Основная ветка `main` содержит merge-коммит [c069bfaff54f6dbdfe398ef00b1611424e884fb0](https://github.com/azartworld55-ctrl/mlbb-atlas/commit/c069bfaff54f6dbdfe398ef00b1611424e884fb0).
+- Тесты и валидаторы прошли успешно после merge.
+- Сравнение источников навыков прошло успешно; workflow не публикует сырые данные, а только временный отчёт сравнения.
+- Сборка и публикация GitHub Pages завершились успешно.
