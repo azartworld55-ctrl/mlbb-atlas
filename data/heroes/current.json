@@ -886,7 +886,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_8a7a2312f5db658e2c2a69172eca8de4.png",
         "cooldown": "10.0",
         "resource_cost": "50",
-        "description": "Bruno kicks a Powerball on his next Basic Attack, gaining 48% Movement Speed for 1s. It deals 100 (+100% Total Physical Attack) Physical Damage to the target, and slows them by 30% for 0.5s.\n\nThe Powerball then bounces back toward Bruno and lands on the ground. He or allied heroes can retrieve the Powerball for another attack and reduce the cooldown of Slide by 1s.",
+        "description": "Bruno kicks a Powerball on his next Basic Attack, gaining 48% Movement Speed for 1s. It deals 75-150 (+100% Total Physical Attack) Physical Damage to the target, and slows them by 30% for 0.5s.\n\nThe Powerball then bounces back toward Bruno and lands on the ground. He or allied heroes can retrieve the Powerball for another attack and reduce the cooldown of Slide by 1s.",
         "tags": [
           "Damage",
           "Slow"
@@ -927,7 +927,18 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.16",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbb.tools/patch-notes/2.2.16",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Volley Shot base damage 100-225 -> 75-150; stored description updated to the full level range"
+        ]
+      }
+    ]
   },
   {
     "id": "13",
@@ -1144,7 +1155,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_d44b0dd173dce52af46ec6432c4ab287.png",
         "cooldown": "32.0",
         "resource_cost": "130",
-        "description": "Eudora calls down a blast of lightning on the target area, dealing 600 (+160% Total Magic Power) Magic Damage to targets at the center. Then it strikes targets outside the center, dealing 300 (+100% Total Magic Power) Magic Damage.\n\nEvery time Thunder's Wrath hits a target affected by Superconductor, it triggers a Thunderburst centered on the Superconductor target after a short delay, dealing 330 (+110% Total Magic Power) Magic Damage.",
+        "description": "Eudora calls down a blast of lightning on the target area, dealing 540-900 (+145% Total Magic Power) Magic Damage to targets at the center. Then it strikes targets outside the center, dealing 270-450 (+90% Total Magic Power) Magic Damage.\n\nEvery time Thunder's Wrath hits a target affected by Superconductor, it triggers a Thunderburst centered on the Superconductor target after a short delay, dealing 300-500 (+100% Total Magic Power) Magic Damage.",
         "tags": [
           "Burst"
         ]
@@ -1158,7 +1169,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.16a",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Thunder's Wrath center damage 600-1000 (+160% Total Magic Power) -> 540-900 (+145%)",
+          "Outer damage 300-500 (+100%) -> 270-450 (+90%)",
+          "Delayed Thunderburst 330-550 (+110%) -> 300-500 (+100%)"
+        ]
+      }
+    ]
   },
   {
     "id": "16",
@@ -1648,7 +1672,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_dcd7beb4c0cef38f848a6cf26e51b105.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Freya gains 1 Sacred Orb with each Basic Attack (up to 6 Sacred Orbs). Consuming 1 Sacred Orb grants Freya 100% Attack Speed for her next Basic Attack (up to 6 stacks).\n\nWhile out of combat, Sacred Orbs regenerate gradually.",
+        "description": "Freya gains 1 Sacred Orb with each Basic Attack (up to 6 Sacred Orbs). Consuming 1 Sacred Orb grants Freya 100% Attack Speed for her next Basic Attack and restores 20 (+3*Hero Level) (+20% Total Physical Attack) HP (up to 6 stacks).\n\nWhile out of combat, Sacred Orbs regenerate gradually.",
         "tags": [
           "Buff"
         ]
@@ -1684,9 +1708,9 @@
         "name": "Valkyrie Descent",
         "type": "active",
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_49a8b4de271d0162ab9e26e06819840e.png",
-        "cooldown": "44.0",
+        "cooldown": "60.0",
         "resource_cost": "null",
-        "description": "Freya selects a target area and dives down as a Sacred Orb (gaining Control Immunity), dealing 300 (+75% Total Physical Attack) Physical Damage and 40% slow to enemies in her path and at the landing point for 2s. Upon landing, Freya enters the Valkyrie state for 10s, during which her Basic Attacks deal 30 extra damage (extra damage cannot Crit), she recovers 40 (+40% Total Physical Attack) HP per Basic Attack, and her Basic Attacks deal splash damage.",
+        "description": "Freya selects a target area and dives down as a Sacred Orb (gaining Control Immunity), dealing 300 (+75% Total Physical Attack) Physical Damage and 40% slow to enemies in her path and at the landing point for 2s. Upon landing, Freya enters the Valkyrie state for 10s, during which her Basic Attacks deal 100-200 (+70% Total Physical Attack) extra Physical Damage (extra damage cannot Crit) and deal splash damage.",
         "tags": [
           "Morph",
           "Buff"
@@ -1701,7 +1725,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Power of Einherjar: next Basic Attack after consuming a Sacred Orb restores 20 (+3*Hero Level) (+20% Total Physical Attack) HP",
+          "Valkyrie Descent cooldown 44-28s -> 60-44s; stored first-rank cooldown 60s",
+          "Ultimate-enhanced Basic Attack 30-60 (+100% Total Physical Attack) -> 100-200 (+70% Total Physical Attack); Basic Attack HP regeneration during Ultimate removed"
+        ]
+      }
+    ]
   },
   {
     "id": "23",
@@ -3188,7 +3225,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_db5f9ad9a119521901a51a7691656afb.png",
         "cooldown": "8.0",
         "resource_cost": "65",
-        "description": "Karrie releases a sphere of surging energy in the target direction, dealing 250 (+90% Total Physical Attack) Physical Damage to enemies in its path. The sphere will stop upon hitting an enemy hero or reaching its max travel distance, continuously dealing 150 (+20% Total Physical Attack) Physical Damage to nearby enemies and slowing them by 80% for 1s.",
+        "description": "Karrie releases a sphere of surging energy in the target direction, dealing 250 (+20% Total Physical Attack) Physical Damage to enemies in its path. The sphere will stop upon hitting an enemy hero or reaching its max travel distance, continuously dealing 150 (+10% Total Physical Attack) Physical Damage to nearby enemies and slowing them by 80% for 1s.",
         "tags": [
           "AOE",
           "Slow"
@@ -3214,7 +3251,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1a9f31cc93421fb6bcd5ef01d86a96f8.png",
         "cooldown": "35.0",
         "resource_cost": "100",
-        "description": "Karrie enters Dual Wield state for 10s, gaining 20% Movement Speed. Each Basic Attack deals 40 (+50% Total Physical Attack) Physical Damage and throws 2 lightwheels that inherit a portion of Attack Effects.",
+        "description": "Karrie enters Dual Wield state for 10s, gaining 30% Movement Speed. Each Basic Attack deals 50 (+50% Total Physical Attack) Physical Damage and throws 2 lightwheels that inherit a portion of Attack Effects.",
         "tags": [
           "Buff",
           "Burst"
@@ -3229,7 +3266,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Spinning Lightwheel Total Physical Attack scaling 90% -> 20%; sustained damage scaling 20% -> 10%",
+          "Speedy Lightwheel damage per lightwheel 40 -> 50; Movement Speed 20% -> 30%"
+        ]
+      }
+    ]
   },
   {
     "id": "41",
@@ -5129,9 +5178,9 @@
         "name": "Contract: Explosion",
         "type": "active",
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_523832f81d6deeaf65b1f9a0a4735591.png",
-        "cooldown": "12.0",
+        "cooldown": "8.0",
         "resource_cost": "80",
-        "description": "Aldous assumes a defensive stance, gaining 30% Damage Reduction for 2s or until canceled.\nHe then deals 200 (+20% Total Physical Attack)-400 (+40% Total Physical Attack) Physical Damage to nearby enemies and stuns them for 0.5-1s (scales with defensive stance duration).",
+        "description": "Aldous assumes a defensive stance, gaining 30%-55% Damage Reduction for 2s or until canceled.\nHe then deals 200 (+20% Total Physical Attack)-400 (+40% Total Physical Attack) Physical Damage to nearby enemies and stuns them for 0.5-1s (scales with defensive stance duration).",
         "tags": [
           "Buff",
           "CC"
@@ -5159,7 +5208,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Contract: Explosion cooldown 12-9.5s -> 8s at all ranks; stored cooldown updated to 8s",
+          "Damage Reduction 30% at all ranks -> 30%-55%"
+        ]
+      }
+    ]
   },
   {
     "id": "65",
@@ -5444,7 +5505,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_664a96f964b628fff553bf11064a9367.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen she uses the Power of Order, she gains 0.5% Spell Vamp for every 1% Magic Penetration.\nWhen she uses the Power of Chaos, she gains 0.5% Magic Penetration for every 1% Spell Vamp.",
+        "description": "Lunox is twisted by the powers of Chaos and Order.\nWhen she shifts to Power of Order, she immediately gains 10% Spell Vamp. She also gains 0.5% Spell Vamp for every 1% Magic Penetration.\nWhen she shifts to Power of Chaos, she immediately gains 10% Magic Penetration. She also gains 0.5% Magic Penetration for every 1% Spell Vamp.",
         "tags": [
           "Buff"
         ]
@@ -5469,7 +5530,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1785f547a0d65857cdd756fd248932ed.png",
         "cooldown": "2.0",
         "resource_cost": "30",
-        "description": "Lunox unleashes Chaos Energy at a target enemy, dealing 250 (+120% Total Magic Power) (+ 2.5% target's ) Magic Damage (+ 1.5% against creeps).\n\nThis skill shares its cooldown with Starlight Pulse. Using it grants Power of Chaos and ends the Power of Order state.",
+        "description": "Lunox unleashes Chaos Energy at a target enemy, dealing 250 (+120% Total Magic Power) (+ 3.5%-5% of the target's Max HP) Magic Damage (+ 2.1%-3% against creeps).\n\nThis skill shares its cooldown with Starlight Pulse. Using it grants Power of Chaos and ends the Power of Order state.",
         "tags": [
           "Damage"
         ]
@@ -5507,7 +5568,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1785f547a0d65857cdd756fd248932ed.png",
         "cooldown": "0.3",
         "resource_cost": "null",
-        "description": "Lunox unleashes Chaos Energy at a target enemy, dealing 250 (+120% Total Magic Power) (+ 2.5% target's ) Magic Damage (+ 1.5% against creeps).\n\nWhile enhanced by Power of Chaos, this skill has a brief cooldown, and its cast interval is unaffected by Cooldown Reduction.",
+        "description": "Lunox unleashes Chaos Energy at a target enemy, dealing 250 (+120% Total Magic Power) (+ 3.5%-5% of the target's Max HP) Magic Damage (+ 2.1%-3% against creeps).\n\nWhile enhanced by Power of Chaos, this skill has a brief cooldown, and its cast interval is unaffected by Cooldown Reduction.",
         "tags": [
           "Damage"
         ]
@@ -5532,7 +5593,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_3673d187cf12182b09ba1a0054ca0742.png",
         "cooldown": "30.0",
         "resource_cost": "120",
-        "description": "Lunox blinks in the target direction, dealing 250 (+100% Total Magic Power) Magic Damage to nearby enemies and slowing them by 30% for 4s.\n\nFor the next 4s, Lunox enhances her Power of Chaos, greatly reducing the cooldown of Chaos Assault (unaffected by Cooldown Reduction). Using Starlight Pulse ends this enhanced state.",
+        "description": "Lunox blinks in the target direction, dealing 150-300 (+135% Total Magic Power) Magic Damage to nearby enemies and slowing them by 30% for 4s.\n\nFor the next 4s, Lunox enhances her Power of Chaos, greatly reducing the cooldown of Chaos Assault (unaffected by Cooldown Reduction). Using Starlight Pulse ends this enhanced state.",
         "tags": [
           "Mobility",
           "Burst"
@@ -5547,7 +5608,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Dreamland Twist: +10% immediate Spell Vamp on Order shift and +10% immediate Magic Penetration on Chaos shift",
+          "Chaos Assault extra damage 2.5%-5% -> 3.5%-5%; creep extra damage 1.5%-3% -> 2.1%-3%",
+          "Power of Chaos: Darkening damage 250-450 (+100% Total Magic Power) -> 150-300 (+135% Total Magic Power)"
+        ]
+      }
+    ]
   },
   {
     "id": "69",
@@ -7105,7 +7179,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_0d1830ffdf3eda7e34a33f879aea70d1.png",
         "cooldown": "8.0",
         "resource_cost": "null",
-        "description": "Masha releases energy forward, dealing 250 (+70% Total Physical Attack) Physical Damage to enemies in its path.\nIf an enemy hero is hit, they are slowed by 50% for 1s.",
+        "description": "Masha releases energy forward, dealing 250 (+55% Total Physical Attack) Physical Damage to enemies in its path.\nDeals 150%-200% damage to minions.",
         "tags": [
           "AOE",
           "Slow"
@@ -7118,7 +7192,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_b137533c0a7e40fb4759d2b68ffbc230.png",
         "cooldown": "9.0",
         "resource_cost": "null",
-        "description": "Masha dashes in the target direction, dealing 120 (+80% Extra Physical Attack) Physical Damage.\n[C8Whenever an HP bar is depleted, the cooldown of Claw Strike resets.]",
+        "description": "Masha dashes in the target direction, dealing 60-240 (+40% Extra Physical Attack) Physical Damage.\n[C8Whenever an HP bar is depleted, the cooldown of Claw Strike resets.]",
         "tags": [
           "Mobility",
           "Damage"
@@ -7145,7 +7219,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Feral Swipe damage bonus 70% -> 55%; hero-hit slow removed; minion damage multiplier updated to 150%-200%",
+          "Claw Strike damage 120-240 (+80% Extra Physical Attack) -> 60-240 (+40% Extra Physical Attack)"
+        ]
+      }
+    ]
   },
   {
     "id": "89",
@@ -7496,7 +7582,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_d7bbba4e6ab968ce1f1d798f29960198.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Atlas generates Frigid Breath around him for 5s each time he casts a skill. Enemies affected by Frigid Breath will have their Movement Speed gradually reduced over 2s, after which they'll be frozen for 0.5s.\n\nAtlas gains 20 (+0.5% Extra Max HP) extra when Frigid Breath is present.",
+        "description": "Atlas generates Frigid Breath around him for 4s each time he casts a skill. Enemies affected by Frigid Breath will have their Movement Speed gradually reduced over 2s, after which they'll be frozen for 0.5s (freeze effect cooldown: 4s).\n\nAtlas gains 20 (+0.7% Extra Max HP) extra when Frigid Breath is present.",
         "tags": [
           "Buff",
           "Debuff"
@@ -7549,7 +7635,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Frigid Breath duration 5s -> 4s; freeze effect cooldown 2.5s -> 4s",
+          "Defense scaling 20 (+0.5% Extra HP) -> 20 (+0.7% Extra HP)"
+        ]
+      }
+    ]
   },
   {
     "id": "94",
@@ -8417,7 +8515,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_79eeaa75b48d109dd048a18b06d97c2c.png",
         "cooldown": "10.0",
         "resource_cost": "25",
-        "description": "Gloo reaches out and slams the ground, dealing 80 (+80% Total Magic Power) Magic Damage to enemies hit.\nA Goo is left at the end location, which explodes after 3s, dealing 250 (+12% Extra Max HP) Magic Damage to nearby enemies and immobilizing them for 0.8s.\nTouching the Goo detonates it immediately and resets this skill's cooldown. Gloo also recovers 2.5% if the explosion hits an enemy (doubled if it hits an enemy hero).",
+        "description": "Gloo reaches out and slams the ground, dealing 80 (+80% Total Magic Power) Magic Damage to enemies hit.\nA Goo is left at the end location, which explodes after 3s, dealing 230-380 (+11% Extra Max HP) Magic Damage to nearby enemies and immobilizing them for 0.6s.\nTouching the Goo detonates it immediately and resets this skill's cooldown. Gloo also recovers 2.5% if the explosion hits an enemy (doubled if it hits an enemy hero).",
         "tags": [
           "AOE",
           "CC"
@@ -8443,7 +8541,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_ecf4a30418f8d8ed16718892148a2bbd.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Unlocked when an enemy hero reaches max Sticky stacks. Gloo attaches itself to the target for up to 9s, recovering 20% .\n\nWhile attached, Gloo's Basic Attacks deal 30 (+50% Total Magic Power) (+6% Extra Max HP) Magic Damage, and it transfers 80% of the damage it takes (excluding Turret damage) to the host. If the host dies while Gloo is attached, this skill's cooldown is reduced to 5s.",
+        "description": "Unlocked when an enemy hero reaches max Sticky stacks. Gloo attaches itself to the target for up to 9s, recovering 20% .\n\nWhile attached, Gloo's Basic Attacks deal 30 (+50% Total Magic Power) (+6% Extra Max HP) Magic Damage, and it transfers 60% of the damage it takes (excluding Turret damage) to the host. If the host dies while Gloo is attached, this skill's cooldown is reduced to 5s.",
         "tags": [
           "Attach",
           "Heal"
@@ -8458,7 +8556,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Slam, Slam explosion 250-400 (+12% Extra HP) -> 230-380 (+11% Extra HP); immobilization 0.8s -> 0.6s",
+          "Grab, Grab damage transfer 80% -> 60%"
+        ]
+      }
+    ]
   },
   {
     "id": "105",
@@ -8839,7 +8949,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_212853d016e25b580810f20925cca284.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Whenever Aulus deals skill damage to a unit, he gains an enhanced Basic Attack for 2s (capped at 4s).\nEnhanced Basic Attack: Aulus raises his axe and slams it into the ground, dealing 135 (+15*Hero Level) (+75% Total Physical Attack) Physical Damage to enemies in a line and recovering 30 (+15% Total Physical Attack) HP. Enemies hit are slowed by 10% for 1s. Aulus also gains 0.5 Attack Range and 20 (+2*Hero Level)% Attack Speed for 1s.\nEnhanced Basic Attack deals 270 (+30*Hero Level) (+75% Total Physical Attack) Physical Damage to creeps.",
+        "description": "Whenever Aulus deals skill damage to a unit, he gains an enhanced Basic Attack for 2s (capped at 4s).\nEnhanced Basic Attack: Aulus raises his axe and slams it into the ground, dealing 120 (+12*Hero Level) (+75% Total Physical Attack) Physical Damage to enemies in a line and recovering 15 (+20% Total Physical Attack) HP. Enemies hit are slowed by 10% for 1s. Aulus also gains 0.5 Attack Range and 20 (+2*Hero Level)% Attack Speed for 1s.\nEnhanced Basic Attack deals 270 (+30*Hero Level) (+75% Total Physical Attack) Physical Damage to creeps.",
         "tags": [
           "Buff"
         ]
@@ -8849,7 +8959,7 @@
         "name": "Aulus, Charge!",
         "type": "active",
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_e59b01cde830c737ad24c462840c73dd.png",
-        "cooldown": "14.0",
+        "cooldown": "15.0",
         "resource_cost": "null",
         "description": "Aulus starts accumulating Fighting Spirit, removes all slow effects, and gains 30% extra Movement Speed for 5s.\n\nIf Aulus does not take high-level control effects within 2s, he will enter the Enraged state and gain Control Immunity.",
         "tags": [
@@ -8877,7 +8987,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_3df0c4668657ef5cdaec0ebbd529772f.png",
         "cooldown": "50.0",
         "resource_cost": "null",
-        "description": "Aulus repeatedly swings his axe at nearby enemies, dealing 110 (+60% Total Physical Attack) Physical Damage each time. After 4 strikes, Aulus briefly charges before unleashing a wider slash, dealing 330 (+180% Total Physical Attack) Physical Damage to enemies in a large area.\n\nDuring this skill, Aulus gains 20% Damage Reduction and a short burst of Movement Speed with each slash.",
+        "description": "Aulus repeatedly swings his axe at nearby enemies, dealing 150-230 (+60% Total Physical Attack) Physical Damage for the first four strikes. After 4 strikes, Aulus briefly charges before unleashing a wider slash, dealing 450-690 (+180% Total Physical Attack) Physical Damage to enemies in a large area.\n\nDuring this skill, Aulus gains 20% Damage Reduction and a short burst of Movement Speed with each slash.",
         "tags": [
           "Burst"
         ]
@@ -8891,7 +9001,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.16a",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Fighting Spirit enhanced Basic Attack 135 (+15*Hero Level) -> 120 (+12*Hero Level); HP recovery 30 (+15% Total Physical Attack) -> 15 (+20% Total Physical Attack)",
+          "Aulus, Charge! cooldown 14s -> 15s",
+          "Undying Fury first four strikes 110-270 -> 150-230; final slash 330-810 -> 450-690"
+        ]
+      }
+    ]
   },
   {
     "id": "109",
@@ -9432,7 +9555,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_53a9a675ae08ad46997b51645b3972e8.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "When Xavier's skills hit enemy heroes, he gains 50% Movement Speed for 1.2s (decays over time) and 1 energy charge. At 3 charges, his next skill triggers the Transcendence state.\n\nTranscendence: In this state, Xavier's Skills 1 and 2 have their cooldowns reduced by 4s, and his Ultimate by 36s. Transcendence lasts 5s and can be extended by 1s each time his skills hit enemies.",
+        "description": "When Xavier's skills hit enemy heroes, he gains 60% Movement Speed for 1.2s (decays over time) and 1 energy charge. At 3 charges, his next skill triggers the Transcendence state.\n\nTranscendence: In this state, Xavier's Skills 1 and 2 have their cooldowns reduced by 4s, and his Ultimate by 36s. Transcendence lasts 5s and can be extended by 1s each time his skills hit enemies.",
         "tags": [
           "CC",
           "Damage"
@@ -9458,7 +9581,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_328458b4a72433c00a3eca893c267366.png",
         "cooldown": "13.0",
         "resource_cost": "80",
-        "description": "Xavier summons a Mystic Barrier that lasts 5s. Enemies touching the Barrier take 220 (+65% Total Magic Power) Magic Damage and are slowed by 50%, while allies gain 50% extra Movement Speed (decays over 1.2s).\n\nWhen hit by Xavier's other skills, the Barrier expands into a Mystic Field for 3s, dealing 220 (+65% Total Magic Power) Magic Damage to enemies within and immobilizing them for 0.8s.",
+        "description": "Xavier summons a Mystic Barrier that lasts 5s. Enemies touching the Barrier are slowed by 50%, while allies gain 50% extra Movement Speed (decays over 1.2s).\n\nWhen hit by Xavier's other skills, the Barrier expands into a Mystic Field for 3s, dealing 440-690 (+130% Total Magic Power) Magic Damage to enemies within and immobilizing them for 0.8s.",
         "tags": [
           "AOE"
         ]
@@ -9485,7 +9608,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Transcendence movement-speed bonus 50% -> 60%",
+          "Mystic Barrier direct damage removed",
+          "Mystic Field damage 220-345 (+65% Total Magic Power) -> 440-690 (+130% Total Magic Power)"
+        ]
+      }
+    ]
   },
   {
     "id": "116",
@@ -10434,7 +10570,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_2a67de9ff7e731d6a5e6c6746b9971af.png",
         "cooldown": "5.5",
         "resource_cost": "null",
-        "description": "Passive: Basic Attacks grant Vigor (up to 2 stacks), each stack lasting 4s. Vigor enhances Flash Combo.\nLukas consumes all Vigor to unleash Pulverize, dealing 280 (+120% Total Physical Attack) Physical Damage and recovering 6% of his when hitting a hero or minion.\n1 Stack: Lukas briefly stuns the target and spins his tonfa hammers to deal 80 (+45% Total Physical Attack) Physical Damage 3 times, pulling the enemy toward him.\n2 Stacks: Lukas briefly stuns the target, then delivers 2 attacks dealing 50 (+20% Total Physical Attack) Physical Damage each. Afterward, he spins his tonfa hammers, dealing 80 (+45% Total Physical Attack) Physical Damage 3 times while gaining Control Immunity for the duration.",
+        "description": "Passive: Basic Attacks grant Vigor (up to 2 stacks), each stack lasting 4s. Vigor enhances Flash Combo.\nLukas consumes all Vigor to unleash Pulverize, dealing 400-800 (+60% Total Physical Attack) Physical Damage and recovering 8% of his when hitting a hero or minion.\n1 Stack: Lukas briefly stuns the target and spins his tonfa hammers to deal 95-235 (+25% Total Physical Attack) Physical Damage 3 times, pulling the enemy toward him.\n2 Stacks: Lukas briefly stuns the target, then delivers 2 attacks dealing 50 (+20% Total Physical Attack) Physical Damage each. Afterward, he spins his tonfa hammers, dealing 95-235 (+25% Total Physical Attack) Physical Damage 3 times while gaining Control Immunity for the duration.",
         "tags": [
           "Damage",
           "CC"
@@ -10473,7 +10609,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_31b3aadc6fbf508e4782bc8c36df3008.png",
         "cooldown": "5.5",
         "resource_cost": "null",
-        "description": "Passive: Basic Attacks grant Vigor (up to 2 stacks), each stack lasting 4s. Vigor enhances Flash Combo.\nLukas consumes all Vigor to unleash a tail swing, dealing 280 (+120% Total Physical Attack) Physical Damage and recovering 6% of his when hitting a hero.\n1 Stack: Lukas briefly stuns the target and pounces, dealing 80 (+45% Total Physical Attack) Physical Damage 3 times and knocking the enemy back.\n2 Stacks: Lukas briefly stuns the target and leaps, dealing 50 (+20% Total Physical Attack) Physical Damage 2 times. Afterward, he summons sacred lightning, dealing 80 (+45% Total Physical Attack) Physical Damage 3 times while gaining Control Immunity for the duration.",
+        "description": "Passive: Basic Attacks grant Vigor (up to 2 stacks), each stack lasting 4s. Vigor enhances Flash Combo.\nLukas consumes all Vigor to unleash a tail swing, dealing 400-800 (+60% Total Physical Attack) Physical Damage and recovering 8% of his when hitting a hero.\n1 Stack: Lukas briefly stuns the target and pounces, dealing 95-235 (+25% Total Physical Attack) Physical Damage 3 times and knocking the enemy back.\n2 Stacks: Lukas briefly stuns the target and leaps, dealing 50 (+20% Total Physical Attack) Physical Damage 2 times. Afterward, he summons sacred lightning, dealing 95-235 (+25% Total Physical Attack) Physical Damage 3 times while gaining Control Immunity for the duration.",
         "tags": [
           "Damage",
           "CC"
@@ -10513,7 +10649,20 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Flash Combo Pulverize 280-580 (+120% Total Physical Attack) -> 400-800 (+60% Total Physical Attack)",
+          "Flash Combo Spin 80-180 (+45% Total Physical Attack) -> 95-235 (+25% Total Physical Attack)",
+          "Flash Combo HP recovery 6% -> 8%"
+        ]
+      }
+    ]
   },
   {
     "id": "128",
@@ -10538,7 +10687,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1d60372b6081b1d9aa2493a6939d38a1.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "After casting a skill, Kalea creates a Water Zone on the ground. When Kalea casts a skill within this zone, she absorbs it to enhance her next 3 Basic Attacks with different effects:\nFirst Basic Attack: Kalea dashes to the target, dealing (+100% Total Physical Attack) Physical Damage.\nSecond Basic Attack: Kalea unleashes a flurry of attacks, dealing 140 (+8*Hero Level) (+100% Total Physical Attack) Physical Damage and recovering (+12% Max HP) (+80% Total Magic Power) HP to herself and the nearby ally with the lowest HP.\nThird Basic Attack: Kalea strikes around the target with her tail, dealing 70 (+4*Hero Level) (+100% Total Physical Attack) Physical Damage and creating a new Water Zone.\nEnhanced Basic Attacks are not affected by Attack Speed.\nControl effects can affect Kalea during the third Enhanced Basic Attack, but cannot interrupt it.",
+        "description": "After casting a skill, Kalea creates a Water Zone on the ground. When Kalea casts a skill within this zone, she absorbs it to enhance her next 3 Basic Attacks with different effects:\nFirst Basic Attack: Kalea dashes to the target, dealing (+100% Total Physical Attack) Physical Damage.\nSecond Basic Attack: Kalea unleashes a flurry of attacks, dealing 140 (+8*Hero Level) (+100% Total Physical Attack) Physical Damage and recovering (+12% Max HP) (+80% Total Magic Power) HP to herself and the nearby ally with the lowest HP.\nThird Basic Attack: Kalea strikes around the target with her tail, dealing 120 (+12*Hero Level) (+100% Total Physical Attack) Physical Damage and creating a new Water Zone.\nEnhanced Basic Attacks are not affected by Attack Speed.\nControl effects can affect Kalea during the third Enhanced Basic Attack, but cannot interrupt it.",
         "tags": [
           "Buff"
         ]
@@ -10575,7 +10724,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_ff24a8b43cd23f1be612856e11e8e761.png",
         "cooldown": "56.0",
         "resource_cost": "null",
-        "description": "Kalea grabs an enemy hero with her tail and slams them down in the Joystick's direction (drag the Joystick to change landing spot). She gains Control Immunity during this process. Upon landing, deals 300 (+8% Max HP) Physical Damage to the target and nearby enemies.",
+        "description": "Kalea grabs an enemy hero with her tail and slams them down in the Joystick's direction (drag the Joystick to change landing spot). She gains Control Immunity during this process. Upon landing, deals 300 (+14% Max HP) Physical Damage to the target and nearby enemies.",
         "tags": [
           "CC"
         ]
@@ -10589,7 +10738,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.16a",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Surge of Life enhanced third Basic Attack 70 (+4*Hero Level) -> 120 (+12*Hero Level)",
+          "Tidal Strike Max HP damage bonus 8% -> 14%"
+        ]
+      }
+    ]
   },
   {
     "id": "129",
@@ -11006,7 +11167,7 @@
         "name": "Meisen-e",
         "type": "active",
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_e474b986578e520c42bef6d49e5509cb.png",
-        "cooldown": "9.0",
+        "cooldown": "10.0",
         "resource_cost": "null",
         "description": "Hirara rides the waves using Meisen-e, performing up to two joystick dashes (the first dash goes in her facing direction). She deals 150 (+50% Extra Physical Attack) Physical Damage to enemies hit.",
         "tags": [
@@ -11020,7 +11181,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_14b0cce85253b33fb3d1bd1e21a09d9f.png",
         "cooldown": "5.0",
         "resource_cost": "null",
-        "description": "Hirara uses Kaerazu to unleash the Crimson Maple, dealing 150 (+65% Extra Physical Attack) Physical Damage to enemies in a fan-shaped area.\n\nAfter a short delay, she deals damage again at the target location, dealing 2 times the initial Crimson Maple damage.",
+        "description": "Hirara uses Kaerazu to unleash the Crimson Maple, dealing 165 (+42%-70% Extra Physical Attack) Physical Damage to enemies in a fan-shaped area.\n\nAfter a short delay, she deals damage again at the target location, dealing 2 times the initial Crimson Maple damage.",
         "tags": [
           "AOE"
         ]
@@ -11060,6 +11221,18 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.16a",
+        "verified_against": "Original Server patch notes mirrored by community source",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.16a",
+        "applied_at": "2026-11-14",
+        "changes": [
+          "Meisen-e cooldown 9-5.5s -> 10-6.5s; stored first-rank cooldown 10s",
+          "Kaerazu damage 150-255 (+65% Extra Physical Attack) -> 165-270 (+42%-70% Extra Physical Attack)"
+        ]
+      }
+    ]
   }
 ]
