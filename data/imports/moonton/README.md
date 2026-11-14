@@ -24,3 +24,16 @@ Important:
 - Hero IDs are matched first; normalized names are a fallback only and require review.
 - A mismatch can mean a rename, grouping difference, revamp, or stale source. It is not automatically a correction.
 - Do not publish raw Moonton snapshots or game assets until their applicable terms are reviewed.
+
+
+## Run it from a phone with GitHub Actions
+
+A manual workflow was added at `.github/workflows/fetch-skill-sources.yml`. You do not need to install Python:
+
+1. Open the Atlas repository on GitHub.
+2. Open **Actions**.
+3. Select **Fetch and compare skill sources**.
+4. Tap **Run workflow** and confirm.
+5. When the run finishes, open its **Artifacts** section and download the comparison report.
+
+The workflow does not commit or publish the raw Moonton snapshot. It uploads only the compact comparison report (hero/skill names and counts) for 14 days. If the endpoint rejects the request or has changed, the run will fail and its log will show the error; no empty snapshot is treated as success.
