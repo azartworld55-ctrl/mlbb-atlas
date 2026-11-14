@@ -46,7 +46,9 @@ Run tests with `pytest`.
 - `GET /api/v1/heroes/{hero_id}`
 - `GET /api/v1/items` and `GET /api/v1/items/{item_id}`
 - `GET /api/v1/emblems`
-- `GET /api/v1/spells`\n- `GET /api/v1/skill-versions` — filter patch-scoped skill parameters by hero, skill, patch, channel or verification status\n- `GET /api/v1/skill-versions/{record_id}` — retrieve one exact versioned record
+- `GET /api/v1/spells`
+- `GET /api/v1/skill-versions` — filter patch-scoped skill parameters by hero, skill, patch, channel or verification status
+- `GET /api/v1/skill-versions/{record_id}` — retrieve one exact versioned record
 - `POST /api/v1/calculator/evaluate` — evaluates a caller-supplied JSON formula without assuming unverified in-game mechanics
 
 The initial import currently contains 133 heroes, 89 items and 7 emblems. Battle spells remain empty until a suitable source is reviewed. The website includes a patch-scoped skill-parameter browser. Published endpoints are displayed as endpoints, not expanded into invented rank values. The calculator currently provides a formula sandbox only; it is not yet a verified in-game damage simulator. Imported values are labelled `reported`, not independently verified.
