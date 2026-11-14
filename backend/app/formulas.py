@@ -39,7 +39,7 @@ def evaluate_expression(expression: Mapping[str, Any], stats: Mapping[str, float
 
     operation = expression["op"]
     args = expression["args"]
-    if operation not in _ALLOWED_OPERATIONS or not isinstance(args, list) or len(args) < 2:
+    if not isinstance(operation, str) or operation not in _ALLOWED_OPERATIONS or not isinstance(args, list) or len(args) < 2:
         raise ValueError("Unsupported operation or invalid argument list")
 
     values = [evaluate_expression(arg, stats) for arg in args]
