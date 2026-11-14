@@ -92,6 +92,27 @@ def validate_skill_version_records(records: object) -> list[str]:
     return errors
 
 
+
+def validate_provenance(provenance: object, label: str) -> list[str]:
+    """Validate provenance metadata, requiring blob SHAs only for Git-hosted files."""
+    errors: list[str] = []
+    if not isinstance(provenance, dict):
+        return [f"{label}: provenance must be an object"]
+
+    for required in ("source", "source_repository", "source_revision", "retrieved_at", "confidence"):
+        if not provenance.get(required):
+            errors.append(f"{label}: provenance missing {required!r}")
+
+    source_url = str(provenance.get("source", ""))
+    if "github.com/" in source_url or "gitlab.com/" in source_url:
+        if not provenance.get("source_commit_blob_sha"):
+            errors.append(f"{label}: Git provenance missing 'source_commit_blob_sha'")
+
+    if provenance.get("confidence") not in {"verified", "reported", "experimental"}:
+        errors.append(f"{label}: invalid confidence label")
+    return errors
+
+
 def main() -> int:
     for collection in COLLECTIONS:
         path = ROOT / "data" / collection / "current.json"
@@ -123,18 +144,7 @@ def main() -> int:
             if not isinstance(provenance, dict):
                 fail(f"{label}: provenance must be an object")
                 continue
-            for required in ("source", "source_repository", "source_revision", "retrieved_at", "confidence"):
-                if not provenance.get(required):
-                    fail(f"{label}: provenance missing {required!r}")
-            # A Git blob SHA exists only for files stored in a Git repository.
-            # Web pages (for example Liquipedia and METAMMO) are identified by
-            # their URL and retrieval metadata instead; do not invent a SHA.
-            source_url = str(provenance.get("source", ""))
-            if "github.com/" in source_url or "gitlab.com/" in source_url:
-                if not provenance.get("source_commit_blob_sha"):
-                    fail(f"{label}: Git provenance missing 'source_commit_blob_sha'")
-            if provenance.get("confidence") not in {"verified", "reported", "experimental"}:
-                fail(f"{label}: invalid confidence label")
+            ERRORS.extend(validate_provenance(provenance, label))
             if collection == "heroes" and not isinstance(record.get("skills"), list):
                 fail(f"{label}: skills must be an array")
             if collection == "items" and not isinstance(record.get("modifiers"), list):
