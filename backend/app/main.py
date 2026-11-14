@@ -132,3 +132,46 @@ def spells(search: str | None = Query(default=None, min_length=1, max_length=80)
         needle = search.casefold()
         records = [r for r in records if needle in r.get("name", "").casefold()]
     return {"count": len(records), "data": records}
+
+
+@app.get("/api/v1/skill-versions", tags=["skills"])
+def skill_versions(
+    hero_id: str | None = Query(default=None, min_length=1, max_length=80),
+    skill_id: str | None = Query(default=None, min_length=1, max_length=100),
+    patch: str | None = Query(default=None, min_length=1, max_length=40),
+    channel: str | None = Query(default=None, min_length=1, max_length=40),
+    verification_status: str | None = Query(default=None, min_length=1, max_length=40),
+):
+    """Return patch-scoped skill parameters without inventing missing rank values."""
+    path = ROOT / "data" / "skill_versions" / "current.json"
+    if not path.exists():
+        return {"count": 0, "data": []}
+    import json
+
+    with path.open("r", encoding="utf-8") as stream:
+        records = json.load(stream)
+    if not isinstance(records, list):
+        raise HTTPException(status_code=500, detail="Skill version dataset must be a JSON array")
+
+    if hero_id:
+        records = [r for r in records if r.get("hero_id", "").casefold() == hero_id.casefold()]
+    if skill_id:
+        records = [r for r in records if r.get("skill_id", "").casefold() == skill_id.casefold()]
+    if patch:
+        records = [r for r in records if r.get("patch", {}).get("version", "").casefold() == patch.casefold()]
+    if channel:
+        records = [r for r in records if r.get("patch", {}).get("channel", "").casefold() == channel.casefold()]
+    if verification_status:
+        records = [r for r in records if r.get("verification", {}).get("status", "").casefold() == verification_status.casefold()]
+    records.sort(key=lambda r: (r.get("hero_id", ""), r.get("skill_id", ""), r.get("patch", {}).get("effective_from", "")))
+    return {"count": len(records), "data": records}
+
+
+@app.get("/api/v1/skill-versions/{record_id}", tags=["skills"])
+def skill_version_detail(record_id: str):
+    """Return one exact patch-scoped skill record."""
+    result = skill_versions()
+    for record in result["data"]:
+        if record.get("record_id") == record_id:
+            return record
+    raise HTTPException(status_code=404, detail="Skill version record not found")
