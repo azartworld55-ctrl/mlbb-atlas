@@ -113,8 +113,8 @@ def numeric_tokens(value: Any) -> list[str]:
     """Return numeric literals only; do not republish source descriptions."""
     if not isinstance(value, str):
         return []
-    tokens = re.findall(r"(?<![A-Za-z])\\d+(?:\\.\\d+)?\\s*(?:%|s|ms|x)?", value, flags=re.I)
-    return list(dict.fromkeys(re.sub(r"\\s+", "", token) for token in tokens))
+    tokens = re.findall(r"(?<![A-Za-z])\d+(?:\.\d+)?\s*(?:%|s|ms|x)?", value, flags=re.I)
+    return list(dict.fromkeys(re.sub(r"\s+", "", token) for token in tokens))
 
 
 def compare_moonton(atlas: list[dict[str, Any]], snapshot: dict[str, Any]) -> dict[str, Any]:
