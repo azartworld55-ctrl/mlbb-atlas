@@ -123,10 +123,16 @@ def main() -> int:
             if not isinstance(provenance, dict):
                 fail(f"{label}: provenance must be an object")
                 continue
-            for required in ("source", "source_repository", "source_commit_blob_sha",
-                             "source_revision", "retrieved_at", "confidence"):
+            for required in ("source", "source_repository", "source_revision", "retrieved_at", "confidence"):
                 if not provenance.get(required):
                     fail(f"{label}: provenance missing {required!r}")
+            # A Git blob SHA exists only for files stored in a Git repository.
+            # Web pages (for example Liquipedia and METAMMO) are identified by
+            # their URL and retrieval metadata instead; do not invent a SHA.
+            source_url = str(provenance.get("source", ""))
+            if "github.com/" in source_url or "gitlab.com/" in source_url:
+                if not provenance.get("source_commit_blob_sha"):
+                    fail(f"{label}: Git provenance missing 'source_commit_blob_sha'")
             if provenance.get("confidence") not in {"verified", "reported", "experimental"}:
                 fail(f"{label}: invalid confidence label")
             if collection == "heroes" and not isinstance(record.get("skills"), list):
