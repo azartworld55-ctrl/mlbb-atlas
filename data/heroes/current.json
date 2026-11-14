@@ -4782,7 +4782,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "community-reposted Original Server patch notes; not independently verified in-game",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "corroborating_source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "applied_at": "2026-11-15",
+        "changes": [
+          "Basic Attack splash damage type changed to Magic Damage. The current Atlas description already labels the represented Basic Attack damage as Magic; no unsupported numeric change was added."
+        ]
+      }
+    ]
   },
   {
     "id": "60",
@@ -5013,7 +5025,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "community-reposted Original Server patch notes; not independently verified in-game",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "corroborating_source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "applied_at": "2026-11-15",
+        "changes": [
+          "Soaring state turning speed increased; enhanced Basic Attacks and Skill 2 hits on minions extend Soaring duration; Divine Binding delay slightly increased and Control Immunity no longer avoids its area restriction when it takes effect. No exact numeric values were published."
+        ]
+      }
+    ]
   },
   {
     "id": "63",
@@ -7167,7 +7191,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_6542c500aa72062c01ec90a3228e83bf.png",
         "cooldown": "null",
         "resource_cost": "null",
-        "description": "Bear's Blessing: Masha has 3 HP bars, each inheriting 50% of her Equipment HP bonuses. When an HP bar is depleted, she removes control effects and blocks damage once. She gains Feral by dealing damage to enemy heroes or creeps. Feral converts into HP after leaving combat.\nPower of Wildness: After Masha's skills deal damage to an enemy hero, she leaves a Wound in a random direction. Her Basic Attacks can break the Wound and cause her to enter the Feral state.\nFeral: Masha gains 15 (+1*Hero Level)% Resilience, Attack Speed, and Movement Speed. Her next 3 Basic Attacks become fan-shaped claw strikes, dealing 3 (+2% Extra Physical Attack) (+0.2*Hero Level)% extra Physical Damage to enemies in the area (extra damage does not apply to Turrets) and recovering 4 (+0.4*Hero Level)% HP. It lasts 3s.\n[C8Breaking a Wound again during the Feral state will refresh its duration. Up to 6 claw strikes can be stored.]",
+        "description": "Bear's Blessing: Masha has 3 HP bars, each inheriting 50% of her Equipment HP bonuses. When an HP bar is depleted, she removes control effects and blocks damage once. She gains Feral by dealing damage to enemy heroes or creeps. Feral converts into HP after leaving combat.\nPower of Wildness: After Masha's skills deal damage to an enemy hero, she leaves a Wound in a random direction. Her Basic Attacks can break the Wound and cause her to enter the Feral state.\nFeral: Masha gains 15 (+1*Hero Level)% Resilience, Attack Speed, and Movement Speed. Her next 3 Basic Attacks become fan-shaped claw strikes, dealing 2 (+0.5% Extra Physical Attack) (+0.2*Hero Level)% extra Physical Damage to enemies in the area (extra damage does not apply to Turrets) and recovering 3%-6% Max HP. It lasts 3s.\n[C8Breaking a Wound again during the Feral state will refresh its duration. Up to 6 claw strikes can be stored.]",
         "tags": [
           "Buff"
         ]
@@ -7192,7 +7216,7 @@
         "icon_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_b137533c0a7e40fb4759d2b68ffbc230.png",
         "cooldown": "9.0",
         "resource_cost": "null",
-        "description": "Masha dashes in the target direction, dealing 60-240 (+40% Extra Physical Attack) Physical Damage.\n[C8Whenever an HP bar is depleted, the cooldown of Claw Strike resets.]",
+        "description": "Masha dashes in the target direction, dealing 60-240 (+40% Extra Physical Attack) Physical Damage.\n[C8Whenever an HP bar is depleted, the cooldown of Claw Strike resets.]\nHitting an enemy hero slows them by 50% for 1s. Its path width is reduced by 20%.",
         "tags": [
           "Mobility",
           "Damage"
@@ -7225,11 +7249,14 @@
         "patch_version": "2.2.23",
         "verified_against": "Original Server patch notes mirrored by community source",
         "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
-        "applied_at": "2026-11-14",
+        "applied_at": "2026-11-15",
         "changes": [
           "Feral Swipe damage bonus 70% -> 55%; hero-hit slow removed; minion damage multiplier updated to 150%-200%",
-          "Claw Strike damage 120-240 (+80% Extra Physical Attack) -> 60-240 (+40% Extra Physical Attack)"
-        ]
+          "Claw Strike damage 120-240 (+80% Extra Physical Attack) -> 60-240 (+40% Extra Physical Attack)",
+          "Primal Pact claw-strike bonus damage: (3 + 2% Extra Physical Attack + 0.2 × Hero Level)% -> (2 + 0.5% Extra Physical Attack + 0.2 × Hero Level)% Max HP; Feral-state HP Regen: 4%-10% -> 3%-6% Max HP",
+          "Claw Strike now slows enemy heroes hit by 50% for 1s; path width reduced by 20%"
+        ],
+        "corroborating_source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/"
       }
     ]
   },
@@ -9530,7 +9557,19 @@
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
       "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
-    }
+    },
+    "patch_updates": [
+      {
+        "patch_version": "2.2.23",
+        "verified_against": "community-reposted Original Server patch notes; not independently verified in-game",
+        "source_url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+        "corroborating_source_url": "https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/",
+        "applied_at": "2026-11-15",
+        "changes": [
+          "Eyes on You!: Muddles Damage Transfer and Attack Effect Inheritance Ratio changed from 52% at all levels to 50%-60%; only range endpoints are recorded, not intermediate ranks."
+        ]
+      }
+    ]
   },
   {
     "id": "115",
