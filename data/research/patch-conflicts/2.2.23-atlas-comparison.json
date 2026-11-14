@@ -1,0 +1,149 @@
+{
+  "patch": "2.2.23",
+  "channel": "original_server",
+  "compared_at": "2026-11-14",
+  "atlas_source_revision": "20260929",
+  "atlas_source_repository": "p3hndrx/MLBB-API",
+  "patch_reference": "../patches/2.2.23.json",
+  "overall_status": "partial_comparison_conflicts_found",
+  "method": "Compared Atlas skill descriptions for all 14 heroes named by the 2.2.23 community patch references against the reported patch changes. This is a text-level comparison, not a live-client verification.",
+  "results": [
+    {
+      "hero_id": "popol-and-kupa",
+      "status": "confirmed_stale_conflict",
+      "details": [
+        "Atlas snapshot describes the pre-revamp kit: Kupa revive channel, old passive/skill damage and 12-second ultimate. Patch 2.2.23 reports a revamped kit and 9-second Enraged state. Replace only after confirming full new skill values."
+      ],
+      "action": "Create a new 2.2.23 skill snapshot; preserve old snapshot."
+    },
+    {
+      "hero_id": "xavier",
+      "status": "confirmed_numeric_conflict",
+      "details": [
+        "Atlas says Mystic Barrier contact damage is 220 + 65% Total Magic Power and Mystic Field damage is also 220 + 65%. Patch report says Barrier direct damage was removed and Mystic Field changed to 440-690 + 130% Total Magic Power."
+      ],
+      "action": "Mark old values superseded for 2.2.23; record new reported values pending live-client confirmation."
+    },
+    {
+      "hero_id": "lunox",
+      "status": "confirmed_numeric_and_mechanics_conflict",
+      "details": [
+        "Atlas passive still uses the old Spell Vamp/Magic Penetration conversion description. Patch report adds immediate 10% Spell Vamp or 10% Magic Penetration on switching balance.",
+        "Atlas Chaos Assault text has 2.5% target-HP extra damage; patch report changes extra percentage damage from 2.5%-5% to 3.5%-5%.",
+        "Atlas Chaos ultimate text is 250-450 + 100% Total Magic Power; patch report gives 150-300 + 135% Total Magic Power."
+      ],
+      "action": "Split passive, Chaos Skill 2 and Chaos Ultimate into separate patch-scoped parameters."
+    },
+    {
+      "hero_id": "freya",
+      "status": "needs_numeric_review",
+      "details": [
+        "Atlas contains a skill snapshot, but the patch references reviewed here only summarize a buff outside Ultimate and reduced Ultimate availability; exact values were not captured in the available structured excerpt."
+      ],
+      "action": "Do not edit numbers yet; obtain detailed patch text or live-client test."
+    },
+    {
+      "hero_id": "gloo",
+      "status": "needs_numeric_review",
+      "details": [
+        "Patch references identify a nerf, but the exact skill-level numerical deltas were not available in the structured excerpt used for this comparison."
+      ],
+      "action": "Flag for detailed patch-note lookup."
+    },
+    {
+      "hero_id": "masha",
+      "status": "confirmed_numeric_and_mechanics_conflict",
+      "details": [
+        "Passive extra Physical Damage in Atlas: (3 + 2% Extra Physical Attack + 0.2 × Hero Level)% in the claw-strike text; patch report gives (2 + 0.5% Extra Physical Attack + 0.2 × Hero Level)% Max HP.",
+        "Atlas Feral Swipe still says 50% slow on hero hit; patch report says that slow was removed and moved to Skill 2.",
+        "Atlas Feral Swipe damage bonus is 70%; patch report changes it to 55%.",
+        "Atlas Claw Strike is 120 + 80% Extra Physical Attack; patch report changes it to 60-240 + 40% Extra Physical Attack."
+      ],
+      "action": "Create a new patch snapshot; preserve the old Masha values."
+    },
+    {
+      "hero_id": "lukas",
+      "status": "confirmed_numeric_conflict",
+      "details": [
+        "Atlas Flash Combo still reports Pulverize 280 + 120% Total Physical Attack and spin damage 80 + 45% Total Physical Attack. Patch report gives Pulverize 400-800 + 60% Total Physical Attack and Spin 95-235 + 25% Total Physical Attack."
+      ],
+      "action": "Split Pulverize and Spin into level-indexed parameters for patch 2.2.23."
+    },
+    {
+      "hero_id": "aldous",
+      "status": "needs_numeric_review",
+      "details": [
+        "Patch references report a buff to late-game Damage Reduction, but the exact new values were not present in the structured excerpt used here."
+      ],
+      "action": "Keep current values reported; seek exact patch text."
+    },
+    {
+      "hero_id": "atlas",
+      "status": "needs_numeric_review",
+      "details": [
+        "Patch references report shorter Frigid Breath duration and longer freeze cooldown, plus increased defense bonuses. Exact numerical values were not available in the structured excerpt."
+      ],
+      "action": "Keep current values reported; seek exact patch text."
+    },
+    {
+      "hero_id": "karrie",
+      "status": "needs_numeric_review",
+      "details": [
+        "Patch references report Ultimate combat improvements and Skill 1 damage/slow changes, but the exact numerical deltas were not present in the structured excerpt."
+      ],
+      "action": "Review full patch details before changing the record."
+    },
+    {
+      "hero_id": "kaja",
+      "status": "needs_numeric_review",
+      "details": [
+        "Patch references report Ultimate counterplay timing changes and Soaring-state/mobility improvements, but exact values were not present in the structured excerpt."
+      ],
+      "action": "Review full patch details before changing the record."
+    },
+    {
+      "hero_id": "kagura",
+      "status": "no_numeric_change_reported",
+      "details": [
+        "Patch references describe an optimized visual indicator for maximum umbrella separation; no skill numeric change is reported in the consulted notes."
+      ],
+      "action": "Retain values unless live-client verification finds a mechanics change."
+    },
+    {
+      "hero_id": "uranus",
+      "status": "possible_damage_type_conflict",
+      "details": [
+        "Patch report says Basic Attack splash damage changed to Magic Damage. Atlas passive text already describes Uranus Basic Attack damage as Magic Damage, but does not isolate the splash component; this is not enough to confirm the affected component is correctly represented."
+      ],
+      "action": "Clarify the exact splash component and preserve the distinction from the base attack."
+    },
+    {
+      "hero_id": "melissa",
+      "status": "missing_parameter_not_direct_conflict",
+      "details": [
+        "Patch report changes Muddles damage transfer and Attack Effect Inheritance from 52% fixed to 50%-60%. Atlas skill description does not expose these ratios as structured parameters."
+      ],
+      "action": "Add explicit level-indexed transfer and inheritance parameters after checking the level mapping."
+    }
+  ],
+  "confidence": "reported",
+  "sources": [
+    {
+      "url": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+      "type": "community_patch_notes"
+    },
+    {
+      "url": "https://mlbb.tools/patch-notes/2.2.23",
+      "type": "community_structured_patch_notes"
+    },
+    {
+      "url": "https://mlbbhub.com/patch-notes/original/2.2.23",
+      "type": "community_patch_notes"
+    },
+    {
+      "url": "https://github.com/p3hndrx/MLBB-API",
+      "type": "upstream_atlas_seed"
+    }
+  ],
+  "caveat": "No values in this report are marked verified. The patch sources are community references, not an official Moonton publication. The existing Atlas seed has source revision 20260929 and is not assumed current."
+}
