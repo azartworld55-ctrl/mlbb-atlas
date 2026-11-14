@@ -47,8 +47,9 @@ Run tests with `pytest`.
 - `GET /api/v1/items` and `GET /api/v1/items/{item_id}`
 - `GET /api/v1/emblems`
 - `GET /api/v1/spells`
+- `POST /api/v1/calculator/evaluate` — evaluates a caller-supplied JSON formula without assuming unverified in-game mechanics
 
-The initial import currently contains 133 heroes, 89 items and 7 emblems. Battle spells remain empty until a suitable source is reviewed. Imported values are labelled `reported`, not independently verified.
+The initial import currently contains 133 heroes, 89 items and 7 emblems. Battle spells remain empty until a suitable source is reviewed. The calculator currently provides a formula sandbox only; it is not yet a verified in-game damage simulator. Imported values are labelled `reported`, not independently verified.
 
 ## Data quality
 
