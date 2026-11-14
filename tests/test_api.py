@@ -136,3 +136,64 @@ def test_skill_version_detail():
 
 def test_unknown_skill_version_is_404():
     assert client.get("/api/v1/skill-versions/not-a-record").status_code == 404
+
+def test_matchup_preview_uses_selected_builds_and_sourced_skill_parameters():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {
+                "hero_id": "xavier",
+                "item_ids": ["a001"],
+                "emblem_id": "mage",
+                "spell_id": "flicker",
+                "buffs": {"blue": True, "red": False},
+                "total_magic_power": 100,
+            },
+            "defender": {
+                "hero_id": "miya",
+                "item_ids": ["a002"],
+                "emblem_id": "tank",
+                "spell_id": "aegis",
+                "buffs": {"blue": False, "red": True},
+                "physical_defense": 80,
+                "magic_defense": 60,
+            },
+            "skill_record_id": "xavier-xavier-3-2.2.23-original",
+            "endpoint": "high",
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["attacker"]["hero"]["slug"] == "xavier"
+    assert payload["attacker"]["items"][0]["slug"] == "berserker-s-fury"
+    assert payload["attacker"]["spell"]["slug"] == "flicker"
+    assert payload["attacker"]["buffs"] == {"blue": True, "red": False}
+    assert payload["defender"]["hero"]["slug"] == "miya"
+    assert payload["defender"]["spell"]["slug"] == "aegis"
+    assert payload["defender"]["buffs"] == {"blue": False, "red": True}
+    assert payload["damage_before_defense"] == 820
+    assert payload["skill"]["patch"]["version"] == "2.2.23"
+    assert payload["calculation_scope"] == "source_parameter_preview_before_defense"
+
+
+def test_matchup_rejects_skill_from_other_attacker():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {"hero_id": "miya"},
+            "defender": {"hero_id": "xavier"},
+            "skill_record_id": "xavier-xavier-3-2.2.23-original",
+        },
+    )
+    assert response.status_code == 422
+
+
+def test_matchup_rejects_unknown_spell():
+    response = client.post(
+        "/api/v1/calculator/matchup-preview",
+        json={
+            "attacker": {"hero_id": "miya", "spell_id": "not-a-spell"},
+            "defender": {"hero_id": "xavier"},
+        },
+    )
+    assert response.status_code == 404
