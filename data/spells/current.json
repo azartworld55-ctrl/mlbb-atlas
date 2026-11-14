@@ -48,15 +48,15 @@
     "id": "004",
     "slug": "sprint",
     "name": "Sprint",
-    "cooldown_seconds": 100,
+    "cooldown_seconds": 75,
     "summary": "Временно повышает скорость передвижения и даёт защиту от замедления.",
     "provenance": {
-      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
-      "source_repository": "METAMMO battle spell guide",
-      "source_revision": "2026-10-30",
+      "source": "https://liquipedia.net/mobilelegends/Patch_2.2.23",
+      "source_repository": "Liquipedia Mobile Legends patch archive",
+      "source_revision": "2.2.23",
       "retrieved_at": "2026-11-14",
       "confidence": "reported",
-      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+      "notes": "Cooldown updated from the Original Server 2.2.23 patch note (100s to 75s). Other spell records remain community-reported and should be checked against the in-game client."
     }
   },
   {
