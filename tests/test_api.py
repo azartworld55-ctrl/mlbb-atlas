@@ -67,3 +67,44 @@ def test_homepage_served():
     response = client.get("/")
     assert response.status_code == 200
     assert "MLBB Atlas" in response.text
+
+
+
+def test_calculator_evaluates_supplied_expression_only():
+    response = client.post(
+        "/api/v1/calculator/evaluate",
+        json={
+            "formula_id": "demo-skill",
+            "game_patch": "2.2.23",
+            "expression": {
+                "op": "add",
+                "args": [
+                    {"const": 100},
+                    {"op": "mul", "args": [{"stat": "physical_attack"}, {"const": 0.8}]},
+                ],
+            },
+            "stats": {"physical_attack": 200},
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["value"] == 260
+    assert payload["calculation_scope"] == "supplied_expression_only"
+    assert payload["confidence"] == "user_supplied_unverified"
+    assert "no in-game damage" in payload["note"]
+
+
+def test_calculator_rejects_unknown_stat():
+    response = client.post(
+        "/api/v1/calculator/evaluate",
+        json={"expression": {"stat": "unknown"}, "stats": {}},
+    )
+    assert response.status_code == 422
+
+
+def test_calculator_rejects_invalid_operation_type():
+    response = client.post(
+        "/api/v1/calculator/evaluate",
+        json={"expression": {"op": [], "args": [{"const": 1}, {"const": 2}]}, "stats": {}},
+    )
+    assert response.status_code == 422
