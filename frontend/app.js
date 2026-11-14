@@ -26,7 +26,8 @@ async function loadAtlas() {
       });
     };
 
-    render(heroes.data);\n    setupSkillVersions(heroes.data);
+    render(heroes.data);
+    setupSkillVersions(heroes.data);
     document.querySelector('#hero-search').addEventListener('input', async event => {
       const query = event.target.value;
       const result = await fetch('/api/v1/heroes' + (query ? '?search=' + encodeURIComponent(query) : '')).then(r => r.json());
@@ -304,7 +305,7 @@ async function setupMatchupCalculator() {
       }
       lines.push(payload.buff_note);
       lines.push(payload.spell_note);
-      result.textContent = lines.join('\\n');
+      result.textContent = lines.join('\n');
     } catch (error) {
       result.textContent = 'Не удалось рассчитать: ' + error.message;
     }
