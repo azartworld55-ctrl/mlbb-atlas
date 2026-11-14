@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "template",
+  "confidence": "experimental",
+  "description": "Template for collecting level-by-level skill values. No hero values are asserted by this file.",
+  "required_test_context": {
+    "game_patch": null,
+    "hero_id": null,
+    "skill_id": null,
+    "skill_level": null,
+    "hero_level": null,
+    "attacker_stats": {},
+    "target_stats": {},
+    "equipment_ids": [],
+    "emblem_setup": null,
+    "battle_spell": null,
+    "buffs_and_debuffs": [],
+    "game_mode": null,
+    "platform": null,
+    "procedure": null,
+    "evidence_reference": null
+  },
+  "measurements": [],
+  "formula": null,
+  "notes": "Keep measurements empty until values are captured in a reproducible test. Never infer level scaling from a prose skill description."
+}
