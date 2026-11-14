@@ -1,0 +1,38 @@
+name: Fetch and compare skill sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out Atlas
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch Moonton GMS skill metadata
+        run: python scripts/fetch_moonton_skills.py --output data/imports/moonton/skills-latest.json
+
+      - name: Compare Moonton and Achedon against Atlas
+        run: >-
+          python scripts/compare_skill_sources.py
+          --achedon
+          --moonton data/imports/moonton/skills-latest.json
+          --output /tmp/skill-source-comparison-live.json
+
+      - name: Publish comparison report only
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-source-comparison-${{ github.run_number }}
+          path: /tmp/skill-source-comparison-live.json
+          if-no-files-found: error
+          retention-days: 14
