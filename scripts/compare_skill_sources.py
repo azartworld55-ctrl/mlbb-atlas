@@ -246,7 +246,7 @@ def main() -> int:
         "warnings": [
             "A name/count mismatch is a review lead, not proof that either source is wrong.",
             "Achedon skill descriptions are Wiki-derived CC BY-SA; this report retains names/counts only.",
-            "No current Moonton response means Moonton comparison is pending.",
+            "Moonton metadata is a live snapshot; the endpoint does not expose a verified Original Server patch identifier.",
         ],
     }
 
