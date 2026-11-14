@@ -1,0 +1,100 @@
+{
+  "record_id": "miya-moon-blessing-unversioned-source-snapshot",
+  "hero_id": "miya",
+  "skill_id": "miya-1",
+  "skill_name": "Moon Blessing",
+  "skill_slot": "passive",
+  "description": "Each time Miya's Basic Attack hits a target, she gains Attack Speed. At maximum stacks, each Basic Attack also summons a Moonlight Shadow.",
+  "patch": {
+    "version": null,
+    "channel": "original_server",
+    "effective_from": null,
+    "effective_until": null
+  },
+  "parameters": [
+    {
+      "key": "attack_speed_per_stack",
+      "label": "Attack Speed per stack",
+      "kind": "other",
+      "unit": "%",
+      "damage_type": "none",
+      "values_by_skill_level": [5],
+      "scaling_attribute": null,
+      "scaling_basis": "none",
+      "notes": "Source text reports 5% per stack."
+    },
+    {
+      "key": "stack_duration",
+      "label": "Stack duration",
+      "kind": "duration",
+      "unit": "seconds",
+      "damage_type": "none",
+      "values_by_skill_level": [4],
+      "scaling_attribute": null,
+      "scaling_basis": "none",
+      "notes": "Source text reports 4 seconds."
+    },
+    {
+      "key": "maximum_stacks",
+      "label": "Maximum stacks",
+      "kind": "other",
+      "unit": "stacks",
+      "damage_type": "none",
+      "values_by_skill_level": [5],
+      "scaling_attribute": null,
+      "scaling_basis": "none",
+      "notes": "Source text reports a maximum of 5 stacks."
+    },
+    {
+      "key": "moonlight_shadow_base_damage",
+      "label": "Moonlight Shadow base damage",
+      "kind": "base_damage",
+      "unit": "damage",
+      "damage_type": "physical",
+      "values_by_skill_level": [25],
+      "scaling_attribute": null,
+      "scaling_basis": "none",
+      "notes": "Reported source value; patch applicability is unknown."
+    },
+    {
+      "key": "moonlight_shadow_physical_attack_scaling",
+      "label": "Moonlight Shadow Total Physical Attack scaling",
+      "kind": "scaling",
+      "unit": "%",
+      "damage_type": "physical",
+      "values_by_skill_level": [20],
+      "scaling_attribute": "Total Physical Attack",
+      "scaling_basis": "total_physical_attack",
+      "notes": "Reported source value; keep separate from base damage."
+    },
+    {
+      "key": "attack_effect_inheritance",
+      "label": "Attack Effect inheritance",
+      "kind": "other",
+      "unit": "%",
+      "damage_type": "none",
+      "values_by_skill_level": [20],
+      "scaling_attribute": null,
+      "scaling_basis": "none",
+      "notes": "Reported as 20% inheritance; exact interaction requires controlled testing."
+    }
+  ],
+  "conditions": [
+    "The Moonlight Shadow effect is described as occurring at maximum Moon Blessing stacks.",
+    "The source describes the shadow attack as occurring on each Basic Attack."
+  ],
+  "verification": {
+    "status": "reported",
+    "checked_at": "2026-11-14",
+    "notes": "Transcribed from the imported upstream skill description. Not verified against the live client. No patch version is assigned because the import revision date does not establish balance-patch applicability."
+  },
+  "sources": [
+    {
+      "source_type": "upstream_dataset",
+      "url": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/hero-meta-final.json",
+      "accessed_at": "2026-11-14",
+      "details": "Miya skill record in the imported hero dataset; see data/heroes/current.json provenance for the pinned source blob."
+    }
+  ],
+  "raw_observations": []
+}
