@@ -50,7 +50,7 @@ Collections intentionally start empty. The API does not invent missing game valu
 
 ## Data quality
 
-Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md) and [source register](data/sources/README.md).
+Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [formula format](docs/formula-format.md) and [source register](data/sources/README.md).
 
 ## Combining upstream projects
 
