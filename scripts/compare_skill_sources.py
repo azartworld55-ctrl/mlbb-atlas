@@ -117,6 +117,27 @@ def numeric_tokens(value: Any) -> list[str]:
     return list(dict.fromkeys(re.sub(r"\s+", "", token) for token in tokens))
 
 
+def parse_cooldown_cost(value: Any) -> tuple[str | None, str | None]:
+    """Parse the GMS display string into comparable cooldown and mana-cost values."""
+    if not isinstance(value, str):
+        return None, None
+    cooldown = re.search(r"\\bCD\\s*:\\s*(\\d+(?:\\.\\d+)?)", value, flags=re.I)
+    mana = re.search(r"\\bMana\\s*Cost\\s*:\\s*(\\d+(?:\\.\\d+)?)", value, flags=re.I)
+    return (
+        str(float(cooldown.group(1))).rstrip("0").rstrip(".") if cooldown else None,
+        str(float(mana.group(1))).rstrip("0").rstrip(".") if mana else None,
+    )
+
+
+def comparable_number(value: Any) -> str | None:
+    if value is None or str(value).strip().lower() in {"", "null", "none"}:
+        return None
+    try:
+        return str(float(str(value).strip())).rstrip("0").rstrip(".")
+    except ValueError:
+        return str(value).strip()
+
+
 def compare_moonton(atlas: list[dict[str, Any]], snapshot: dict[str, Any]) -> dict[str, Any]:
     source_heroes = snapshot.get("heroes")
     if not isinstance(source_heroes, list):
@@ -134,42 +155,57 @@ def compare_moonton(atlas: list[dict[str, Any]], snapshot: dict[str, Any]) -> di
             rows.append({"hero": source_hero.get("name"), "status": "hero_not_matched_to_atlas"})
             continue
         matched += 1
-        atlas_skills = atlas_hero.get("skills") if isinstance(atlas_hero.get("skills"), list) else []
-        atlas_by_name = {normalize(s.get("name")): s for s in atlas_skills if isinstance(s, dict)}
-        source_by_name = {normalize(s.get("name")): s for s in source_skills if isinstance(s, dict)}
+        atlas_skills = [s for s in (atlas_hero.get("skills") or []) if isinstance(s, dict)]
+        source_skills = [s for s in source_skills if isinstance(s, dict)]
+        atlas_by_name: dict[str, list[dict[str, Any]]] = {}
+        source_by_name: dict[str, list[dict[str, Any]]] = {}
+        for skill in atlas_skills:
+            atlas_by_name.setdefault(normalize(skill.get("name")), []).append(skill)
+        for skill in source_skills:
+            source_by_name.setdefault(normalize(skill.get("name")), []).append(skill)
         missing = sorted(set(atlas_by_name) - set(source_by_name))
         added = sorted(set(source_by_name) - set(atlas_by_name))
-        if missing or added or len(atlas_skills) != len(source_skills):
-            matched_skill_fields = []
-            for key in sorted(set(atlas_by_name) & set(source_by_name)):
-                a = atlas_by_name[key]
-                m = source_by_name[key]
-                a_nums = numeric_tokens(a.get("description"))
-                m_nums = numeric_tokens(m.get("description_clean"))
-                if (str(a.get("cooldown")) != str(m.get("cooldown_cost") or "")) or a_nums != m_nums:
-                    matched_skill_fields.append({
-                        "skill_name": a.get("name"),
-                        "atlas": {
-                            "cooldown": a.get("cooldown"),
-                            "resource_cost": a.get("resource_cost"),
-                            "description_numeric_tokens": a_nums,
-                        },
-                        "moonton": {
-                            "skill_id": m.get("skill_id"),
-                            "group": m.get("group"),
-                            "cooldown_cost": m.get("cooldown_cost"),
-                            "description_numeric_tokens": m_nums,
-                        },
-                        "review_status": "numeric_or_cooldown_difference_needs_contextual_review",
-                    })
+        matched_skill_fields = []
+        for key in sorted(set(atlas_by_name) & set(source_by_name)):
+            # Multi-form heroes may repeat a skill name across GMS groups. Do not
+            # guess which form maps to the single Atlas row.
+            if len(atlas_by_name[key]) != 1 or len(source_by_name[key]) != 1:
+                continue
+            a = atlas_by_name[key][0]
+            m = source_by_name[key][0]
+            a_nums = numeric_tokens(a.get("description"))
+            m_nums = numeric_tokens(m.get("description_clean"))
+            m_cd, m_mana = parse_cooldown_cost(m.get("cooldown_cost"))
+            a_cd = comparable_number(a.get("cooldown"))
+            a_mana = comparable_number(a.get("resource_cost"))
+            cooldown_diff = a_cd != m_cd and (a_cd is not None or m_cd is not None)
+            mana_diff = a_mana != m_mana and (a_mana is not None or m_mana is not None)
+            if cooldown_diff or mana_diff or a_nums != m_nums:
+                matched_skill_fields.append({
+                    "skill_name": a.get("name"),
+                    "atlas": {
+                        "cooldown": a.get("cooldown"),
+                        "resource_cost": a.get("resource_cost"),
+                        "description_numeric_tokens": a_nums,
+                    },
+                    "moonton": {
+                        "skill_id": m.get("skill_id"),
+                        "group": m.get("group"),
+                        "cooldown": m_cd,
+                        "resource_cost": m_mana,
+                        "description_numeric_tokens": m_nums,
+                    },
+                    "review_status": "numeric_or_cooldown_difference_needs_contextual_review",
+                })
+        if missing or added or len(atlas_skills) != len(source_skills) or matched_skill_fields:
             rows.append({
                 "hero": atlas_hero.get("name"),
                 "hero_id": source_hero.get("hero_id"),
-                "status": "skill_name_or_count_difference",
+                "status": "skill_name_count_or_field_difference",
                 "atlas_skill_count": len(atlas_skills),
                 "moonton_skill_count": len(source_skills),
-                "atlas_only_skill_names": [atlas_by_name[k].get("name") for k in missing],
-                "moonton_only_skill_names": [source_by_name[k].get("name") for k in added],
+                "atlas_only_skill_names": [atlas_by_name[k][0].get("name") for k in missing],
+                "moonton_only_skill_names": [source_by_name[k][0].get("name") for k in added],
                 "matched_skill_field_differences": matched_skill_fields,
                 "moonton_skill_catalogue": [{
                     "skill_id": s.get("skill_id"),
@@ -177,7 +213,7 @@ def compare_moonton(atlas: list[dict[str, Any]], snapshot: dict[str, Any]) -> di
                     "name": s.get("name"),
                     "cooldown_cost": s.get("cooldown_cost"),
                     "description_numeric_tokens": numeric_tokens(s.get("description_clean")),
-                } for s in source_skills if isinstance(s, dict)],
+                } for s in source_skills],
             })
     return {
         "source": "Moonton GMS",
@@ -191,7 +227,7 @@ def compare_moonton(atlas: list[dict[str, Any]], snapshot: dict[str, Any]) -> di
         "source_skill_record_count": source_skill_total,
         "heroes_with_differences": len(rows),
         "differences": rows,
-        "note": "Detailed metadata diff for conflict heroes. Descriptions are not copied; numeric tokens are extracted for review and are not interpreted as verified damage formulas.",
+        "note": "Detailed metadata diff for conflict heroes. Descriptions are not copied; numeric tokens are extracted for review and are not interpreted as verified damage formulas. Duplicate skill names across forms are not field-matched automatically.",
     }
 
 
