@@ -188,6 +188,15 @@ class MatchupSideRequest(BaseModel):
     total_hp: float = 0
     physical_defense: float = 0
     magic_defense: float = 0
+    physical_penetration_percent: float = Field(default=0, ge=0, le=100)
+    physical_penetration_flat: float = Field(default=0, ge=0)
+    magic_penetration_percent: float = Field(default=0, ge=0, le=100)
+    magic_penetration_flat: float = Field(default=0, ge=0)
+    physical_defense_reduction_percent: float = Field(default=0, ge=0, le=100)
+    physical_defense_reduction_flat: float = Field(default=0, ge=0)
+    magic_defense_reduction_percent: float = Field(default=0, ge=0, le=100)
+    magic_defense_reduction_flat: float = Field(default=0, ge=0)
+    damage_reduction_percent: float = Field(default=0, ge=0, le=100)
 
 
 class MatchupPreviewRequest(BaseModel):
@@ -195,6 +204,7 @@ class MatchupPreviewRequest(BaseModel):
     defender: MatchupSideRequest
     skill_record_id: str | None = None
     endpoint: str = "high"
+    damage_type: str = "magic"
 
 
 def _numeric_modifier(value):
@@ -260,6 +270,17 @@ def _build_side_preview(side, label):
         "buffs": {"blue": bool(side.buffs.get("blue")), "red": bool(side.buffs.get("red"))},
         "stats": totals,
         "defenses": {"physical": totals.get("physical_defense", side.physical_defense) + totals.get("hybrid_defense", 0), "magic": totals.get("magic_defense", side.magic_defense) + totals.get("hybrid_defense", 0)},
+        "mitigation_inputs": {
+            "physical_penetration_percent": side.physical_penetration_percent,
+            "physical_penetration_flat": side.physical_penetration_flat,
+            "magic_penetration_percent": side.magic_penetration_percent,
+            "magic_penetration_flat": side.magic_penetration_flat,
+            "physical_defense_reduction_percent": side.physical_defense_reduction_percent,
+            "physical_defense_reduction_flat": side.physical_defense_reduction_flat,
+            "magic_defense_reduction_percent": side.magic_defense_reduction_percent,
+            "magic_defense_reduction_flat": side.magic_defense_reduction_flat,
+            "damage_reduction_percent": side.damage_reduction_percent,
+        },
     }
 
 
@@ -273,6 +294,8 @@ def matchup_preview(payload: MatchupPreviewRequest):
     defender = _build_side_preview(payload.defender, "defender")
     damage = None
     skill = None
+    damage_after_defense = None
+    mitigation = None
     if payload.skill_record_id:
         path = ROOT / "data" / "skill_versions" / "current.json"
         import json
@@ -334,12 +357,50 @@ def matchup_preview(payload: MatchupPreviewRequest):
             "note": "This is a source-parameter preview before enemy defense, penetration, damage reduction, shields, and conditional effects. It is not a full in-game damage result.",
         }
 
+    if payload.damage_type not in {"physical", "magic", "true"}:
+        raise HTTPException(status_code=422, detail="damage_type must be physical, magic, or true")
+
+    if damage is not None:
+        if payload.damage_type == "true":
+            damage_after_defense = damage
+            mitigation = {
+                "damage_type": "true",
+                "effective_defense": 0,
+                "defense_multiplier": 1.0,
+                "damage_reduction_multiplier": 1.0,
+                "formula": "true damage bypasses defense; separate damage-reduction effects are not applied",
+            }
+        else:
+            kind = payload.damage_type
+            prefix = "physical" if kind == "physical" else "magic"
+            target_defense = defender["defenses"][kind]
+            attacker_mods = attacker["mitigation_inputs"]
+            defender_mods = defender["mitigation_inputs"]
+            reduced_defense = (target_defense - defender_mods[f"{prefix}_defense_reduction_flat"]) * (1 - defender_mods[f"{prefix}_defense_reduction_percent"] / 100)
+            effective_defense = reduced_defense * (1 - attacker_mods[f"{prefix}_penetration_percent"] / 100) - attacker_mods[f"{prefix}_penetration_flat"]
+            effective_defense = max(-60.0, effective_defense)
+            defense_multiplier = 120.0 / (120.0 + effective_defense)
+            damage_reduction_multiplier = 1 - defender_mods["damage_reduction_percent"] / 100
+            damage_after_defense = damage * defense_multiplier * damage_reduction_multiplier
+            mitigation = {
+                "damage_type": kind,
+                "target_defense_before_reduction": target_defense,
+                "effective_defense": effective_defense,
+                "defense_multiplier": defense_multiplier,
+                "damage_reduction_multiplier": damage_reduction_multiplier,
+                "formula": "raw × 120/(120 + effective defense) × (1 − damage reduction)",
+                "penetration_order": "defense reduction → percentage penetration → flat penetration",
+                "negative_defense_floor": -60,
+            }
+
     return {
         "attacker": attacker,
         "defender": defender,
         "skill": skill,
         "damage_before_defense": damage,
-        "calculation_scope": "source_parameter_preview_before_defense",
+        "damage_after_defense": damage_after_defense,
+        "mitigation": mitigation,
+        "calculation_scope": "source_parameter_preview_with_defense_for_supported_single_component_skills",
         "buff_note": "Blue/red buff selections are saved as scenario flags; their combat modifiers are not applied until patch-specific values are verified.",
         "spell_note": "Battle spells are selectable for both sides; their active effects are not added to skill damage in this preview.",
     }
