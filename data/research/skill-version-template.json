@@ -1,0 +1,23 @@
+{
+  "record_id": "miya-moon-blessing-2.2.23-original",
+  "hero_id": "miya",
+  "skill_id": "miya-1",
+  "skill_name": "Moon Blessing",
+  "skill_slot": "passive",
+  "description": null,
+  "patch": {
+    "version": null,
+    "channel": "original_server",
+    "effective_from": null,
+    "effective_until": null
+  },
+  "parameters": [],
+  "conditions": [],
+  "verification": {
+    "status": "unverified",
+    "checked_at": null,
+    "notes": "Template/example identity only. Do not treat as measured skill values; fill patch scope and parameters from a confirmed live-client source."
+  },
+  "sources": [],
+  "raw_observations": []
+}
