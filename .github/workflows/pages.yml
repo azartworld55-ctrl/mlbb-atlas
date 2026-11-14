@@ -26,6 +26,7 @@ jobs:
       - name: Assemble application source
         run: |
           cat site/app.part01.jsfrag site/app.part02.jsfrag site/app.part03.jsfrag site/app.part04.jsfrag site/app.part05.jsfrag > site/app.js
+          rm site/app.part*.jsfrag
       - name: Prepare static data
         run: |
           mkdir -p site/data
