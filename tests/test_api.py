@@ -57,10 +57,13 @@ def test_emblems_endpoint():
     assert response.json()["count"] == 7
 
 
-def test_spells_endpoint_is_empty_until_sourced():
+def test_spells_endpoint_returns_sourced_catalogue():
     response = client.get("/api/v1/spells")
     assert response.status_code == 200
-    assert response.json() == {"count": 0, "data": []}
+    payload = response.json()
+    assert payload["count"] == 12
+    assert {row["slug"] for row in payload["data"]} >= {"flicker", "execute", "retribution", "vengeance"}
+    assert all(row["provenance"]["confidence"] == "reported" for row in payload["data"])
 
 
 def test_homepage_served():
