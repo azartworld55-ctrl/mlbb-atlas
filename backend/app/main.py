@@ -185,6 +185,7 @@ class MatchupSideRequest(BaseModel):
     buffs: dict[str, bool] = Field(default_factory=lambda: {"blue": False, "red": False})
     total_physical_attack: float = 0
     total_magic_power: float = 0
+    total_hp: float = 0
     physical_defense: float = 0
     magic_defense: float = 0
 
@@ -218,7 +219,7 @@ def _build_side_preview(side, label):
 
     items = load_collection("items")
     selected_items = []
-    totals = {"physical_attack": side.total_physical_attack, "magic_power": side.total_magic_power}
+    totals = {"physical_attack": side.total_physical_attack, "magic_power": side.total_magic_power, "hp": side.total_hp}
     for item_id in side.item_ids:
         item = next((row for row in items if row.get("id") == item_id or row.get("slug") == item_id), None)
         if item is None:
@@ -258,7 +259,7 @@ def _build_side_preview(side, label):
         "spell": spell,
         "buffs": {"blue": bool(side.buffs.get("blue")), "red": bool(side.buffs.get("red"))},
         "stats": totals,
-        "defenses": {"physical": totals.get("physical_defense", side.physical_defense), "magic": totals.get("magic_defense", side.magic_defense)},
+        "defenses": {"physical": totals.get("physical_defense", side.physical_defense) + totals.get("hybrid_defense", 0), "magic": totals.get("magic_defense", side.magic_defense) + totals.get("hybrid_defense", 0)},
     }
 
 
