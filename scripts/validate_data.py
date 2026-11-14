@@ -43,7 +43,7 @@ def validate_skill_version_records(records: object) -> list[str]:
         patch = record.get("patch")
         if not isinstance(patch, dict):
             errors.append(f"{label}: patch must be an object")
-        elif not re.fullmatch(r"[0-9]+\\.[0-9]+\\.[0-9]+[a-z]?", str(patch.get("version", ""))):
+        elif not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+[a-z]?", str(patch.get("version", ""))):
             errors.append(f"{label}: invalid patch version")
         elif patch.get("channel") not in {"original_server", "advanced_server", None}:
             errors.append(f"{label}: invalid patch channel")
@@ -145,7 +145,7 @@ def main() -> int:
         print(f"skill_versions: {len(skill_records) if isinstance(skill_records, list) else 0} records")
 
     if ERRORS:
-        print("\\nValidation errors:")
+        print("\nValidation errors:")
         for error in ERRORS:
             print(f"- {error}")
         return 1
