@@ -265,7 +265,7 @@ async function setupMatchupCalculator() {
         red: document.getElementById(prefix + '-red').checked
       },
       total_physical_attack: Number(document.getElementById(prefix + '-pa')?.value || 0),
-      total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),
+      total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),\n      total_hp: Number(document.getElementById(prefix + '-hp')?.value || 0),
       physical_defense: Number(document.getElementById(prefix + '-pd')?.value || 0),
       magic_defense: Number(document.getElementById(prefix + '-md')?.value || 0)
     };
@@ -298,7 +298,7 @@ async function setupMatchupCalculator() {
       lines.push('Защита противника: ' + JSON.stringify(payload.defender.defenses));
       if (payload.skill) {
         lines.push('Навык: ' + payload.skill.skill_name + ' · патч ' + payload.skill.patch.version + ' · ' + payload.skill.verification.status);
-        lines.push(payload.damage_before_defense === null ? 'Для этого навыка пока нет достаточных числовых параметров.' : 'Расчётный урон до защиты: ' + Number(payload.damage_before_defense).toFixed(2));
+        lines.push(payload.damage_before_defense === null ? (payload.skill.damage_note || 'Для этого навыка пока нет достаточных числовых параметров.') : 'Расчётный урон до защиты: ' + Number(payload.damage_before_defense).toFixed(2));
         lines.push(payload.skill.note);
       } else {
         lines.push('Навык не выбран — показаны только параметры сборок.');
