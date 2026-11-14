@@ -283,8 +283,8 @@ def matchup_preview(payload: MatchupPreviewRequest):
         if skill.get("hero_id", "").casefold() != payload.attacker.hero_id.casefold():
             raise HTTPException(status_code=422, detail="Selected skill record does not belong to the attacking hero")
 
-        base_values = []
-        scaling_total = 0.0
+        base_parameters = []
+        scaling_parameters = []
         unsupported = []
         for parameter in skill.get("parameters", []):
             values = parameter.get("values_by_skill_level", [])
@@ -294,24 +294,40 @@ def matchup_preview(payload: MatchupPreviewRequest):
             index = 0 if payload.endpoint == "low" else len(values) - 1
             value = float(values[index])
             if parameter.get("kind") == "base_damage":
-                base_values.append(value)
+                base_parameters.append({"key": parameter.get("key"), "value": value, "damage_type": parameter.get("damage_type")})
             elif parameter.get("kind") == "scaling":
+                scaling_parameters.append(parameter)
                 attribute = parameter.get("scaling_attribute")
                 stat_key = {"physical_attack": "physical_attack", "magic_power": "magic_power", "max_hp": "hp"}.get(attribute)
-                if stat_key:
-                    scaling_total += attacker["stats"].get(stat_key, 0) * value / 100
-                else:
+                if not stat_key:
                     unsupported.append(parameter.get("key", "unknown scaling"))
-        if base_values:
-            damage = sum(base_values) + scaling_total
+        damage = None
+        damage_note = None
+        if len(base_parameters) == 1 and len(scaling_parameters) <= 1 and not unsupported:
+            damage = base_parameters[0]["value"]
+            if scaling_parameters:
+                parameter = scaling_parameters[0]
+                values = parameter.get("values_by_skill_level", [])
+                index = 0 if payload.endpoint == "low" else len(values) - 1
+                attribute = parameter.get("scaling_attribute")
+                stat_key = {"physical_attack": "physical_attack", "magic_power": "magic_power", "max_hp": "hp"}.get(attribute)
+                damage += attacker["stats"].get(stat_key, 0) * float(values[index]) / 100
+        elif len(base_parameters) > 1:
+            damage_note = "This skill has multiple damage components or hit stages. They are listed in the source record but are not added together automatically."
+        elif len(scaling_parameters) > 1 or unsupported:
+            damage_note = "This skill has multiple or unsupported scaling terms. A single total would be misleading, so only the source record is shown."
+        else:
+            damage_note = "No standalone base-damage parameter is available for this skill."
         skill = {
             "record_id": skill.get("record_id"),
             "hero_id": skill.get("hero_id"),
             "skill_name": skill.get("skill_name"),
             "patch": skill.get("patch"),
             "verification": skill.get("verification"),
-            "damage_type": next((p.get("damage_type") for p in skill.get("parameters", []) if p.get("kind") == "base_damage" and p.get("damage_type")), None),
+            "damage_type": base_parameters[0].get("damage_type") if len(base_parameters) == 1 else None,
+            "damage_components": base_parameters,
             "damage_before_defense": damage,
+            "damage_note": damage_note,
             "unsupported_scalings": unsupported,
             "endpoint_used": payload.endpoint,
             "note": "This is a source-parameter preview before enemy defense, penetration, damage reduction, shields, and conditional effects. It is not a full in-game damage result.",
