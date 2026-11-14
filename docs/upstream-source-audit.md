@@ -53,3 +53,31 @@ A first automated-by-structure/manual-reviewed text comparison was completed for
 It found clear stale or conflicting records for Popol and Kupa, Xavier, Lunox, Masha and Lukas; missing/unclear numerical details for Freya, Gloo, Aldous, Atlas, Karrie and Kaja; a visual-only change for Kagura; a component-level damage-type question for Uranus; and missing structured transfer ratios for Melissa.
 
 This is a first-pass text comparison of the Atlas seed (upstream revision 20260929) against community patch references. It is not a complete comparison against a fresh Moonton GMS response, nor a live-client verification. Conflicts are recorded as research findings and have **not** been silently applied to canonical hero data.
+
+
+## Second-stage catalogue comparison (2026-11-14)
+
+The current Atlas hero catalogue was compared against Achedon's `src/data/game/skills.json` on branch `develop`, using normalized hero names/slugs and skill-name matching. Results are recorded in [skill-source-comparison-achedon.json](../data/research/skill-source-comparison-achedon.json).
+
+Observed counts:
+- Atlas: 133 heroes, 590 skill records.
+- Achedon: 134 hero keys, 627 skill records.
+- 133 Atlas heroes matched to Achedon by slug/name.
+- 117 heroes have equal skill-record counts.
+- 20 heroes have skill-name or count differences.
+- Achedon contains an additional `dori` key absent from Atlas.
+- 586 skill names matched across the matched hero sets.
+
+These are catalogue-structure differences, not confirmed gameplay changes. Multi-form heroes can be represented differently (e.g. separate forms, weapon modes, or sub-skills); never reconcile by array index alone. The report stores only names/counts, not Wiki descriptions. Achedon states Wiki-derived data is CC BY-SA; preserve attribution and share-alike terms if any adapted Wiki text is later redistributed.
+
+## Moonton GMS snapshot tooling
+
+A local-only fetcher is available at `scripts/fetch_moonton_skills.py`. It follows the request shape observed in the public warungerik scraper, extracts hero/skill metadata without downloading images, and writes a local snapshot under the ignored `data/imports/moonton/` directory. The endpoint is undocumented and may change. This environment could inspect the request pattern but could not execute the POST request; therefore no fresh Moonton response is claimed yet.
+
+Run:
+```bash
+python scripts/fetch_moonton_skills.py
+python scripts/compare_skill_sources.py --achedon --moonton data/imports/moonton/skills-latest.json
+```
+
+The comparison tool does not copy full Wiki descriptions or infer damage formulas. It reports only metadata identity/name/count differences. Raw Moonton snapshots remain local pending a clear redistribution permission review.
