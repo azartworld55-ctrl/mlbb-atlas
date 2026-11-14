@@ -1,0 +1,277 @@
+{
+  "report_version": 1,
+  "generated_at": "2026-11-14",
+  "atlas_revision": "20260929",
+  "moonton_gms_snapshot": {
+    "retrieved_at": "2026-11-14T20:25:47+00:00",
+    "heroes": 133,
+    "skill_records": 622,
+    "matched_atlas_heroes": 133,
+    "heroes_flagged_by_detailed_comparison": 31,
+    "patch_version_exposed_by_api": null,
+    "note": "The endpoint does not expose a verified Original Server patch identifier. Numeric-token comparison is a review lead, not proof by itself."
+  },
+  "evidence_policy": {
+    "patch_notes": "Community-maintained mirrors of in-game Original Server notes. No direct official Moonton patch-note URL was verified in this review.",
+    "moonton_gms": "Official-client metadata endpoint accessed through a community-documented request. Its response is not independently stamped with an Original Server patch version.",
+    "application": "Only patch-note changes with a clear skill/field mapping are classified as confirmed candidates. No canonical hero record is silently overwritten by this report."
+  },
+  "sources": [
+    {
+      "patch": "2.2.23",
+      "url": "https://liquipedia.net/mobilelegends/Patch_2.2.23"
+    },
+    {
+      "patch": "2.2.23",
+      "url": "https://mlbbhub.com/patch-notes/original/2.2.23"
+    },
+    {
+      "patch": "2.2.23",
+      "url": "https://mlbb.tools/patch-notes/2.2.23"
+    },
+    {
+      "patch": "2.2.16a",
+      "url": "https://mlbbhub.com/patch-notes/original/2.2.16a"
+    },
+    {
+      "patch": "2.2.16a",
+      "url": "https://liquipedia.net/mobilelegends/Patch_2.2.16a"
+    },
+    {
+      "patch": "2.2.16",
+      "url": "https://mlbb.tools/patch-notes/2.2.16"
+    }
+  ],
+  "confirmed_patch_candidates": [
+    {
+      "hero": "Xavier",
+      "patch": "2.2.23",
+      "fields": [
+        "Transcendence movement-speed bonus: 50% -> 60%",
+        "Mystic Field damage: 220-345 (+65% Total Magic Power) -> 440-690 (+130% Total Magic Power)",
+        "Mystic Barrier direct damage removed"
+      ],
+      "gms_alignment": "Numeric values in the GMS snapshot align with the new Mystic Field scaling and 60% passive bonus.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Lunox",
+      "patch": "2.2.23",
+      "fields": [
+        "Dreamland Twist: immediately gain 10% Spell Vamp on Power of Order shift and 10% Magic Penetration on Power of Chaos shift",
+        "Chaos Assault extra percentage damage: 2.5%-5% -> 3.5%-5%",
+        "Chaos Assault extra damage to creeps: 1.5%-3% -> 2.1%-3%",
+        "Power of Chaos: Darkening damage: 250-450 (+100% Total Magic Power) -> 150-300 (+135% Total Magic Power)",
+        "Darkening dash foreswing reduced by 50%"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with the new 3.5%, 2.1%, 150 base and 135% scaling values.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Freya",
+      "patch": "2.2.23",
+      "fields": [
+        "Power of Einherjar: after consuming a Sacred Orb, next Basic Attack restores 20 (+3*Hero Level) (+20% Total Physical Attack) HP",
+        "Valkyrie Descent cooldown: 44-28s -> 60-44s",
+        "Ultimate-enhanced Basic Attack damage: 30-60 (+100% Total Physical Attack) -> 100-200 (+70% Total Physical Attack)",
+        "Basic Attack HP regeneration during Ultimate removed",
+        "Gain 30 Movement Speed while Ultimate is active"
+      ],
+      "gms_alignment": "GMS numeric metadata contains the new 20, 3 and 20% passive values and the 100/70% Ultimate values.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Gloo",
+      "patch": "2.2.23",
+      "fields": [
+        "Slam, Slam immobilization: 0.8s -> 0.6s",
+        "Slam, Slam explosion: 250-400 (+12% Extra HP) -> 230-380 (+11% Extra HP)",
+        "Grab, Grab damage transfer: 80% -> 60%"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 0.6s, 230, 11% and 60%.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Masha",
+      "patch": "2.2.23",
+      "fields": [
+        "Primal Pact wound damage formula: (3 + 1% Extra Physical Attack + 0.3*Hero Level)% Max HP -> (2 + 0.5% Extra Physical Attack + 0.2*Hero Level)% Max HP",
+        "Primal Pact HP regeneration: 4-10% Max HP -> 3-6% Max HP",
+        "Feral Swipe damage bonus: 70% -> 55%; minion damage: 100%-150% -> 150%-200%; old hero-hit slow removed",
+        "Claw Strike damage: 120-240 (+80% Extra Physical Attack) -> 60-240 (+40% Extra Physical Attack); new 50% slow for 1s on hero hit; path width reduced by 20%"
+      ],
+      "gms_alignment": "GMS numeric metadata contains the new 55%, 0.5%, 0.2 and 40% values.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Lukas",
+      "patch": "2.2.23",
+      "fields": [
+        "Flash Combo Pulverize: 280-580 (+120% Total Physical Attack) -> 400-800 (+60% Total Physical Attack)",
+        "Flash Combo Spin: 80-180 (+45% Total Physical Attack) -> 95-235 (+25% Total Physical Attack)",
+        "Flash Combo HP regeneration: 6% Max HP -> 8% Max HP"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with the new 400/60%, 95/25% and 8% values.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Atlas",
+      "patch": "2.2.23",
+      "fields": [
+        "Frigid Breath duration: 5s -> 4s",
+        "Freeze cooldown: 2.5s -> 4s",
+        "Physical and Magic Defense: 20 (+0.5% Extra HP) -> 20 (+0.7% Extra HP)"
+      ],
+      "gms_alignment": "GMS numeric metadata includes the new 4s duration and 0.7% defense scaling.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Karrie",
+      "patch": "2.2.23",
+      "fields": [
+        "Spinning Lightwheel base Total Physical Attack scaling: 90% -> 20%",
+        "Spinning Lightwheel sustained Total Physical Attack scaling: 20% -> 10%",
+        "Phantom Step now detects enemy heroes throughout the dash",
+        "Speedy Lightwheel damage per Lightwheel: 40 -> 50",
+        "Speedy Lightwheel Movement Speed bonus: 20% -> 30%"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 20%, 10%, 50 and 30%.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Kaja",
+      "patch": "2.2.23",
+      "fields": [
+        "Soaring state turning speed increased",
+        "Enhanced Basic Attack hits while Soaring extend the state",
+        "Skill 2 hits on minions while Soaring extend the state",
+        "Divine Binding delay slightly increased; Control Immunity no longer avoids the area restriction when it takes effect"
+      ],
+      "gms_alignment": "GMS numeric metadata includes a 0.2s duration extension associated with the enhanced Basic Attack behavior; full effect text requires a field-level manual check.",
+      "status": "candidate_confirmed_by_patch_notes_gms_partial"
+    },
+    {
+      "hero": "Aldous",
+      "patch": "2.2.23",
+      "fields": [
+        "Contract: Explosion cooldown: 12-9.5s -> 8s at all levels",
+        "Damage Reduction: 30% at all levels -> 30%-55%"
+      ],
+      "gms_alignment": "The GMS comparison did not clearly corroborate these two changed fields; retain the patch-note values as a separate review candidate.",
+      "status": "patch_notes_confirmed_gms_not_yet_correlated"
+    },
+    {
+      "hero": "Popol and Kupa",
+      "patch": "2.2.23",
+      "fields": [
+        "Full hero revamp: mounted Kupa state, revised Alpha Wolf form, traps/frost zone and updated passive/Ultimate behavior"
+      ],
+      "gms_alignment": "GMS exposes multiple skill groups and 10 records versus Atlas's 7. This is a form/group modelling issue as well as a stale-kit issue; do not map by array index.",
+      "status": "revamp_confirmed_structural_rebuild_required"
+    },
+    {
+      "hero": "Kagura",
+      "patch": "2.2.23",
+      "fields": [
+        "Maximum umbrella-separation visual indicator optimized; no numerical skill change stated"
+      ],
+      "gms_alignment": "GMS and Atlas count mismatch should not be interpreted as a gameplay number change.",
+      "status": "visual_only_patch_change"
+    },
+    {
+      "hero": "Melissa",
+      "patch": "2.2.23",
+      "fields": [
+        "Muddles damage transfer: 52% -> 50%-60%",
+        "Attack Effect Inheritance Ratio: 52% -> 50%-60%"
+      ],
+      "gms_alignment": "No specific numeric conflict was raised by the current comparator; still verify the relevant text field before applying.",
+      "status": "patch_notes_confirmed_gms_field_check_pending"
+    },
+    {
+      "hero": "Uranus",
+      "patch": "2.2.23",
+      "fields": [
+        "Basic Attack splash damage type changed to Magic Damage"
+      ],
+      "gms_alignment": "Not a numeric mismatch; damage-type field must be checked separately.",
+      "status": "type_field_review_required"
+    }
+  ],
+  "previous_patch_candidates": [
+    {
+      "hero": "Hirara",
+      "patch": "2.2.16a",
+      "fields": [
+        "Meisen-e cooldown: 9-5.5s -> 10-6.5s",
+        "Kaerazu damage: 150-255 (+65% Extra Physical Attack) -> 165-270 (+42%-70% Extra Physical Attack)"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 165 and 42%; the skill's full level range still needs exact mapping.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Aulus",
+      "patch": "2.2.16a",
+      "fields": [
+        "Fighting Spirit enhanced Basic Attack: 135 (+15*Hero Level) -> 120 (+12*Hero Level)",
+        "HP regeneration: 30 (+15% Total Physical Attack) -> 15 (+20% Total Physical Attack)",
+        "Aulus, Charge! cooldown: 14-12s -> 15s at all levels",
+        "Undying Fury first four strikes: 110-270 -> 150-230; final slash: 330-810 -> 450-690"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 120/12 and 150/450 values.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Eudora",
+      "patch": "2.2.16a",
+      "fields": [
+        "Thunder's Wrath center damage: 600-1000 (+160% Total Magic Power) -> 540-900 (+145%)",
+        "Outer damage: 300-500 (+100%) -> 270-450 (+90%)",
+        "Delayed Thunderburst: 330-550 (+110%) -> 300-500 (+100%)"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 540/145%, 270/90% and 300/100%.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    },
+    {
+      "hero": "Kalea",
+      "patch": "2.2.16a",
+      "fields": [
+        "Enhanced third Basic Attack: 70 (+4*Hero Level) -> 120 (+12*Hero Level)",
+        "Absorbing a Water Zone grants 60% Movement Speed for 1s",
+        "Tidal Strike Max HP damage bonus: 8% -> 14%"
+      ],
+      "gms_alignment": "GMS numeric metadata aligns with 120/12, 60% and 14%.",
+      "status": "candidate_confirmed_by_patch_notes_and_gms_numeric_metadata"
+    }
+  ],
+  "additional_review_queue": [
+    {
+      "hero": "Bruno",
+      "reason": "The Atlas Volley Shot description still contains the older 100 base damage, while the September 2026 rework notes list a 75-150 range. GMS metadata and skill-level scaling must be mapped before applying."
+    },
+    {
+      "hero": "Argus",
+      "reason": "Numeric-token differences exist, but this review has not yet matched each changed value to the correct 2.2.16 skill field."
+    },
+    {
+      "hero": "Fanny",
+      "reason": "Numeric-token mismatch has no verified matching change in the reviewed patch-note sources."
+    },
+    {
+      "hero": "Joy",
+      "reason": "Comparator flagged metadata but no patch-note field has been mapped."
+    },
+    {
+      "hero": "Moskov",
+      "reason": "One extra numeric token may be a text/description artifact; no gameplay change inferred."
+    },
+    {
+      "hero": "Sora, Yin, Edith, Beatrix, Hanzo, Leomord, Selena, Roger, Lapu-Lapu, Julian",
+      "reason": "GMS skill counts differ while skill names largely overlap. Inspect group/alternate-form structure and avoid array-index matching."
+    }
+  ],
+  "application_status": {
+    "canonical_data_changed": false,
+    "reason": "This report separates patch-confirmed candidate values from structural differences and unverified numeric conflicts. Canonical hero records remain unchanged until each field, level range, form and damage type is mapped."
+  }
+}
