@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "id": "001",
+    "slug": "execute",
+    "name": "Execute",
+    "cooldown_seconds": 90,
+    "summary": "Урон по герою, зависящий от его недостающего здоровья.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "002",
+    "slug": "retribution",
+    "name": "Retribution",
+    "cooldown_seconds": 35,
+    "summary": "Заклинание лесника: истинный урон монстрам и миньонам; варианты благословения требуют отдельной модели.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "003",
+    "slug": "inspire",
+    "name": "Inspire",
+    "cooldown_seconds": 75,
+    "summary": "Временно усиливает базовые атаки.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "004",
+    "slug": "sprint",
+    "name": "Sprint",
+    "cooldown_seconds": 100,
+    "summary": "Временно повышает скорость передвижения и даёт защиту от замедления.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "005",
+    "slug": "revitalize",
+    "name": "Revitalize",
+    "cooldown_seconds": 100,
+    "summary": "Создаёт область восстановления здоровья и усиливает получаемое лечение.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "006",
+    "slug": "aegis",
+    "name": "Aegis",
+    "cooldown_seconds": 75,
+    "summary": "Даёт щит себе и ближайшему союзнику.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "007",
+    "slug": "petrify",
+    "name": "Petrify",
+    "cooldown_seconds": 75,
+    "summary": "Наносит магический урон поблизости и оглушает.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "008",
+    "slug": "purify",
+    "name": "Purify",
+    "cooldown_seconds": 90,
+    "summary": "Снимает большинство отрицательных эффектов и даёт краткую защиту от контроля.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "009",
+    "slug": "flameshot",
+    "name": "Flameshot",
+    "cooldown_seconds": 50,
+    "summary": "Дальний магический выстрел; урон зависит от расстояния.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "010",
+    "slug": "flicker",
+    "name": "Flicker",
+    "cooldown_seconds": 120,
+    "summary": "Мгновенное перемещение и кратковременная дополнительная защита.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "011",
+    "slug": "arrival",
+    "name": "Arrival",
+    "cooldown_seconds": 75,
+    "summary": "Перемещение к союзной точке карты после подготовки.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  },
+  {
+    "id": "012",
+    "slug": "vengeance",
+    "name": "Vengeance",
+    "cooldown_seconds": 75,
+    "summary": "Временно снижает получаемый урон и отражает часть урона.",
+    "provenance": {
+      "source": "https://metammo.com/mobile-legends-guide/battle-spells",
+      "source_repository": "METAMMO battle spell guide",
+      "source_revision": "2026-10-30",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Community reference; cooldown and summary should be checked against the in-game client before treating as authoritative."
+    }
+  }
+]
