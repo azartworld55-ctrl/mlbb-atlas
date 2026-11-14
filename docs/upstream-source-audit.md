@@ -44,3 +44,12 @@ This audit records source capabilities and policy. It does not claim that all he
 ## Concrete staleness checks
 
 The inspected `data/heroes/layla.json` in Build Analyser declares `lastPatch: 1.8.80`, despite the repository having later commits. This is why its per-hero structure and formula DSL are useful, but its skill numbers cannot be assumed current for 2.2.23.
+
+
+## First field-level comparison against the Atlas seed
+
+A first automated-by-structure/manual-reviewed text comparison was completed for all 14 heroes named in the 2.2.23 community patch references. The report is [2.2.23-atlas-comparison.json](../data/research/patch-conflicts/2.2.23-atlas-comparison.json).
+
+It found clear stale or conflicting records for Popol and Kupa, Xavier, Lunox, Masha and Lukas; missing/unclear numerical details for Freya, Gloo, Aldous, Atlas, Karrie and Kaja; a visual-only change for Kagura; a component-level damage-type question for Uranus; and missing structured transfer ratios for Melissa.
+
+This is a first-pass text comparison of the Atlas seed (upstream revision 20260929) against community patch references. It is not a complete comparison against a fresh Moonton GMS response, nor a live-client verification. Conflicts are recorded as research findings and have **not** been silently applied to canonical hero data.
