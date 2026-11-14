@@ -70,6 +70,18 @@ Observed counts:
 
 These are catalogue-structure differences, not confirmed gameplay changes. Multi-form heroes can be represented differently (e.g. separate forms, weapon modes, or sub-skills); never reconcile by array index alone. The report stores only names/counts, not Wiki descriptions. Achedon states Wiki-derived data is CC BY-SA; preserve attribution and share-alike terms if any adapted Wiki text is later redistributed.
 
+## Live Moonton field-level review (2026-11-14)
+
+The manual source workflow now completes a live Moonton GMS request and compares 133 heroes / 622 skill records against the Atlas seed. A detailed comparison artifact is retained by the workflow for 14 days; raw Moonton response data is not committed or uploaded.
+
+The follow-up review is [2026-11-14-moonton-review.json](../data/research/patch-conflicts/2026-11-14-moonton-review.json). It separates:
+- patch-note changes that align with GMS numeric metadata (including Xavier, Lunox, Freya, Gloo, Masha, Lukas, Atlas, Karrie, Hirara, Aulus, Eudora and Kalea);
+- changes stated in patch notes but not yet correlated to the exact GMS field (e.g. Aldous, Melissa, Uranus);
+- multi-form/group catalogue differences that must not be reconciled by array index;
+- numeric differences without a verified patch-note explanation.
+
+The review does **not** change canonical hero data. The GMS endpoint response has no verified Original Server patch identifier, and the numeric-token extractor cannot interpret each number's meaning or level range by itself. Canonical updates require field-by-field mapping, including alternate forms, damage types, cooldown levels and resource costs.
+
 ## Moonton GMS snapshot tooling
 
 A local-only fetcher is available at `scripts/fetch_moonton_skills.py`. It follows the request shape observed in the public warungerik scraper, extracts hero/skill metadata without downloading images, and writes a local snapshot under the ignored `data/imports/moonton/` directory. The endpoint is undocumented and may change. A live POST was successfully executed by GitHub Actions on 2026-11-14: the response contained 133 heroes and 622 skill records. The first report found 15 heroes with catalogue count/name differences versus Atlas. The raw Moonton snapshot remains local to the runner and is not committed or uploaded. A follow-up comparator now emits skill IDs, group, cooldown/cost text and numeric tokens (not full descriptions) for the 15 conflict heroes, plus field-level numeric/cooldown differences where names match. This is a review aid only: the endpoint response does not expose a verified Original Server patch identifier, and numeric tokens are not interpreted as verified damage formulas.
