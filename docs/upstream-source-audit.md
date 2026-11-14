@@ -93,3 +93,24 @@ python scripts/compare_skill_sources.py --achedon --moonton data/imports/moonton
 ```
 
 The comparison tool does not copy full Wiki descriptions or infer damage formulas. It reports only metadata identity/name/count differences. Raw Moonton snapshots remain local pending a clear redistribution permission review.
+
+
+## Patch 2.2.23 follow-up (2026-11-15)
+
+A full Original Server patch-note repost is available at [r/MobileLegendsGame](https://www.reddit.com/r/MobileLegendsGame/comments/1xtm2m3/patch_notes_2223_org_server/) (posted by subreddit moderator u/Tigreal). The details cross-check with the [Liquipedia 2.2.23 archive](https://liquipedia.net/mobilelegends/Patch_2.2.23) and the [MLBBHub Original Server archive](https://mlbbhub.com/patch-notes/original/2.2.23). These are community-hosted/reposted sources, not a direct Moonton primary-source publication. A direct official Moonton patch-note URL was not verified in this run, so the patch remains `community_reported_pending_official_confirmation` and all imported values remain `reported`.
+
+Applied to canonical catalogues:
+- Antique Cuirass `Deter`: Physical Damage reduction updated from 6% to 8%.
+- Chastise Pauldron `Chastise`: Attack Speed and Attack Speed cap reduction updated from 75% to 80% of normal.
+- Sprint: the catalogue already had the 75-second cooldown; an explicit 2.2.23 patch-history record now documents 100s -> 75s.
+- Masha: corrected the Primal Pact claw-strike bonus-damage formula and Feral-state HP Regen range; added the Skill 2 50% / 1s hero-hit slow and 20% path-width reduction to the hero description and patch-scoped skill records.
+- Freya: recorded the new 30 Movement Speed effect during Valkyrie Descent in the patch-scoped skill record.
+- Melissa: added patch-scoped endpoint records for Muddles Damage Transfer and Attack Effect Inheritance (50%-60%); intermediate level values are intentionally not inferred.
+- Kaja and Uranus: added explicit patch-history notes for the reported non-numeric behavior/type changes. Uranus's current description already labels the represented Basic Attack damage as Magic.
+
+The patch history now also records Concussive Blast (an emblem talent), Gold Lane Siege Minion extra Gold, Golden Turret values, and qualitative changes for Popol and Kupa, Karrie, Kagura and the Healing Turtle. The seven base emblem-stat records were not changed: Concussive Blast is a talent adjustment, not a change to the base emblem-stat catalogue. Brawl-only hero modifiers were not merged into standard hero stats.
+
+Remaining limitations:
+- Popol and Kupa's pre-revamp multi-form skill catalogue is still present. A safe replacement needs a complete form/group mapping and all supported values; the patch note prose alone is insufficient.
+- No direct official Moonton patch-note URL or independent in-game test was obtained. Keep all 2.2.23 values reported.
+- The Advance Server track is separate (community archive lists 2.2.32 as testing); none of its experimental values were imported into Original Server records.
