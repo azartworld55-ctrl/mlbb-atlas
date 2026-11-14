@@ -60,3 +60,39 @@ def test_achedon_comparison_reports_differences_without_descriptions():
 
 def test_normalize_is_stable():
     assert normalize("Popol & Kupa") == "popol kupa"
+
+def test_moonton_comparison_reports_field_differences_without_descriptions():
+    from scripts.compare_skill_sources import compare_moonton
+
+    atlas = [{
+        "id": "1",
+        "slug": "miya",
+        "name": "Miya",
+        "skills": [{
+            "name": "Moon Arrow",
+            "cooldown": "11.0",
+            "resource_cost": "60",
+            "description": "Deals 100 (+50% Total Physical Attack) damage.",
+        }],
+    }]
+    snapshot = {
+        "source": {"retrieved_at": "2026-11-14T20:00:00+00:00"},
+        "heroes": [{
+            "hero_id": "1",
+            "name": "Miya",
+            "skills": [{
+                "skill_id": "101",
+                "group": 1,
+                "name": "Moon Arrow",
+                "cooldown_cost": "12s / 60",
+                "description_clean": "Deals 120 (+60% Total Physical Attack) damage.",
+            }],
+        }],
+    }
+    report = compare_moonton(atlas, snapshot)
+    diff = report["differences"][0]["matched_skill_field_differences"][0]
+    assert diff["atlas"]["description_numeric_tokens"] == ["100", "50%"]
+    assert diff["moonton"]["description_numeric_tokens"] == ["120", "60%"]
+    assert "description_clean" not in str(report)
+    assert report["patch_version"] is None
+
