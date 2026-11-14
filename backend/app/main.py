@@ -6,9 +6,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from app.formulas import evaluate_expression
-
 from app.data import find_record, load_collection
+from app.formulas import evaluate_expression
 
 class FormulaEvaluationRequest(BaseModel):
     """A caller-supplied, non-executable formula and its numeric inputs."""
