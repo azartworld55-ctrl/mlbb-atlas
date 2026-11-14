@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="MLBB Atlas — справочник героев, навыков и предметов Mobile Legends: Bang Bang.">
+  <title>MLBB Atlas — база знаний MLBB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="MLBB Atlas — главная"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b><small>НЕЗАВИСИМАЯ БАЗА ЗНАНИЙ</small></span></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <button class="nav-link active" data-view="heroes">Герои</button>
+      <button class="nav-link" data-view="items">Предметы</button>
+      <button class="nav-link" data-view="skills">Навыки и патчи</button>
+      <button class="nav-link" data-view="about">О проекте</button>
+    </nav>
+    <button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="hero-copy">
+        <div class="overline"><span class="live-dot"></span> СПРАВОЧНИК MOBILE LEGENDS: BANG BANG</div>
+        <h1>ЗНАЙ СВОИХ<br><em>ГЕРОЕВ.</em></h1>
+        <p>Герои, способности, предметы и изменения патчей — в одном месте. Данные с источниками, без выдуманных характеристик.</p>
+        <div class="hero-actions"><button class="primary-btn" data-jump="heroes">Открыть базу <span>↗</span></button><span class="version-chip">ORIGINAL SERVER · 2.2.23</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-glyph">AT<br><span>LAS</span></div><div class="art-caption">KNOWLEDGE<br>IS POWER</div></div>
+      <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+    </section>
+
+    <section class="metrics" aria-label="Размер базы">
+      <div><strong id="metric-heroes">—</strong><span>ГЕРОЕВ</span></div>
+      <div><strong id="metric-items">—</strong><span>ПРЕДМЕТОВ</span></div>
+      <div><strong id="metric-skills">—</strong><span>ЗАПИСЕЙ НАВЫКОВ</span></div>
+      <div><strong>100%</strong><span>БЕЗ РЕГИСТРАЦИИ</span></div>
+    </section>
+
+    <section class="content-section" id="database">
+      <div class="section-heading">
+        <div><div class="overline">БИБЛИОТЕКА</div><h2 id="section-title">ГЕРОИ <span>MLBB</span></h2><p id="section-subtitle">Выбирай персонажа, изучай навыки и собирай знания перед матчем.</p></div>
+        <div class="heading-side"><span class="data-status"><i></i> ЛОКАЛЬНАЯ БАЗА ДАННЫХ</span><span id="result-count" class="result-count">Загрузка…</span></div>
+      </div>
+      <div class="toolbar" id="hero-toolbar">
+        <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Найти героя…" autocomplete="off"><kbd>/</kbd></label>
+        <div class="filter-group" id="role-filters">
+          <button class="filter active" data-role="all">Все</button><button class="filter" data-role="Tank">Танк</button><button class="filter" data-role="Fighter">Боец</button><button class="filter" data-role="Assassin">Убийца</button><button class="filter" data-role="Mage">Маг</button><button class="filter" data-role="Marksman">Стрелок</button><button class="filter" data-role="Support">Поддержка</button>
+        </div>
+        <button class="icon-btn" id="favorites-toggle" title="Избранное" aria-label="Показать избранное">☆</button>
+      </div>
+      <div class="lane-row" id="lane-filters"><span>ЛИНИЯ</span><button class="lane active" data-lane="all">Любая</button><button class="lane" data-lane="exp lane">EXP</button><button class="lane" data-lane="gold lane">Золото</button><button class="lane" data-lane="mid lane">Мид</button><button class="lane" data-lane="jungle">Лес</button><button class="lane" data-lane="roam">Роум</button></div>
+      <div class="hero-grid" id="hero-grid"><div class="loading-state"><span class="loader"></span><p>Загружаем базу героев…</p></div></div>
+      <div class="empty-state hidden" id="empty-state">Ничего не найдено. Попробуй изменить фильтры.</div>
+      <div class="pagination-note" id="pagination-note"></div>
+    </section>
+
+    <section class="content-section hidden" id="items-view">
+      <div class="section-heading"><div><div class="overline">ЭКИПИРОВКА</div><h2>ПРЕДМЕТЫ <span>И СНАРЯЖЕНИЕ</span></h2><p>Характеристики и описания из базы проекта. Непроверенные значения помечены.</p></div></div>
+      <div class="toolbar"><label class="searchbox"><span>⌕</span><input id="item-search" type="search" placeholder="Найти предмет…"></label><div class="filter-group" id="item-categories"><button class="filter active" data-category="all">Все</button><button class="filter" data-category="Attack">Атака</button><button class="filter" data-category="Magic">Магия</button><button class="filter" data-category="Defense">Защита</button><button class="filter" data-category="Movement">Передвижение</button><button class="filter" data-category="Jungle">Лес</button><button class="filter" data-category="Roaming">Роум</button></div></div>
+      <div class="item-grid" id="item-grid"></div>
+    </section>
+
+    <section class="content-section hidden" id="skills-view">
+      <div class="section-heading"><div><div class="overline">ИСТОРИЯ ОБНОВЛЕНИЙ</div><h2>НАВЫКИ <span>ПО ПАТЧАМ</span></h2><p>Параметры привязаны к версии игры. Опубликованные границы не превращаются в выдуманные значения по уровням.</p></div></div>
+      <div class="toolbar skill-toolbar"><label class="searchbox"><span>⌕</span><input id="skill-search" type="search" placeholder="Герой или название навыка…"></label><label class="select-wrap"><span>ПАТЧ</span><select id="patch-filter"><option value="all">Все версии</option></select></label><label class="select-wrap"><span>СТАТУС</span><select id="status-filter"><option value="all">Все статусы</option><option value="verified">Проверено</option><option value="reported">Сообщено источником</option><option value="experimental">Экспериментально</option></select></label></div>
+      <div class="skill-list" id="skill-list"></div>
+    </section>
+
+    <section class="content-section hidden" id="about-view">
+      <div class="about-panel"><div class="overline">НЕЗАВИСИМЫЙ ПРОЕКТ</div><h2>НЕ ПРОСТО<br><span>ЕЩЁ ОДИН ТИР-ЛИСТ.</span></h2><p>MLBB Atlas — справочная база с привязкой данных к версиям игры. Мы не выдаём догадки за факты: у записей есть источники и статус проверки.</p><div class="about-points"><div><b>01</b><span>Источники и история изменений</span></div><div><b>02</b><span>Никаких аккаунтов и регистрации</span></div><div><b>03</b><span>Сохранение избранного на устройстве</span></div><div><b>04</b><span>Бесплатный статический сайт</span></div></div><p class="disclaimer">MLBB Atlas — фанатский справочный проект. Не связан с Moonton. Названия и игровые материалы принадлежат их правообладателям.</p><a class="repo-link" href="https://github.com/azartworld55-ctrl/mlbb-atlas" target="_blank" rel="noopener">Открыть репозиторий ↗</a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="./"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b></span></a><span>НЕОФИЦИАЛЬНАЯ БАЗА ЗНАНИЙ · 2026</span><a href="https://github.com/azartworld55-ctrl/mlbb-atlas" target="_blank" rel="noopener">GITHUB ↗</a></footer>
+  <div class="modal hidden" id="hero-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name"><div class="modal-backdrop" data-close-modal></div><article class="modal-card"><button class="modal-close" data-close-modal aria-label="Закрыть">×</button><div id="modal-content"></div></article></div>
+  <script src="./app.js"></script>
+</body>
+</html>
