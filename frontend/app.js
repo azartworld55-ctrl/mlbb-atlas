@@ -210,7 +210,7 @@ async function setupMatchupCalculator() {
     select.append(empty);
     rows.forEach(row => {
       const option = document.createElement('option');
-      option.value = row.slug || row.id;
+      option.value = row.record_id || row.slug || row.id;
       option.textContent = label(row);
       select.append(option);
     });
