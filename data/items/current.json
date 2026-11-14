@@ -1,1 +1,4314 @@
-[]
+[
+  {
+    "id": "a001",
+    "slug": "berserker-s-fury",
+    "name": "Berserker's Fury",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Berserkers Fury.png",
+    "cost": "2390",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "65"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+40% Crit Damage",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Doom",
+        "description": "Critical strikes grant 5% extra Physical Attack for 2 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a002",
+    "slug": "blade-of-despair",
+    "name": "Blade of Despair",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Blade of Despair.png",
+    "cost": "3010",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "physical_attack": "160",
+        "movement_speed": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Despair",
+        "description": "Dealing damage to non-Minion enemies below 50% HP increases Physical Attack by 25% for 2 seconds (takes effect before the damage is dealt).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a003",
+    "slug": "blade-of-the-heptaseas",
+    "name": "Blade of the Heptaseas",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Blade of the Heptaseas.png",
+    "cost": "1950",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "70",
+        "hp": "250"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+15 Physical Penetration",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Ambush",
+        "description": "If no damage is taken or dealt within 5 seconds (excluding from Minions or Creeps), the next Basic Attack will deal an additional 160 (+40% Total Physical Attack) Physical Damage and slow the target by 40% for 1.5 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a004",
+    "slug": "corrosion-scythe",
+    "name": "Corrosion Scythe",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Corrosion Scythe.png",
+    "cost": "2050",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "physical_attack": "30",
+        "movement_speed": "5%",
+        "attack_speed": "30%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Corrosive",
+        "description": "Basic Attacks gain 80 extra Physical Damage and slow the target by 8% (halved for ranged Basic Attacks) for 1.5 seconds. Stacks up to 5 times.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Impulse",
+        "description": "Basic Attacks grant 6% extra Attack Speed for 3 seconds, capped at 5 stacks.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a005",
+    "slug": "dagger",
+    "name": "Dagger",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Dagger.png",
+    "cost": "250",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "15"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a006",
+    "slug": "demon-hunter-sword",
+    "name": "Demon Hunter Sword",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Demon Hunter Sword.png",
+    "cost": "2180",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "35",
+        "attack_speed": "20%",
+        "physical_lifesteal": "8%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Engulf",
+        "description": "Basic Attacks deal 8% of the target's current HP as extra physical damage (capped at 60 against minions).",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Devour",
+        "description": "Basic Attacks grant 2% Lifesteal for 3 seconds (stacks up to 5 times).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a007",
+    "slug": "endless-battle",
+    "name": "Endless Battle",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Endless Battle.png",
+    "cost": "2330",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "60",
+        "magic_power": "5",
+        "hp": "250",
+        "movement_speed": "5%",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Divine Justice",
+        "description": "After casting a skill, the next Basic Attack within 3 seconds deals (60% Total Physical Attack) extra True Damage and recovers 80 (+40% of Total Physical Attack) HP (1.5 seconds cooldown).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a008",
+    "slug": "fury-hammer",
+    "name": "Fury Hammer",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Fury Hammer.png",
+    "cost": "830",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "35"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a009",
+    "slug": "golden-staff",
+    "name": "Golden Staff",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Golden Staff.png",
+    "cost": "2000",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "55",
+        "attack_speed": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Swift",
+        "description": "Every 1% extra Crit Chance gained is converted into 1% extra Attack Speed.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Endless Strike",
+        "description": "After every 2 non-Crit Basic Attacks, the Attack Speed of the next Basic Attack is increased by 80% (and Attack Speed cap is increased to 500%) and triggers Attack Effects an additional 2 time(s).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a010",
+    "slug": "great-dragon-spear",
+    "name": "Great Dragon Spear",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Great Dragon Spear.png",
+    "cost": "2140",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "70",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Supreme Warrior",
+        "description": "After casting an Ultimate, increase Movement Speed by 30% for 7.5 seconds. This effect has a 15 seconds cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a011",
+    "slug": "haas-claws",
+    "name": "Haas' Claws",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Haas Claws.png",
+    "cost": "2020",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "40",
+        "attack_speed": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+20% Lifesteal",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Frenzy",
+        "description": "Critical strikes grant 20% extra Attack Speed for 2 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a012",
+    "slug": "hunter-strike",
+    "name": "Hunter Strike",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Hunter Strike.png",
+    "cost": "2010",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "80",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+15 Physical Penetration",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Retribution",
+        "description": "Dealing damage to the same enemy hero or creep 5 times in a row grants 50% extra Movement Speed that decays over 3 seconds (8 seconds cooldown).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a013",
+    "slug": "iron-hunting-bow",
+    "name": "Iron Hunting Bow",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Iron Hunting Bow.png",
+    "cost": "450",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "10",
+        "cd_reduction": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a014",
+    "slug": "javelin",
+    "name": "Javelin",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Javelin.png",
+    "cost": "320",
+    "summary": "Attack",
+    "modifiers": [
+      {}
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a015",
+    "slug": "knife",
+    "name": "Knife",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Knife.png",
+    "cost": "280",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "attack_speed": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a016",
+    "slug": "legion-sword",
+    "name": "Legion Sword",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Legion Sword.png",
+    "cost": "910",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "60"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a017",
+    "slug": "magic-blade",
+    "name": "Magic Blade",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Magic Blade.png",
+    "cost": "1050",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "35",
+        "physical_lifesteal": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Lifeline",
+        "description": "When taking damage that reduces HP below 30%, gains a (+60*Hero Level) shield (increases with level) and 50% Movement Speed that rapidly decays over 3 seconds. This effect has a 60 seconds cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a018",
+    "slug": "malefic-gun",
+    "name": "Malefic Gun",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Malefic Gun.png",
+    "cost": "2120",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "40",
+        "attack_speed": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Armor Buster",
+        "description": "Increase Physical Penetration by 30%.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Malefic Energy",
+        "description": "Increases Basic Attack range by 12%. When hitting a target, gains 10% Movement Speed for 0.5 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a019",
+    "slug": "malefic-roar",
+    "name": "Malefic Roar",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Malefic Roar.png",
+    "cost": "2060",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "60"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Armor Buster",
+        "description": "Increase Physical Penetration by 30%.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Breaker",
+        "description": "When attacking an enemy, gains 0.1% extra Physical Penetration for each point of the enemy's Physical Defense, capped at 30%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a020",
+    "slug": "ogre-tomahawk",
+    "name": "Ogre Tomahawk",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Ogre Tomahawk.png",
+    "cost": "650",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "25",
+        "hp": "230"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a021",
+    "slug": "regular-spear",
+    "name": "Regular Spear",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Regular Spear.png",
+    "cost": "600",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "20",
+        "attack_speed": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a022",
+    "slug": "rogue-meteor",
+    "name": "Rogue Meteor",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Rogue Meteor.png",
+    "cost": "900",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "attack_speed": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a023",
+    "slug": "rose-gold-meteor",
+    "name": "Rose Gold Meteor",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Rose Gold Meteor.png",
+    "cost": "2030",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "40",
+        "attack_speed": "20%",
+        "physical_lifesteal": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Dragon Scale",
+        "description": "Every 1% Lifesteal increases Hybrid Defense by 1, up to 50 (effect is halved for non-Fighter heroes).",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Lifeline",
+        "description": "When taking damage that reduces HP below 30%, gains a (120*Hero Level) shield (increases with level) and 50% Movement Speed that rapidly decays over 3 seconds. This effect has a 60 seconds cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a024",
+    "slug": "sea-halberd",
+    "name": "Sea Halberd",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Sea Halberd.png",
+    "cost": "2050",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "80",
+        "attack_speed": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Lifebane",
+        "description": "Dealing damage to a target will reduce the Shield and HP Regen effects on them to 60% of normal for 3 seconds.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Punish",
+        "description": "Increase damage by 8% against enemy heroes with higher extra HP.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a025",
+    "slug": "swift-crossbow",
+    "name": "Swift Crossbow",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Swift Crossbow.png",
+    "cost": "1000",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "attack_speed": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Crossbow",
+        "description": "Each Basic Attack deals 40 extra Adaptive Damage.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Impulse",
+        "description": "Basic Attacks grant 3% extra Attack Speed for 3 seconds, capped at 5 stacks.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a026",
+    "slug": "vampire-mallet",
+    "name": "Vampire Mallet",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Vampire Mallet.png",
+    "cost": "400",
+    "summary": "Attack",
+    "modifiers": [
+      {
+        "physical_attack": "8",
+        "physical_lifesteal": "8%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a027",
+    "slug": "war-axe",
+    "name": "War Axe",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "War Axe.png",
+    "cost": "2100",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "35",
+        "hp": "400",
+        "cd_reduction": "10%",
+        "spell_vamp": "12%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Fighting Spirit",
+        "description": "Attacks grants 12 extra Physical Attack per second for 4 seconds, up to 6 stacks. Deals 10% extra True Damage based on the damage dealt (no damage reduction counted) at full stacks. (Marksmen, Mages, and Supports only receive 50% of these stacked effects.)",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a028",
+    "slug": "wind-of-nature",
+    "name": "Wind of Nature",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Wind of Nature.png",
+    "cost": "1910",
+    "summary": "Attack_Speed",
+    "modifiers": [
+      {
+        "physical_attack": "30",
+        "attack_speed": "20%",
+        "physical_lifesteal": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Active - Wind Chant",
+        "description": "Become immune to all Physical Damage for 2 seconds (duration is halved for non-Marksmen; 90 seconds cooldown).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "a029",
+    "slug": "windtalker",
+    "name": "Windtalker",
+    "category": "Attack",
+    "tier": "3",
+    "icon_reference": "Windtalker.png",
+    "cost": "1880",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "movement_speed": "20%",
+        "attack_speed": "35%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Typhoon",
+        "description": "Every 5–2 seconds (reduced by 0.2 seconds for each Basic Attack), the next Basic Attack will hit up to 3 enemy units for 150–362 Magic Damage. (This attack can Crit and the damage increases to 200% against Minions.)",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "am001",
+    "slug": "expert-gloves",
+    "name": "Expert Gloves",
+    "category": "Attack & Magic",
+    "tier": "3",
+    "icon_reference": "Expert Gloves.png",
+    "cost": "500",
+    "summary": "Attack & Magic",
+    "modifiers": [
+      {
+        "physical_attack": "30"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "am002",
+    "slug": "sky-piercer",
+    "name": "Sky Piercer",
+    "category": "Attack & Magic",
+    "tier": "3",
+    "icon_reference": "Sky Piercer.png",
+    "cost": "1500",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "physical_attack": "60",
+        "movement_speed": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Lethality",
+        "description": "After dealing damage to an enemy hero, executes the hero if their HP is lower than 4%. Gains 10 stack(s) of Lethality for each kill and loses 30% current stack(s) for each death. Each stack of Lethality increases the HP threshold of the execute effect by 0.1%, stacking up 80 times.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "am003",
+    "slug": "winter-crown",
+    "name": "Winter Crown",
+    "category": "Attack & Magic",
+    "tier": "3",
+    "icon_reference": "Winter Crown.png",
+    "cost": "1910",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "45",
+        "hp": "400",
+        "cd_reduction": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Active - Frozen",
+        "description": "Becomes frozen, untarge, and immune to damage for 2 seconds (100 seconds cooldown). Cannot move or cast skills while frozen, but skills already cast won't be interrupted.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "x001",
+    "slug": "fleeting-time",
+    "name": "Fleeting Time",
+    "category": "Attack, Magic & Defense",
+    "tier": "3",
+    "icon_reference": "Fleeting Time.png",
+    "cost": "2050",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "physical_attack": "30",
+        "hp": "600",
+        "cd_reduction": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Timestream",
+        "description": "Hero kills or assists reduce the Ultimate's current cooldown by 30%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d001",
+    "slug": "antique-cuirass",
+    "name": "Antique Cuirass",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Antique Cuirass.png",
+    "cost": "2170",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "924",
+        "physical_defense": "40"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Deter",
+        "description": "When hit by a skill, reduces the attacker's Physical Damage by 6% for 2 seconds (this effect stacks up to 3 times).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d002",
+    "slug": "ares-belt",
+    "name": "Ares Belt",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Ares Belt.png",
+    "cost": "700",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "600"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d003",
+    "slug": "athena-s-shield",
+    "name": "Athena's Shield",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Athenas Shield.png",
+    "cost": "2150",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "902",
+        "magic_defense": "48"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Shield",
+        "description": "Upon taking Magic Damage from enemy hero skills or Basic Attacks, reduces Magic Damage taken by 25% for 3 second (including the damage that triggers the effect)s. Regains this effect 5 seconds after leaving combat.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d004",
+    "slug": "black-ice-shield",
+    "name": "Black Ice Shield",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Black Ice Shield.png",
+    "cost": "780",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "20",
+        "magic_defense": "20"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Fortress Shield",
+        "description": "For each enemy hero within 5 units, Hybrid Defense is increased by 4, up to 20.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d005",
+    "slug": "blade-armor",
+    "name": "Blade Armor",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Blade Armor.png",
+    "cost": "1910",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "80"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+20% Crit Damage Reduction",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Bladed Armor",
+        "description": "When struck by a Basic Attack, deals Physical Damage equal to 30 (+2% Total Physical Defense)% of the incoming damage (calculated before Damage Reduction) to the attacker and slows them by 15% for 1 second.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d006",
+    "slug": "brute-force-breastplate",
+    "name": "Brute Force Breastplate",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Brute Force Breastplate.png",
+    "cost": "2070",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "800",
+        "physical_defense": "20",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Brute Force",
+        "description": "Each second after dealing damage, gain 8 extra Adaptive Attack and 2% extra Movement Speed for 4 seconds, up to 6 stacks. Gain 25% extra Control Duration Reduction at full stacks.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d007",
+    "slug": "chastise-pauldron",
+    "name": "Chastise Pauldron",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Chastise Pauldron.png",
+    "cost": "2100",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "900",
+        "physical_defense": "40"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Chastise",
+        "description": "Taking damage will reduce the Attack Speed and Attack Speed cap of the attacker to 75% of normal for 2 seconds.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Redemption",
+        "description": "When incoming damage reduces HP below 30%, recover 20% Max HP over the next 2 seconds. This effect has a 60 seconds cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d008",
+    "slug": "cursed-helmet",
+    "name": "Cursed Helmet",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Cursed Helmet.png",
+    "cost": "1910",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "1200",
+        "magic_defense": "20"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Burning Soul",
+        "description": "Deals (1.2% Total HP) Magic Damage to nearby enemies per second. This damage is increased by 125(+15*Hero Level)% against creeps and minions.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Curse",
+        "description": "Dealing damage with Burning Soul will reduce the target's Hybrid Defense by 3 for 3 seconds. Stacks up to 3 times.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d009",
+    "slug": "dominance-ice",
+    "name": "Dominance Ice",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Dominance Ice.png",
+    "cost": "2010",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "40",
+        "magic_defense": "40",
+        "movement_speed": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Fortress Shield",
+        "description": "For each enemy hero within 5 units, Hybrid Defense is increased by 8, up to 40.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Lifebane",
+        "description": "Taking damage will reduce the Shield and HP Regen effects of the attacker to 60% of normal for 1 second.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d010",
+    "slug": "dreadnaught-armor",
+    "name": "Dreadnaught Armor",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Dreadnaught Armor.png",
+    "cost": "730",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "30"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Deter",
+        "description": "When hit by a skill, reduces the attacker's Physical Damage by 4% for 2 seconds (this effect stacks up to 3 times).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d011",
+    "slug": "guardian-helmet",
+    "name": "Guardian Helmet",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Guardian Helmet.png",
+    "cost": "2500",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "1820"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Recovery",
+        "description": "After 5 seconds out of combat, recover (2.5% Total HP) HP per second.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Defender",
+        "description": "Upon taking more than 500 damage in a single instance, recover 20 (+0.3% Total HP)% HP from the excess damage beyond that amount.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d012",
+    "slug": "healing-necklace",
+    "name": "Healing Necklace",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Healing Necklace.png",
+    "cost": "140",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "4"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d013",
+    "slug": "hero-s-ring",
+    "name": "Hero's Ring",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Heros Ring.png",
+    "cost": "450",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "150",
+        "cd_reduction": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d014",
+    "slug": "immortality",
+    "name": "Immortality",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Immortality.png",
+    "cost": "2120",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "850",
+        "physical_defense": "15"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Immortal",
+        "description": "Resurrect 2.5 seconds upon death and gets 16% Max HP and a shield that can absorb 150(+70*Hero Level）damage. Shield lasts 3 seconds. This effect has a 210 seconds cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d015",
+    "slug": "leather-jerkin",
+    "name": "Leather Jerkin",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Leather Jerkin.png",
+    "cost": "220",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "14"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d016",
+    "slug": "magic-resist-cloak",
+    "name": "Magic Resist Cloak",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Magic Resist Cloak.png",
+    "cost": "220",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "magic_defense": "14"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d017",
+    "slug": "molten-essence",
+    "name": "Molten Essence",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Molten Essence.png",
+    "cost": "800",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "540"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Burning Soul",
+        "description": "Deals (0.6% Total HP) Magic Damage to nearby enemies per second. This damage is increased by 125(+15*Hero Level)% against creeps and minions.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d018",
+    "slug": "oracle",
+    "name": "Oracle",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Oracle.png",
+    "cost": "1860",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "850",
+        "physical_defense": "20",
+        "magic_defense": "20",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Bless",
+        "description": "Received Shield and HP Regen effects are increased by 30%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d019",
+    "slug": "queen-s-wings",
+    "name": "Queen's Wings",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Queens Wings.png",
+    "cost": "2250",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_attack": "30",
+        "hp": "750",
+        "cd_reduction": "10%",
+        "spell_vamp": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Demonize",
+        "description": "When HP drops below 40%, gains 30% Damage Reduction for 3 seconds and reduces skill cooldowns by 2 seconds. This effect has a 60 seconds cooldown.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Defiance",
+        "description": "For every 1% HP lost, damage is increased by 0.25%, up to 15%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d020",
+    "slug": "radiant-armor",
+    "name": "Radiant Armor",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Radiant Armor.png",
+    "cost": "1880",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "962",
+        "magic_defense": "40"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Holy Blessing",
+        "description": "Taking Magic Damage grants 5(+1*Hero Level) Magic Defense for 5 seconds, up to 6 stacks ( can only gain 1 stack(s) every 0.4 seconds).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d021",
+    "slug": "silence-robe",
+    "name": "Silence Robe",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Silence Robe.png",
+    "cost": "1020",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "540",
+        "magic_defense": "23"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d022",
+    "slug": "steel-legplates",
+    "name": "Steel Legplates",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Steel Legplates.png",
+    "cost": "630",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "35"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d023",
+    "slug": "thunder-belt",
+    "name": "Thunder Belt",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Thunder Belt.png",
+    "cost": "1820",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "600",
+        "physical_defense": "15",
+        "magic_defense": "15",
+        "movement_speed": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Thunderbolt",
+        "description": "Every 4 seconds, the next Basic Attack deals 50 (+100% Extra Physical Defense) (+100% Extra Magic Defense) extra True Damage to the target and enemies around them, and briefly slows them by 99%. Hybrid Defense permanently increases by 1 each time the attack hits an enemy hero. (This effect is reduced to 50% for Marksmen and Mages)",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "d024",
+    "slug": "vitality-crystal",
+    "name": "Vitality Crystal",
+    "category": "Defense",
+    "tier": "3",
+    "icon_reference": "Vitality Crystal.png",
+    "cost": "300",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "hp": "230"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m001",
+    "slug": "azure-blade",
+    "name": "Azure Blade",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Azure Blade.png",
+    "cost": "600",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "5",
+        "cd_reduction": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Judgement",
+        "description": "After casting a skill, the next Basic Attack within 3 seconds deals 50 extra True Damage (1.5 seconds cooldown).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m002",
+    "slug": "blood-wings",
+    "name": "Blood Wings",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Blood Wings.png",
+    "cost": "2100",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "90"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Guard",
+        "description": "Gains a 800 (+100% Magic Power) Shield that will regenerate 20 seconds after being damaged. The Shield also grants 30 Movement Speed while it lasts and 150 Movement Speed for 1 second after it breaks.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m003",
+    "slug": "book-of-sages",
+    "name": "Book of Sages",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Book of Sages.png",
+    "cost": "450",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "8",
+        "cd_reduction": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m004",
+    "slug": "clock-of-destiny",
+    "name": "Clock of Destiny",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Clock of Destiny.png",
+    "cost": "2030",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "445",
+        "hp": "400",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Destiny",
+        "description": "Gains 4.5(+0.5*Hero Level) Hybrid Defense for 5 seconds when dealing Magic Damage to enemy heroes, stacking up to 6 times (can gain 1 stack every 0.4 second).",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Gift",
+        "description": "When HP drops below 50%, recovers 15% of HP over the next 3 seconds. When Mana drops below 50%, restores 15% of Mana over the next 3 seconds. Cooldown: 60 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m005",
+    "slug": "concentrated-energy",
+    "name": "Concentrated Energy",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Concentrated Energy.png",
+    "cost": "2020",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "70",
+        "hp": "400"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+20% Hybrid Lifesteal",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Recharge",
+        "description": "Increases Magic Power by 5 after dealing Magic Damage (this effect stacks up to 6 times and can only gain 1 stack every 0.4 second). When reaching full stacks, increases Magic Damage by 12% for 5 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m006",
+    "slug": "divine-glaive",
+    "name": "Divine Glaive",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Divine Glaive.png",
+    "cost": "1970",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "65"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+40% Magic Penetration",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Spellbreaker",
+        "description": "When attacking an enemy, gains 0.1% extra Magic Penetration for each point of the enemy's Magic Defense, capped at 20%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m007",
+    "slug": "elegant-gem",
+    "name": "Elegant Gem",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Elegant Gem.png",
+    "cost": "700",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "380",
+        "hp": "300"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Gift",
+        "description": "When HP drops below 50%, recovers 15% of HP over the next 3 seconds. When Mana drops below 50%, restores 15% of Mana over the next 3 seconds. Cooldown: 60 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m008",
+    "slug": "enchanted-talisman",
+    "name": "Enchanted Talisman",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Enchanted Talisman.png",
+    "cost": "1870",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "50",
+        "hp": "250",
+        "cd_reduction": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Mana Spring",
+        "description": "Regenerates 15% of Max Mana every 10 seconds.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Magic Mastery",
+        "description": "Max Cooldown Reduction is increased by 5%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m009",
+    "slug": "exotic-veil",
+    "name": "Exotic Veil",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Exotic Veil.png",
+    "cost": "600",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "30",
+        "movement_speed": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m010",
+    "slug": "feather-of-heaven",
+    "name": "Feather of Heaven",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Feather of Heaven.png",
+    "cost": "2030",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "55",
+        "attack_speed": "20%",
+        "cd_reduction": "5%",
+        "physical_lifesteal": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Affliction",
+        "description": "Each Basic Attack deals extra 50 (+30% Total Magic Power) Magic Damage.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Impulse",
+        "description": "Basic Attacks grant 6% extra Attack Speed for 3 seconds, capped at 5 stacks.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m011",
+    "slug": "flask-of-the-oasis",
+    "name": "Flask of the Oasis",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Flask of the Oasis.png",
+    "cost": "1850",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "60",
+        "hp": "300",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+12% Healing Effect",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Blessing",
+        "description": "When casting a healing or shield skill, if the target's HP is below 35%, or falls below 35% within 3 seconds, they will get a (100*Hero Level) shield that lasts 3 seconds. When this effect triggers, it also reduces the cooldown of the caster's skills by 2 seconds. (This effect can only trigger once every 60 seconds on the same target, and will not trigger on self-only healing and shield skills.)",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m012",
+    "slug": "genius-wand",
+    "name": "Genius Wand",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Genius Wand.png",
+    "cost": "2000",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "75",
+        "movement_speed": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Unique Attribute",
+        "description": "+10 Magic Penetration",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Magic",
+        "description": "Dealing Magic Damage to enemy heroes will reduce their Magic Defense by 3+(0.3*Hero Level) for 2 seconds. Stacks up to 3 times.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m013",
+    "slug": "glowing-wand",
+    "name": "Glowing Wand",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Glowing Wand.png",
+    "cost": "2150",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "75",
+        "hp": "400",
+        "movement_speed": "5%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Scorch",
+        "description": "Dealing Magic Damage burns the targets for 3 seconds, also dealing extra Magic Damage equal to 1% of the target's Max HP per second.",
+        "modifiers": []
+      },
+      {
+        "unique_passive_name": "Lifebane",
+        "description": "Dealing damage to the target will reduce the Shield and HP Regen effects on them to 60% of normal for 3 seconds.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m014",
+    "slug": "holy-crystal",
+    "name": "Holy Crystal",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Holy Crystal.png",
+    "cost": "3000",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "185"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Mystery",
+        "description": "Gains 21%-35% extra Magic Power (scales with level).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m015",
+    "slug": "ice-queen-wand",
+    "name": "Ice Queen Wand",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Ice Queen Wand.png",
+    "cost": "2040",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "magic_power": "75",
+        "hp": "300",
+        "movement_speed": "7%",
+        "spell_vamp": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Ice Bound",
+        "description": "When a skill deals damage to an enemy hero, it will also slow them by 10% for 2 seconds (stacks up to 3 times). This effect has a 1 second cooldown.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m016",
+    "slug": "lightning-truncheon",
+    "name": "Lightning Truncheon",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Lightning Truncheon.png",
+    "cost": "2250",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "475",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Resonate",
+        "description": "Every 6 seconds, the next skill echoes, dealing 170 (+85% Magic Power) extra Magic Damage to all enemies in range.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m017",
+    "slug": "magic-necklace",
+    "name": "Magic Necklace",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Magic Necklace.png",
+    "cost": "120",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "2"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m018",
+    "slug": "magic-wand",
+    "name": "Magic Wand",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Magic Wand.png",
+    "cost": "820",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "45"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m019",
+    "slug": "mystery-codex",
+    "name": "Mystery Codex",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Mystery Codex.png",
+    "cost": "300",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "15"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m020",
+    "slug": "mystic-container",
+    "name": "Mystic Container",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Mystic Container.png",
+    "cost": "500",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "15",
+        "spell_vamp": "8%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m021",
+    "slug": "power-crystal",
+    "name": "Power Crystal",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Power Crystal.png",
+    "cost": "220",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "280"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m022",
+    "slug": "starlium-scythe",
+    "name": "Starlium Scythe",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Starlium Scythe.png",
+    "cost": "2120",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "76",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Crisis",
+        "description": "After casting a skill, the next Basic Attack within 3 seconds deals 100 (+100% Total Magic Power) extra True Damage and reduces the target's Movement Speed by 40% for 1.5 seconds (5 seconds cooldown).",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m023",
+    "slug": "tome-of-evil",
+    "name": "Tome of Evil",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Tome of Evil.png",
+    "cost": "950",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "39",
+        "cd_reduction": "8%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "m024",
+    "slug": "wishing-lantern",
+    "name": "Wishing Lantern",
+    "category": "Magic",
+    "tier": "3",
+    "icon_reference": "Wishing Lantern.png",
+    "cost": "2250",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "475",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Butterfly Goddess",
+        "description": "For every 800 Magic Damage dealt to an enemy hero (calculated before Damage Reduction), a Butterfly Goddess is summoned to attack the enemy hero, dealing Magic Damage equal to 8% of their Current HP.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo001",
+    "slug": "arcane-boots",
+    "name": "Arcane Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Arcane Boots.png",
+    "cost": "720",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "15",
+        "movement_speed": "40%",
+        "penetration": "10"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo002",
+    "slug": "boots",
+    "name": "Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Boots.png",
+    "cost": "250",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "movement_speed": "20%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo003",
+    "slug": "demon-shoes",
+    "name": "Demon Shoes",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Demon Shoes.png",
+    "cost": "720",
+    "summary": "Magic",
+    "modifiers": [
+      {
+        "magic_power": "10",
+        "movement_speed": "40%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Mysticism",
+        "description": "Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2 seconds after taking damage from the hero.)",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo004",
+    "slug": "magic-shoes",
+    "name": "Magic Shoes",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Magic Shoes.png",
+    "cost": "720",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "hp": "150",
+        "movement_speed": "40%",
+        "cd_reduction": "10%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo005",
+    "slug": "rapid-boots",
+    "name": "Rapid Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Rapid Boots.png",
+    "cost": "720",
+    "summary": "Health",
+    "modifiers": [
+      {
+        "hp": "12",
+        "movement_speed": "65%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Side Effect",
+        "description": "Loses 20 Movement Speed for 5 seconds upon dealing or taking damage.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo006",
+    "slug": "swift-boots",
+    "name": "Swift Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Swift Boots.png",
+    "cost": "720",
+    "summary": "Movement",
+    "modifiers": [
+      {
+        "movement_speed": "40%",
+        "attack_speed": "15%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo007",
+    "slug": "tough-boots",
+    "name": "Tough Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Tough Boots.png",
+    "cost": "720",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "magic_defense": "18",
+        "movement_speed": "40%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Fortitude",
+        "description": "CC and Slow Duration reduced by 25%.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  },
+  {
+    "id": "mo008",
+    "slug": "warrior-boots",
+    "name": "Warrior Boots",
+    "category": "Movement",
+    "tier": "3",
+    "icon_reference": "Warrior Boots.png",
+    "cost": "720",
+    "summary": "Defense",
+    "modifiers": [
+      {
+        "physical_defense": "18",
+        "movement_speed": "40%"
+      }
+    ],
+    "active": [
+      {
+        "active_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "passive": [
+      {
+        "passive_name": "null",
+        "description": "null",
+        "modifiers": []
+      }
+    ],
+    "unique_passive": [
+      {
+        "unique_passive_name": "Valor",
+        "description": "Gains 4 extra Physical Defense for 3 seconds when taking Physical Damage, up to 20.",
+        "modifiers": []
+      }
+    ],
+    "build_path": [],
+    "provenance": {
+      "source": "https://github.com/p3hndrx/MLBB-API/blob/main/v1/item-meta-final.json",
+      "source_repository": "p3hndrx/MLBB-API",
+      "source_commit_blob_sha": "72136a38dd1f00764c49d99ae063c86db5c271d2",
+      "source_revision": "20251130",
+      "retrieved_at": "2026-11-14",
+      "confidence": "reported",
+      "notes": "Imported from the upstream MIT-licensed dataset. Not independently verified against the live game; check patch applicability."
+    }
+  }
+]
