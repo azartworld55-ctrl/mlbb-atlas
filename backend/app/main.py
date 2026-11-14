@@ -258,7 +258,7 @@ def _build_side_preview(side, label):
         "spell": spell,
         "buffs": {"blue": bool(side.buffs.get("blue")), "red": bool(side.buffs.get("red"))},
         "stats": totals,
-        "defenses": {"physical": side.physical_defense, "magic": side.magic_defense},
+        "defenses": {"physical": totals.get("physical_defense", side.physical_defense), "magic": totals.get("magic_defense", side.magic_defense)},
     }
 
 
