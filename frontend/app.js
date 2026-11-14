@@ -267,6 +267,15 @@ async function setupMatchupCalculator() {
       total_physical_attack: Number(document.getElementById(prefix + '-pa')?.value || 0),
       total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),
       total_hp: Number(document.getElementById(prefix + '-hp')?.value || 0),
+      physical_penetration_percent: Number(document.getElementById(prefix + '-physical-pen-percent')?.value || 0),
+      physical_penetration_flat: Number(document.getElementById(prefix + '-physical-pen-flat')?.value || 0),
+      magic_penetration_percent: Number(document.getElementById(prefix + '-magic-pen-percent')?.value || 0),
+      magic_penetration_flat: Number(document.getElementById(prefix + '-magic-pen-flat')?.value || 0),
+      physical_defense_reduction_percent: Number(document.getElementById(prefix + '-physical-def-reduction-percent')?.value || 0),
+      physical_defense_reduction_flat: Number(document.getElementById(prefix + '-physical-def-reduction-flat')?.value || 0),
+      magic_defense_reduction_percent: Number(document.getElementById(prefix + '-magic-def-reduction-percent')?.value || 0),
+      magic_defense_reduction_flat: Number(document.getElementById(prefix + '-magic-def-reduction-flat')?.value || 0),
+      damage_reduction_percent: Number(document.getElementById(prefix + '-damage-reduction-percent')?.value || 0),
       physical_defense: Number(document.getElementById(prefix + '-pd')?.value || 0),
       magic_defense: Number(document.getElementById(prefix + '-md')?.value || 0)
     };
@@ -286,7 +295,8 @@ async function setupMatchupCalculator() {
         body: JSON.stringify({
           attacker, defender,
           skill_record_id: skillSelect.value || null,
-          endpoint: document.querySelector('#matchup-endpoint').value
+          endpoint: document.querySelector('#matchup-endpoint').value,
+          damage_type: document.querySelector('#matchup-damage-type').value
         })
       });
       const payload = await response.json();
@@ -300,6 +310,8 @@ async function setupMatchupCalculator() {
       if (payload.skill) {
         lines.push('Навык: ' + payload.skill.skill_name + ' · патч ' + payload.skill.patch.version + ' · ' + payload.skill.verification.status);
         lines.push(payload.damage_before_defense === null ? (payload.skill.damage_note || 'Для этого навыка пока нет достаточных числовых параметров.') : 'Расчётный урон до защиты: ' + Number(payload.damage_before_defense).toFixed(2));
+        if (payload.damage_after_defense !== null) lines.push('Урон после защиты: ' + Number(payload.damage_after_defense).toFixed(2));
+        if (payload.mitigation) lines.push('Защита после пробивания: ' + (payload.mitigation.effective_defense ?? 'не применяется') + ' · множитель защиты: ' + Number(payload.mitigation.defense_multiplier).toFixed(3));
         lines.push(payload.skill.note);
       } else {
         lines.push('Навык не выбран — показаны только параметры сборок.');
