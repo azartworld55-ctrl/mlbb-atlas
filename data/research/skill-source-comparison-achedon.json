@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-11-14",
+  "atlas_source": "data/heroes/current.json",
+  "atlas_hero_count": 133,
+  "atlas_skill_record_count": 590,
+  "comparisons": [
+    {
+      "source": "achedon12/mlbb",
+      "branch": "develop",
+      "file": "src/data/game/skills.json",
+      "source_url": "https://github.com/achedon12/mlbb/blob/develop/src/data/game/skills.json",
+      "source_tree_sha": "71a7de79c243c82ab8f529dfe57d9eaa4dc99f37",
+      "data_basis": "Mobile Legends Fandom Wiki-derived content; source project README states CC BY-SA for Wiki-derived game data.",
+      "source_hero_count": 134,
+      "source_skill_record_count": 627,
+      "matched_hero_count": 133,
+      "matched_skill_name_count": 586,
+      "heroes_with_equal_skill_counts": 117,
+      "heroes_with_name_or_count_differences": 20,
+      "source_only_hero_keys": [
+        "dori"
+      ],
+      "differences": [
+        {
+          "hero": "Bane",
+          "atlas_skill_count": 4,
+          "source_skill_count": 4,
+          "atlas_only_skill_names": [
+            "Sea Ink"
+          ],
+          "source_only_skill_names": [
+            "Ale"
+          ]
+        },
+        {
+          "hero": "Kagura",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Sun",
+          "atlas_skill_count": 5,
+          "source_skill_count": 5,
+          "atlas_only_skill_names": [
+            "Instantaneous Move"
+          ],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Lapu-Lapu",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Roger",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Zhask",
+          "atlas_skill_count": 5,
+          "source_skill_count": 5,
+          "atlas_only_skill_names": [
+            "Hive Clones"
+          ],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Selena",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Leomord",
+          "atlas_skill_count": 6,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Lunox",
+          "atlas_skill_count": 8,
+          "source_skill_count": 15,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Hanzo",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Masha",
+          "atlas_skill_count": 4,
+          "source_skill_count": 5,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": [
+            "Life Recovery"
+          ]
+        },
+        {
+          "hero": "Popol and Kupa",
+          "atlas_skill_count": 7,
+          "source_skill_count": 10,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Yu Zhong",
+          "atlas_skill_count": 5,
+          "source_skill_count": 5,
+          "atlas_only_skill_names": [
+            "Furious Dive"
+          ],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Beatrix",
+          "atlas_skill_count": 14,
+          "source_skill_count": 20,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Edith",
+          "atlas_skill_count": 6,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Yin",
+          "atlas_skill_count": 6,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Julian",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Lukas",
+          "atlas_skill_count": 7,
+          "source_skill_count": 8,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Sora",
+          "atlas_skill_count": 10,
+          "source_skill_count": 12,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        },
+        {
+          "hero": "Hirara",
+          "atlas_skill_count": 5,
+          "source_skill_count": 6,
+          "atlas_only_skill_names": [],
+          "source_only_skill_names": []
+        }
+      ],
+      "note": "Skill-name and count comparison only. The source may represent alternate forms, sub-skills, or segmented descriptions as separate records. No descriptions or numeric formulas were copied."
+    }
+  ],
+  "moonton_gms": {
+    "status": "fetcher_added_snapshot_not_yet_retrieved",
+    "endpoint": "https://api.gms.moontontech.com/api/gms/source/2669606/2756564",
+    "reference_implementation": "https://github.com/warungerik/MLBB-Hero-Scraper/blob/main/scraper.js",
+    "note": "A local fetch script has been added. This environment could inspect the endpoint request pattern but could not perform its POST request or retrieve a live response. No live Moonton snapshot is claimed."
+  },
+  "linconius": {
+    "status": "architecture_reference_only",
+    "note": "One hero file inspected (Layla) reports lastPatch 1.8.80. Use schema and Git history conventions, not its stale skill values as current."
+  },
+  "next_review": {
+    "priority": [
+      "Popol and Kupa",
+      "Lunox",
+      "Beatrix",
+      "Masha",
+      "Lukas",
+      "Bane",
+      "Sun",
+      "Zhask",
+      "Yu Zhong"
+    ],
+    "rules": [
+      "Do not merge skill rows by array index alone.",
+      "Review skill identity and form/group semantics before applying count differences.",
+      "Do not copy Wiki descriptions into canonical Atlas without preserving CC BY-SA attribution and share-alike obligations.",
+      "Do not infer damage formula numbers from prose descriptions."
+    ]
+  },
+  "confidence": "reported"
+}
