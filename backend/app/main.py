@@ -175,3 +175,154 @@ def skill_version_detail(record_id: str):
         if record.get("record_id") == record_id:
             return record
     raise HTTPException(status_code=404, detail="Skill version record not found")
+
+
+class MatchupSideRequest(BaseModel):
+    hero_id: str
+    item_ids: list[str] = Field(default_factory=list, max_length=6)
+    emblem_id: str | None = None
+    spell_id: str | None = None
+    buffs: dict[str, bool] = Field(default_factory=lambda: {"blue": False, "red": False})
+    total_physical_attack: float = 0
+    total_magic_power: float = 0
+    physical_defense: float = 0
+    magic_defense: float = 0
+
+
+class MatchupPreviewRequest(BaseModel):
+    attacker: MatchupSideRequest
+    defender: MatchupSideRequest
+    skill_record_id: str | None = None
+    endpoint: str = "high"
+
+
+def _numeric_modifier(value):
+    if isinstance(value, bool) or value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        cleaned = value.strip().replace("%", "")
+        try:
+            return float(cleaned)
+        except ValueError:
+            return None
+    return None
+
+
+def _build_side_preview(side, label):
+    heroes = load_collection("heroes")
+    hero = next((row for row in heroes if row.get("slug") == side.hero_id or row.get("id") == side.hero_id), None)
+    if hero is None:
+        raise HTTPException(status_code=404, detail=f"{label}: hero not found")
+
+    items = load_collection("items")
+    selected_items = []
+    totals = {"physical_attack": side.total_physical_attack, "magic_power": side.total_magic_power}
+    for item_id in side.item_ids:
+        item = next((row for row in items if row.get("id") == item_id or row.get("slug") == item_id), None)
+        if item is None:
+            raise HTTPException(status_code=404, detail=f"{label}: item {item_id} not found")
+        selected_items.append(item)
+        for group in item.get("modifiers", []):
+            if isinstance(group, dict):
+                for key, raw in group.items():
+                    value = _numeric_modifier(raw)
+                    if value is not None:
+                        totals[key] = totals.get(key, 0) + value
+
+    emblem = None
+    if side.emblem_id:
+        emblems = load_collection("emblems")
+        emblem = next((row for row in emblems if row.get("id") == side.emblem_id or row.get("slug") == side.emblem_id), None)
+        if emblem is None:
+            raise HTTPException(status_code=404, detail=f"{label}: emblem not found")
+        for group in emblem.get("modifiers", []):
+            if isinstance(group, dict):
+                for key, raw in group.items():
+                    value = _numeric_modifier(raw)
+                    if value is not None:
+                        totals[key] = totals.get(key, 0) + value
+
+    spell = None
+    if side.spell_id:
+        spells = load_collection("spells")
+        spell = next((row for row in spells if row.get("id") == side.spell_id or row.get("slug") == side.spell_id), None)
+        if spell is None:
+            raise HTTPException(status_code=404, detail=f"{label}: battle spell not found")
+
+    return {
+        "hero": {"id": hero.get("id"), "slug": hero.get("slug"), "name": hero.get("name")},
+        "items": [{"id": item.get("id"), "slug": item.get("slug"), "name": item.get("name")} for item in selected_items],
+        "emblem": {"id": emblem.get("id"), "name": emblem.get("name")} if emblem else None,
+        "spell": spell,
+        "buffs": {"blue": bool(side.buffs.get("blue")), "red": bool(side.buffs.get("red"))},
+        "stats": totals,
+        "defenses": {"physical": side.physical_defense, "magic": side.magic_defense},
+    }
+
+
+@app.post("/api/v1/calculator/matchup-preview", tags=["calculator"])
+def matchup_preview(payload: MatchupPreviewRequest):
+    """Compare two editable loadouts and calculate only sourced, pre-mitigation skill damage."""
+    if payload.endpoint not in {"low", "high"}:
+        raise HTTPException(status_code=422, detail="endpoint must be 'low' or 'high'")
+
+    attacker = _build_side_preview(payload.attacker, "attacker")
+    defender = _build_side_preview(payload.defender, "defender")
+    damage = None
+    skill = None
+    if payload.skill_record_id:
+        path = ROOT / "data" / "skill_versions" / "current.json"
+        import json
+        with path.open("r", encoding="utf-8") as stream:
+            records = json.load(stream)
+        skill = next((row for row in records if row.get("record_id") == payload.skill_record_id), None)
+        if skill is None:
+            raise HTTPException(status_code=404, detail="Skill version record not found")
+        if skill.get("hero_id", "").casefold() != payload.attacker.hero_id.casefold():
+            raise HTTPException(status_code=422, detail="Selected skill record does not belong to the attacking hero")
+
+        base_values = []
+        scaling_total = 0.0
+        unsupported = []
+        for parameter in skill.get("parameters", []):
+            values = parameter.get("values_by_skill_level", [])
+            semantics = parameter.get("value_semantics")
+            if not values or semantics not in {"fixed", "endpoints", "per_level"}:
+                continue
+            index = 0 if payload.endpoint == "low" else len(values) - 1
+            value = float(values[index])
+            if parameter.get("kind") == "base_damage":
+                base_values.append(value)
+            elif parameter.get("kind") == "scaling":
+                attribute = parameter.get("scaling_attribute")
+                stat_key = {"physical_attack": "physical_attack", "magic_power": "magic_power", "max_hp": "hp"}.get(attribute)
+                if stat_key:
+                    scaling_total += attacker["stats"].get(stat_key, 0) * value / 100
+                else:
+                    unsupported.append(parameter.get("key", "unknown scaling"))
+        if base_values:
+            damage = sum(base_values) + scaling_total
+        skill = {
+            "record_id": skill.get("record_id"),
+            "hero_id": skill.get("hero_id"),
+            "skill_name": skill.get("skill_name"),
+            "patch": skill.get("patch"),
+            "verification": skill.get("verification"),
+            "damage_type": next((p.get("damage_type") for p in skill.get("parameters", []) if p.get("kind") == "base_damage" and p.get("damage_type")), None),
+            "damage_before_defense": damage,
+            "unsupported_scalings": unsupported,
+            "endpoint_used": payload.endpoint,
+            "note": "This is a source-parameter preview before enemy defense, penetration, damage reduction, shields, and conditional effects. It is not a full in-game damage result.",
+        }
+
+    return {
+        "attacker": attacker,
+        "defender": defender,
+        "skill": skill,
+        "damage_before_defense": damage,
+        "calculation_scope": "source_parameter_preview_before_defense",
+        "buff_note": "Blue/red buff selections are saved as scenario flags; their combat modifiers are not applied until patch-specific values are verified.",
+        "spell_note": "Battle spells are selectable for both sides; their active effects are not added to skill damage in this preview.",
+    }
