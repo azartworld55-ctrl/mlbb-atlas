@@ -1,5 +1,4 @@
 name: Deploy MLBB Atlas to GitHub Pages
-
 on:
   push:
     branches: [main]
@@ -7,43 +6,46 @@ on:
       - "site/**"
       - "data/heroes/current.json"
       - "data/items/current.json"
+      - "data/emblems/current.json"
+      - "data/spells/current.json"
       - "data/skill_versions/current.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - name: Assemble application source
+        run: |
+          cat site/app.part01.jsfrag site/app.part02.jsfrag site/app.part03.jsfrag site/app.part04.jsfrag site/app.part05.jsfrag > site/app.js
       - name: Prepare static data
         run: |
           mkdir -p site/data
           cp data/heroes/current.json site/data/heroes.json
           cp data/items/current.json site/data/items.json
+          cp data/emblems/current.json site/data/emblems.json
+          cp data/spells/current.json site/data/spells.json
           cp data/skill_versions/current.json site/data/skills.json
-      - name: Validate JSON data
+      - name: Validate datasets and JavaScript
         run: |
-          python -m json.tool site/data/heroes.json > /dev/null
-          python -m json.tool site/data/items.json > /dev/null
-          python -m json.tool site/data/skills.json > /dev/null
+          for f in site/data/*.json; do python -m json.tool "$f" > /dev/null; done
+          node --check site/app.js
+          test -s site/index.html
+          test -s site/styles.css
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
-
   deploy:
     environment:
       name: github-pages
