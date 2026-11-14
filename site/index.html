@@ -1,85 +1,59 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0d12">
-  <meta name="description" content="MLBB Atlas — справочник героев, навыков и предметов Mobile Legends: Bang Bang.">
-  <title>MLBB Atlas — база знаний MLBB</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0d12"><meta name="description" content="MLBB Atlas — русская база героев, навыков, предметов, сборок и калькулятор Mobile Legends: Bang Bang.">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css"><title>MLBB Atlas — база знаний</title>
 </head>
 <body>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="MLBB Atlas — главная"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b><small>НЕЗАВИСИМАЯ БАЗА ЗНАНИЙ</small></span></a>
-    <nav class="main-nav" aria-label="Основная навигация">
-      <button class="nav-link active" data-view="heroes">Герои</button>
-      <button class="nav-link" data-view="items">Предметы</button>
-      <button class="nav-link" data-view="skills">Навыки и патчи</button>
-      <button class="nav-link" data-view="about">О проекте</button>
-    </nav>
-    <button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
-  </header>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar"><a class="brand" href="./" data-view="home"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b><small>НЕЗАВИСИМАЯ БАЗА ЗНАНИЙ</small></span></a>
+<button class="mobile-menu" id="mobile-menu" aria-label="Открыть меню">☰</button>
+<nav class="main-nav" id="main-nav">
+<button class="nav-link active" data-view="home">Главная</button><button class="nav-link" data-view="heroes">Герои</button><button class="nav-link" data-view="items">Предметы</button><button class="nav-link" data-view="builds">Сборки</button><button class="nav-link" data-view="calculator">Калькулятор</button><button class="nav-link" data-view="compare">Сравнение</button><button class="nav-link" data-view="tier">Тир-лист</button><button class="nav-link" data-view="library">Ещё</button>
+</nav></header>
+<main>
+<section class="view active" id="view-home">
+<div class="hero-banner"><div class="hero-copy"><div class="overline"><i class="live-dot"></i> СПРАВОЧНИК MOBILE LEGENDS: BANG BANG</div><h1>ЗНАЙ СВОИХ<br><em>ГЕРОЕВ.</em></h1><p>Герои, навыки, предметы, сборки и инструменты для анализа матча. Данные с источниками и честными отметками достоверности.</p><div class="hero-actions"><button class="primary-btn" data-view="heroes">Открыть базу <span>↗</span></button><span class="version-chip">ORIGINAL SERVER · 2.2.23*</span></div><small class="muted">*Версия последнего импортированного набора патч-данных, не гарантия текущей версии клиента.</small></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-glyph">AT<br><span>LAS</span></div><div class="art-caption">KNOWLEDGE<br>IS POWER</div></div></div>
+<div class="metrics"><div><strong id="metric-heroes">—</strong><span>ГЕРОЕВ</span></div><div><strong id="metric-items">—</strong><span>ПРЕДМЕТОВ</span></div><div><strong id="metric-emblems">—</strong><span>ЭМБЛЕМ</span></div><div><strong id="metric-skills">—</strong><span>ЗАПИСЕЙ НАВЫКОВ</span></div></div>
+<div class="section-heading"><div><div class="overline">БЫСТРЫЙ ДОСТУП</div><h2>ТВОЯ <span>БАЗА</span></h2><p>Выбери нужный инструмент — всё работает прямо в браузере.</p></div></div>
+<div class="quick-grid">
+<button class="quick-card" data-view="heroes"><b>01</b><span class="quick-icon">♙</span><strong>Герои</strong><small>Каталог, навыки, роли и линии</small></button>
+<button class="quick-card" data-view="builds"><b>02</b><span class="quick-icon">⚔</span><strong>Конструктор сборок</strong><small>Шесть слотов, эмблема и заклинание</small></button>
+<button class="quick-card" data-view="calculator"><b>03</b><span class="quick-icon">⌁</span><strong>Калькулятор урона</strong><small>Пробивание, защита и множители</small></button>
+<button class="quick-card" data-view="compare"><b>04</b><span class="quick-icon">⇄</span><strong>Сравнение</strong><small>Герои, роли и доступные данные</small></button>
+<button class="quick-card" data-view="tier"><b>05</b><span class="quick-icon">▤</span><strong>Личный тир-лист</strong><small>Собери свой рейтинг и сохрани</small></button>
+<button class="quick-card" data-view="library"><b>06</b><span class="quick-icon">◈</span><strong>Эмблемы и заклинания</strong><small>Каталог с параметрами и источниками</small></button>
+</div>
+<div class="notice"><b>О достоверности.</b> Каталог содержит импортированные данные сообщества. Они не равны проверке в текущем клиенте. Расчётчик применяет только описанную формулу и поддерживаемые одиночные компоненты навыков; сложные пассивки и эффекты не моделируются.</div>
+</section>
 
-  <main>
-    <section class="hero-banner">
-      <div class="hero-copy">
-        <div class="overline"><span class="live-dot"></span> СПРАВОЧНИК MOBILE LEGENDS: BANG BANG</div>
-        <h1>ЗНАЙ СВОИХ<br><em>ГЕРОЕВ.</em></h1>
-        <p>Герои, способности, предметы и изменения патчей — в одном месте. Данные с источниками, без выдуманных характеристик.</p>
-        <div class="hero-actions"><button class="primary-btn" data-jump="heroes">Открыть базу <span>↗</span></button><span class="version-chip">ORIGINAL SERVER · 2.2.23</span></div>
-      </div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-glyph">AT<br><span>LAS</span></div><div class="art-caption">KNOWLEDGE<br>IS POWER</div></div>
-      <div class="hero-index"><span>01</span><i></i><span>04</span></div>
-    </section>
+<section class="view" id="view-heroes"><div class="section-heading"><div><div class="overline">БИБЛИОТЕКА ПЕРСОНАЖЕЙ</div><h2>ГЕРОИ <span>MLBB</span></h2><p>Поиск, фильтрация, карточки и история изменений.</p></div><span class="result-count" id="hero-count"></span></div>
+<div class="toolbar"><label class="searchbox">⌕<input id="hero-search" placeholder="Имя героя…" type="search"></label><div class="filter-group" id="role-filters"><button class="filter active" data-role="all">Все роли</button><button class="filter" data-role="Tank">Танк</button><button class="filter" data-role="Fighter">Боец</button><button class="filter" data-role="Assassin">Убийца</button><button class="filter" data-role="Mage">Маг</button><button class="filter" data-role="Marksman">Стрелок</button><button class="filter" data-role="Support">Поддержка</button></div><button class="outline-btn" id="fav-filter">☆ Избранное</button></div>
+<div class="lane-row" id="lane-filters"><span>ЛИНИЯ</span><button class="lane active" data-lane="all">Любая</button><button class="lane" data-lane="exp lane">EXP</button><button class="lane" data-lane="gold lane">Золото</button><button class="lane" data-lane="mid lane">Мид</button><button class="lane" data-lane="jungle">Лес</button><button class="lane" data-lane="roam">Роум</button></div>
+<div class="hero-grid" id="hero-grid"></div><div class="empty-state hidden" id="hero-empty">Ничего не найдено.</div></section>
 
-    <section class="metrics" aria-label="Размер базы">
-      <div><strong id="metric-heroes">—</strong><span>ГЕРОЕВ</span></div>
-      <div><strong id="metric-items">—</strong><span>ПРЕДМЕТОВ</span></div>
-      <div><strong id="metric-skills">—</strong><span>ЗАПИСЕЙ НАВЫКОВ</span></div>
-      <div><strong>100%</strong><span>БЕЗ РЕГИСТРАЦИИ</span></div>
-    </section>
+<section class="view" id="view-items"><div class="section-heading"><div><div class="overline">ЭКИПИРОВКА</div><h2>ПРЕДМЕТЫ <span>И СНАРЯЖЕНИЕ</span></h2><p>Стоимость, модификаторы и пассивные эффекты из набора данных.</p></div><span class="result-count" id="item-count"></span></div>
+<div class="toolbar"><label class="searchbox">⌕<input id="item-search" type="search" placeholder="Найти предмет…"></label><div class="filter-group" id="item-filters"><button class="filter active" data-cat="all">Все</button><button class="filter" data-cat="Attack">Атака</button><button class="filter" data-cat="Magic">Магия</button><button class="filter" data-cat="Defense">Защита</button><button class="filter" data-cat="Movement">Передвижение</button><button class="filter" data-cat="Jungle">Лес</button><button class="filter" data-cat="Roaming">Роум</button></div></div><div class="item-grid" id="item-grid"></div></section>
 
-    <section class="content-section" id="database">
-      <div class="section-heading">
-        <div><div class="overline">БИБЛИОТЕКА</div><h2 id="section-title">ГЕРОИ <span>MLBB</span></h2><p id="section-subtitle">Выбирай персонажа, изучай навыки и собирай знания перед матчем.</p></div>
-        <div class="heading-side"><span class="data-status"><i></i> ЛОКАЛЬНАЯ БАЗА ДАННЫХ</span><span id="result-count" class="result-count">Загрузка…</span></div>
-      </div>
-      <div class="toolbar" id="hero-toolbar">
-        <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Найти героя…" autocomplete="off"><kbd>/</kbd></label>
-        <div class="filter-group" id="role-filters">
-          <button class="filter active" data-role="all">Все</button><button class="filter" data-role="Tank">Танк</button><button class="filter" data-role="Fighter">Боец</button><button class="filter" data-role="Assassin">Убийца</button><button class="filter" data-role="Mage">Маг</button><button class="filter" data-role="Marksman">Стрелок</button><button class="filter" data-role="Support">Поддержка</button>
-        </div>
-        <button class="icon-btn" id="favorites-toggle" title="Избранное" aria-label="Показать избранное">☆</button>
-      </div>
-      <div class="lane-row" id="lane-filters"><span>ЛИНИЯ</span><button class="lane active" data-lane="all">Любая</button><button class="lane" data-lane="exp lane">EXP</button><button class="lane" data-lane="gold lane">Золото</button><button class="lane" data-lane="mid lane">Мид</button><button class="lane" data-lane="jungle">Лес</button><button class="lane" data-lane="roam">Роум</button></div>
-      <div class="hero-grid" id="hero-grid"><div class="loading-state"><span class="loader"></span><p>Загружаем базу героев…</p></div></div>
-      <div class="empty-state hidden" id="empty-state">Ничего не найдено. Попробуй изменить фильтры.</div>
-      <div class="pagination-note" id="pagination-note"></div>
-    </section>
+<section class="view" id="view-builds"><div class="section-heading"><div><div class="overline">ТВОЯ ЭКИПИРОВКА</div><h2>КОНСТРУКТОР <span>СБОРОК</span></h2><p>Сохраняй варианты локально на этом устройстве. Сборки не загружаются на сервер.</p></div></div>
+<div class="workspace"><div class="panel"><h3>СОЗДАТЬ СБОРКУ</h3><label class="field">Название сборки<input id="build-name" placeholder="Например: основной билд"></label><label class="field">Герой<select id="build-hero"></select></label><div class="field-label">Шесть слотов предметов</div><div class="slot-grid" id="build-slots"></div><label class="field">Эмблема<select id="build-emblem"></select></label><label class="field">Боевой навык<select id="build-spell"></select></label><button class="primary-btn full" id="save-build">Сохранить сборку</button><div class="notice compact" id="build-preview">Выбранные предметы и эмблема показывают суммарные числовые модификаторы из базы. Пассивные эффекты не симулируются.</div></div><div class="panel"><h3>СОХРАНЁННЫЕ СБОРКИ</h3><div id="saved-builds" class="saved-list"></div></div></div></section>
 
-    <section class="content-section hidden" id="items-view">
-      <div class="section-heading"><div><div class="overline">ЭКИПИРОВКА</div><h2>ПРЕДМЕТЫ <span>И СНАРЯЖЕНИЕ</span></h2><p>Характеристики и описания из базы проекта. Непроверенные значения помечены.</p></div></div>
-      <div class="toolbar"><label class="searchbox"><span>⌕</span><input id="item-search" type="search" placeholder="Найти предмет…"></label><div class="filter-group" id="item-categories"><button class="filter active" data-category="all">Все</button><button class="filter" data-category="Attack">Атака</button><button class="filter" data-category="Magic">Магия</button><button class="filter" data-category="Defense">Защита</button><button class="filter" data-category="Movement">Передвижение</button><button class="filter" data-category="Jungle">Лес</button><button class="filter" data-category="Roaming">Роум</button></div></div>
-      <div class="item-grid" id="item-grid"></div>
-    </section>
+<section class="view" id="view-calculator"><div class="section-heading"><div><div class="overline">ЛАБОРАТОРИЯ УРОНА</div><h2>КАЛЬКУЛЯТОР <span>СРАЖЕНИЯ</span></h2><p>Настрой атакующего и защитника независимо. Результат — расчёт по заданной формуле, не точная симуляция игры.</p></div></div>
+<div class="calc-grid"><div class="panel"><h3>АТАКУЮЩИЙ</h3><div id="attacker-form" class="side-form"></div></div><div class="panel"><h3>ЗАЩИТНИК</h3><div id="defender-form" class="side-form"></div></div></div>
+<div class="panel calc-controls"><h3>ПАРАМЕТРЫ УДАРА</h3><div class="form-grid"><label class="field">Запись навыка<select id="calc-skill"></select></label><label class="field">Тип урона<select id="damage-type"><option value="physical">Физический</option><option value="magic">Магический</option><option value="true">Чистый</option></select></label><label class="field">Точка диапазона<select id="endpoint"><option value="low">Нижняя граница</option><option value="high" selected>Верхняя граница</option></select></label></div><button class="primary-btn" id="run-calc">Рассчитать урон</button><div id="calc-result" class="calc-result"><span class="muted">Выбери атакующего, навык и параметры защиты.</span></div></div>
+<div class="notice"><b>Что не учитывается:</b> критический урон, уровни навыков между опубликованными границами, щиты, сопротивления по условиям, боевые эффекты заклинаний, синие/красные баффы и пассивки предметов. Переключатели баффов сохраняются как сценарий, но не меняют результат.</div></section>
 
-    <section class="content-section hidden" id="skills-view">
-      <div class="section-heading"><div><div class="overline">ИСТОРИЯ ОБНОВЛЕНИЙ</div><h2>НАВЫКИ <span>ПО ПАТЧАМ</span></h2><p>Параметры привязаны к версии игры. Опубликованные границы не превращаются в выдуманные значения по уровням.</p></div></div>
-      <div class="toolbar skill-toolbar"><label class="searchbox"><span>⌕</span><input id="skill-search" type="search" placeholder="Герой или название навыка…"></label><label class="select-wrap"><span>ПАТЧ</span><select id="patch-filter"><option value="all">Все версии</option></select></label><label class="select-wrap"><span>СТАТУС</span><select id="status-filter"><option value="all">Все статусы</option><option value="verified">Проверено</option><option value="reported">Сообщено источником</option><option value="experimental">Экспериментально</option></select></label></div>
-      <div class="skill-list" id="skill-list"></div>
-    </section>
+<section class="view" id="view-compare"><div class="section-heading"><div><div class="overline">АНАЛИЗ ПЕРСОНАЖЕЙ</div><h2>СРАВНЕНИЕ <span>ГЕРОЕВ</span></h2><p>Сравни роли, линии, набор навыков и количество записей патчей.</p></div></div><div class="compare-select"><label class="field">Первый герой<select id="compare-a"></select></label><span>VS</span><label class="field">Второй герой<select id="compare-b"></select></label></div><div id="compare-result" class="compare-grid"></div><div class="notice">В исходном каталоге нет надёжного единого набора базовых HP, защиты, атаки и винрейтов по каждому герою. Поэтому такие числа не подставляются и не сравниваются.</div></section>
 
-    <section class="content-section hidden" id="about-view">
-      <div class="about-panel"><div class="overline">НЕЗАВИСИМЫЙ ПРОЕКТ</div><h2>НЕ ПРОСТО<br><span>ЕЩЁ ОДИН ТИР-ЛИСТ.</span></h2><p>MLBB Atlas — справочная база с привязкой данных к версиям игры. Мы не выдаём догадки за факты: у записей есть источники и статус проверки.</p><div class="about-points"><div><b>01</b><span>Источники и история изменений</span></div><div><b>02</b><span>Никаких аккаунтов и регистрации</span></div><div><b>03</b><span>Сохранение избранного на устройстве</span></div><div><b>04</b><span>Бесплатный статический сайт</span></div></div><p class="disclaimer">MLBB Atlas — фанатский справочный проект. Не связан с Moonton. Названия и игровые материалы принадлежат их правообладателям.</p><a class="repo-link" href="https://github.com/azartworld55-ctrl/mlbb-atlas" target="_blank" rel="noopener">Открыть репозиторий ↗</a></div>
-    </section>
-  </main>
+<section class="view" id="view-tier"><div class="section-heading"><div><div class="overline">ЛИЧНЫЙ РЕЙТИНГ</div><h2>МОЙ <span>ТИР-ЛИСТ</span></h2><p>Создай собственный рейтинг героев и сохрани его в браузере.</p></div></div><div class="tier-controls panel"><label class="field">Герой<select id="tier-hero"></select></label><label class="field">Тир<select id="tier-rank"><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label><button class="primary-btn" id="tier-add">Добавить</button><button class="outline-btn" id="tier-clear">Очистить мой тир-лист</button></div><div class="tier-board" id="tier-board"></div><div class="notice">Это твой личный список, не объективный мета-рейтинг. Публичные тир-листы здесь не генерируются без проверяемой статистики, выборки и даты патча.</div></section>
 
-  <footer><a class="brand footer-brand" href="./"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b></span></a><span>НЕОФИЦИАЛЬНАЯ БАЗА ЗНАНИЙ · 2026</span><a href="https://github.com/azartworld55-ctrl/mlbb-atlas" target="_blank" rel="noopener">GITHUB ↗</a></footer>
-  <div class="modal hidden" id="hero-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name"><div class="modal-backdrop" data-close-modal></div><article class="modal-card"><button class="modal-close" data-close-modal aria-label="Закрыть">×</button><div id="modal-content"></div></article></div>
-  <script src="./app.js"></script>
-</body>
-</html>
+<section class="view" id="view-library"><div class="section-heading"><div><div class="overline">ДОПОЛНИТЕЛЬНЫЕ ДАННЫЕ</div><h2>ЭМБЛЕМЫ <span>И ЗАКЛИНАНИЯ</span></h2><p>Справочник всех загруженных наборов и источников.</p></div></div><div class="library-tabs"><button class="filter active" data-library="emblems">Эмблемы</button><button class="filter" data-library="spells">Боевые заклинания</button><button class="filter" data-library="skills">Навыки и патчи</button><button class="filter" data-library="about">О проекте и источниках</button></div><div id="library-content"></div></section>
+</main>
+<footer><a class="brand footer-brand" href="./" data-view="home"><span class="brand-mark">A</span><span>MLBB <b>ATLAS</b></span></a><span>НЕОФИЦИАЛЬНАЯ БАЗА ЗНАНИЙ · 2026</span><a href="https://github.com/azartworld55-ctrl/mlbb-atlas" target="_blank" rel="noopener">GITHUB ↗</a></footer>
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true"><div class="modal-backdrop" data-close></div><article class="modal-card"><button class="modal-close" data-close aria-label="Закрыть">×</button><div id="modal-content"></div></article></div>
+<div id="toast" class="toast" role="status"></div><script src="./app.js"></script>
+</body></html>
