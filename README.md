@@ -49,7 +49,8 @@ Run tests with `pytest`.
 - `GET /api/v1/spells` — 12 community-sourced battle spell entries with confidence labels
 - `GET /api/v1/skill-versions` — filter patch-scoped skill parameters by hero, skill, patch, channel or verification status
 - `GET /api/v1/skill-versions/{record_id}` — retrieve one exact versioned record
-- `POST /api/v1/calculator/evaluate` — evaluates a caller-supplied JSON formula without assuming unverified in-game mechanics\n- `POST /api/v1/calculator/matchup-preview` — compares two independently configured hero loadouts, items, emblems, battle spells and buff flags; skill damage is shown before defense only when a patch-scoped skill record is available
+- `POST /api/v1/calculator/evaluate` — evaluates a caller-supplied JSON formula without assuming unverified in-game mechanics
+- `POST /api/v1/calculator/matchup-preview` — compares two independently configured hero loadouts, items, emblems, battle spells and buff flags; skill damage is shown before defense only when a patch-scoped skill record is available
 
 The initial import currently contains 133 heroes, 89 items and 7 emblems. The website includes a patch-scoped skill-parameter browser. Published endpoints are displayed as endpoints, not expanded into invented rank values. The matchup workspace supports separate attacker and defender builds (six item slots, emblem, battle spell, and independent blue/red buff flags). The current calculation is a sourced skill-parameter preview before defense, penetration, shields and conditional effects; buff and battle-spell flags are recorded but their combat modifiers are not applied yet. It is not a full verified in-game damage simulator. Imported values are labelled `reported`, not independently verified.
 
