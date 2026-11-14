@@ -62,7 +62,9 @@ def test_spells_endpoint_returns_sourced_catalogue():
     assert response.status_code == 200
     payload = response.json()
     assert payload["count"] == 12
-    assert {row["slug"] for row in payload["data"]} >= {"flicker", "execute", "retribution", "vengeance"}\n    sprint = next(row for row in payload["data"] if row["slug"] == "sprint")\n    assert sprint["cooldown_seconds"] == 75
+    assert {row["slug"] for row in payload["data"]} >= {"flicker", "execute", "retribution", "vengeance"}
+    sprint = next(row for row in payload["data"] if row["slug"] == "sprint")
+    assert sprint["cooldown_seconds"] == 75
     assert all(row["provenance"]["confidence"] == "reported" for row in payload["data"])
 
 
