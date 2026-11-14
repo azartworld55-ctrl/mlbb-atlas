@@ -185,3 +185,130 @@ async function setupSkillVersions(heroes) {
   });
   await refresh();
 }
+
+
+async function setupMatchupCalculator() {
+  const ids = ['attacker-hero','defender-hero','attacker-emblem','defender-emblem','attacker-spell','defender-spell'];
+  if (!document.getElementById(ids[0])) return;
+  const result = document.querySelector('#matchup-result');
+  const [heroesPayload, itemsPayload, emblemsPayload, spellsPayload] = await Promise.all([
+    fetch('/api/v1/heroes').then(r => r.json()),
+    fetch('/api/v1/items').then(r => r.json()),
+    fetch('/api/v1/emblems').then(r => r.json()),
+    fetch('/api/v1/spells').then(r => r.json())
+  ]);
+  const heroes = heroesPayload.data || [];
+  const items = itemsPayload.data || [];
+  const emblems = emblemsPayload.data || [];
+  const spells = spellsPayload.data || [];
+
+  function fillSelect(select, rows, label, placeholder) {
+    select.replaceChildren();
+    const empty = document.createElement('option');
+    empty.value = '';
+    empty.textContent = placeholder;
+    select.append(empty);
+    rows.forEach(row => {
+      const option = document.createElement('option');
+      option.value = row.slug || row.id;
+      option.textContent = label(row);
+      select.append(option);
+    });
+  }
+  const byName = (a,b) => (a.name || '').localeCompare(b.name || '');
+  ['attacker-hero','defender-hero'].forEach(id => fillSelect(document.getElementById(id), heroes, h => h.name, 'Выбери героя'));
+  ['attacker-emblem','defender-emblem'].forEach(id => fillSelect(document.getElementById(id), emblems, e => e.name, 'Без эмблемы'));
+  ['attacker-spell','defender-spell'].forEach(id => fillSelect(document.getElementById(id), spells, s => s.name + ' · ' + s.cooldown_seconds + ' сек.', 'Без заклинания'));
+  const sortedItems = [...items].sort(byName);
+  ['attacker-items','defender-items'].forEach(containerId => {
+    const container = document.getElementById(containerId);
+    for (let slot = 1; slot <= 6; slot++) {
+      const label = document.createElement('label');
+      label.textContent = 'Предмет ' + slot;
+      const select = document.createElement('select');
+      select.className = 'build-item-select';
+      select.dataset.slot = String(slot);
+      fillSelect(select, sortedItems, item => item.name, 'Пустой слот');
+      label.append(select);
+      container.append(label);
+    }
+  });
+  const skillSelect = document.querySelector('#matchup-skill');
+  const attackerHero = document.querySelector('#attacker-hero');
+  async function refreshSkills() {
+    skillSelect.replaceChildren();
+    const selectedHero = attackerHero.value;
+    if (!selectedHero) {
+      const option = document.createElement('option');
+      option.value = '';
+      option.textContent = 'Сначала выбери атакующего героя';
+      skillSelect.append(option);
+      return;
+    }
+    const payload = await fetch('/api/v1/skill-versions?hero_id=' + encodeURIComponent(selectedHero)).then(r => r.json());
+    const rows = payload.data || [];
+    fillSelect(skillSelect, rows, row => row.skill_name + ' · патч ' + row.patch.version + ' · ' + row.verification.status, 'Без навыка');
+    rows.forEach((row, index) => { if (index === rows.length - 1) skillSelect.value = row.record_id; });
+  }
+  attackerHero.addEventListener('change', () => refreshSkills().catch(error => { result.textContent = error.message; }));
+  await refreshSkills();
+
+  function readSide(prefix) {
+    return {
+      hero_id: document.getElementById(prefix + '-hero').value,
+      emblem_id: document.getElementById(prefix + '-emblem').value || null,
+      spell_id: document.getElementById(prefix + '-spell').value || null,
+      item_ids: [...document.querySelectorAll('#' + prefix + '-items select')].map(x => x.value).filter(Boolean),
+      buffs: {
+        blue: document.getElementById(prefix + '-blue').checked,
+        red: document.getElementById(prefix + '-red').checked
+      },
+      total_physical_attack: Number(document.getElementById(prefix + '-pa')?.value || 0),
+      total_magic_power: Number(document.getElementById(prefix + '-mp')?.value || 0),
+      physical_defense: Number(document.getElementById(prefix + '-pd')?.value || 0),
+      magic_defense: Number(document.getElementById(prefix + '-md')?.value || 0)
+    };
+  }
+  document.querySelector('#matchup-calculate').addEventListener('click', async () => {
+    const attacker = readSide('attacker');
+    const defender = readSide('defender');
+    if (!attacker.hero_id || !defender.hero_id) {
+      result.textContent = 'Выбери героя для обеих сторон.';
+      return;
+    }
+    result.textContent = 'Считаю параметры сборок…';
+    try {
+      const response = await fetch('/api/v1/calculator/matchup-preview', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          attacker, defender,
+          skill_record_id: skillSelect.value || null,
+          endpoint: document.querySelector('#matchup-endpoint').value
+        })
+      });
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.detail || 'Ошибка расчёта');
+      const lines = [];
+      lines.push(payload.attacker.hero.name + ' → ' + payload.defender.hero.name);
+      lines.push('Атакующий: ' + payload.attacker.items.length + ' предметов · эмблема: ' + (payload.attacker.emblem?.name || 'нет') + ' · заклинание: ' + (payload.attacker.spell?.name || 'нет'));
+      lines.push('Противник: ' + payload.defender.items.length + ' предметов · эмблема: ' + (payload.defender.emblem?.name || 'нет') + ' · заклинание: ' + (payload.defender.spell?.name || 'нет'));
+      lines.push('Атака: ' + JSON.stringify(payload.attacker.stats));
+      lines.push('Защита противника: ' + JSON.stringify(payload.defender.defenses));
+      if (payload.skill) {
+        lines.push('Навык: ' + payload.skill.skill_name + ' · патч ' + payload.skill.patch.version + ' · ' + payload.skill.verification.status);
+        lines.push(payload.damage_before_defense === null ? 'Для этого навыка пока нет достаточных числовых параметров.' : 'Расчётный урон до защиты: ' + Number(payload.damage_before_defense).toFixed(2));
+        lines.push(payload.skill.note);
+      } else {
+        lines.push('Навык не выбран — показаны только параметры сборок.');
+      }
+      lines.push(payload.buff_note);
+      lines.push(payload.spell_note);
+      result.textContent = lines.join('\\n');
+    } catch (error) {
+      result.textContent = 'Не удалось рассчитать: ' + error.message;
+    }
+  });
+}
+
+setupMatchupCalculator().catch(error => console.error(error));
