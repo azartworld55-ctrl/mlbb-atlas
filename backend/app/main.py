@@ -4,8 +4,20 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
+
+from app.formulas import evaluate_expression
 
 from app.data import find_record, load_collection
+
+class FormulaEvaluationRequest(BaseModel):
+    """A caller-supplied, non-executable formula and its numeric inputs."""
+
+    expression: dict
+    stats: dict[str, object] = Field(default_factory=dict)
+    formula_id: str | None = None
+    game_patch: str | None = None
+
 
 ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = ROOT / "frontend"
@@ -95,6 +107,23 @@ def emblems(search: str | None = Query(default=None, min_length=1, max_length=80
         needle = search.casefold()
         records = [r for r in records if needle in r.get("name", "").casefold()]
     return {"count": len(records), "data": records}
+
+
+@app.post("/api/v1/calculator/evaluate", tags=["calculator"])
+def evaluate_formula(payload: FormulaEvaluationRequest):
+    """Evaluate a safe JSON expression; no MLBB mitigation rules are implied."""
+    try:
+        value = evaluate_expression(payload.expression, payload.stats)
+    except (TypeError, ValueError) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    return {
+        "formula_id": payload.formula_id,
+        "game_patch": payload.game_patch,
+        "value": value,
+        "calculation_scope": "supplied_expression_only",
+        "confidence": "user_supplied_unverified",
+        "note": "This is only the result of the supplied expression; no in-game damage, defense, rounding, or special mechanics are inferred.",
+    }
 
 
 @app.get("/api/v1/spells", tags=["spells"])
