@@ -178,7 +178,7 @@ def test_matchup_preview_uses_selected_builds_and_sourced_skill_parameters():
     assert payload["defender"]["buffs"] == {"blue": False, "red": True}
     assert payload["damage_before_defense"] == 859
     assert payload["skill"]["patch"]["version"] == "2.2.23"
-    assert payload["calculation_scope"] == "source_parameter_preview_before_defense"
+    assert payload["calculation_scope"] == "source_parameter_preview_with_defense_for_supported_single_component_skills"
 
 
 def test_matchup_rejects_skill_from_other_attacker():
