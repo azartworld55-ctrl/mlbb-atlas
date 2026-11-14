@@ -39,3 +39,8 @@ See [skill-source-lock.json](../data/sources/skill-source-lock.json). Do not bul
 ## Current implementation status
 
 This audit records source capabilities and policy. It does not claim that all hero skills have been imported, compared or verified. The next technical step is a permitted metadata snapshot from the Moonton endpoint, then a field-level diff against the existing Atlas hero catalog and the reviewed community datasets.
+
+
+## Concrete staleness checks
+
+The inspected `data/heroes/layla.json` in Build Analyser declares `lastPatch: 1.8.80`, despite the repository having later commits. This is why its per-hero structure and formula DSL are useful, but its skill numbers cannot be assumed current for 2.2.23.
