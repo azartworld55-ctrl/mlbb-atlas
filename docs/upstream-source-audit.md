@@ -72,7 +72,7 @@ These are catalogue-structure differences, not confirmed gameplay changes. Multi
 
 ## Moonton GMS snapshot tooling
 
-A local-only fetcher is available at `scripts/fetch_moonton_skills.py`. It follows the request shape observed in the public warungerik scraper, extracts hero/skill metadata without downloading images, and writes a local snapshot under the ignored `data/imports/moonton/` directory. The endpoint is undocumented and may change. This environment could inspect the request pattern but could not execute the POST request; therefore no fresh Moonton response is claimed yet.
+A local-only fetcher is available at `scripts/fetch_moonton_skills.py`. It follows the request shape observed in the public warungerik scraper, extracts hero/skill metadata without downloading images, and writes a local snapshot under the ignored `data/imports/moonton/` directory. The endpoint is undocumented and may change. A live POST was successfully executed by GitHub Actions on 2026-11-14: the response contained 133 heroes and 622 skill records. The first report found 15 heroes with catalogue count/name differences versus Atlas. The raw Moonton snapshot remains local to the runner and is not committed or uploaded. A follow-up comparator now emits skill IDs, group, cooldown/cost text and numeric tokens (not full descriptions) for the 15 conflict heroes, plus field-level numeric/cooldown differences where names match. This is a review aid only: the endpoint response does not expose a verified Original Server patch identifier, and numeric tokens are not interpreted as verified damage formulas.
 
 Run:
 ```bash
