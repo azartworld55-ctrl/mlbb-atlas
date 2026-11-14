@@ -26,7 +26,7 @@ def test_unknown_stat_is_rejected():
 
 def test_division_by_zero_is_rejected():
     with pytest.raises(ValueError, match="Division by zero"):
-        evaluate_expression({"op": "div", "args": [{"const": 1}, {"const": 0}])
+        evaluate_expression({"op": "div", "args": [{"const": 1}, {"const": 0}]})
 
 
 def test_arbitrary_expression_is_rejected():
