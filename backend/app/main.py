@@ -134,15 +134,14 @@ def spells(search: str | None = Query(default=None, min_length=1, max_length=80)
     return {"count": len(records), "data": records}
 
 
-@app.get("/api/v1/skill-versions", tags=["skills"])
-def skill_versions(
-    hero_id: str | None = Query(default=None, min_length=1, max_length=80),
-    skill_id: str | None = Query(default=None, min_length=1, max_length=100),
-    patch: str | None = Query(default=None, min_length=1, max_length=40),
-    channel: str | None = Query(default=None, min_length=1, max_length=40),
-    verification_status: str | None = Query(default=None, min_length=1, max_length=40),
+def _get_skill_versions(
+    hero_id: str | None = None,
+    skill_id: str | None = None,
+    patch: str | None = None,
+    channel: str | None = None,
+    verification_status: str | None = None,
 ):
-    """Return patch-scoped skill parameters without inventing missing rank values."""
+    """Load and filter skill versions using plain Python values."""
     path = ROOT / "data" / "skill_versions" / "current.json"
     if not path.exists():
         return {"count": 0, "data": []}
@@ -167,10 +166,22 @@ def skill_versions(
     return {"count": len(records), "data": records}
 
 
+@app.get("/api/v1/skill-versions", tags=["skills"])
+def skill_versions(
+    hero_id: str | None = Query(default=None, min_length=1, max_length=80),
+    skill_id: str | None = Query(default=None, min_length=1, max_length=100),
+    patch: str | None = Query(default=None, min_length=1, max_length=40),
+    channel: str | None = Query(default=None, min_length=1, max_length=40),
+    verification_status: str | None = Query(default=None, min_length=1, max_length=40),
+):
+    """Return patch-scoped skill parameters without inventing missing rank values."""
+    return _get_skill_versions(hero_id, skill_id, patch, channel, verification_status)
+
+
 @app.get("/api/v1/skill-versions/{record_id}", tags=["skills"])
 def skill_version_detail(record_id: str):
     """Return one exact patch-scoped skill record."""
-    result = skill_versions()
+    result = _get_skill_versions()
     for record in result["data"]:
         if record.get("record_id") == record_id:
             return record
