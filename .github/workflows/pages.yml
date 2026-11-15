@@ -17,7 +17,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: pages-land-of-legends
   cancel-in-progress: true
 jobs:
   build:
