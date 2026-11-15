@@ -30,11 +30,28 @@ def test_shared_hero_link_opens_after_data_load_and_browser_back_restores_state(
 
 def test_service_worker_refreshes_cached_site_shell_after_release():
     worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
-    assert 'const CACHE="mlbb-atlas-shell-v4"' in worker
+    assert 'const CACHE="mlbb-atlas-shell-v5"' in worker
 
 
 def test_service_worker_only_clears_previous_atlas_shell_caches():
     worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
-    assert 'const CACHE="mlbb-atlas-shell-v4"' in worker
+    assert 'const CACHE="mlbb-atlas-shell-v5"' in worker
     assert 'const CACHE_PREFIX="mlbb-atlas-shell-"' in worker
     assert "keys.filter(k=>k.startsWith(CACHE_PREFIX)&&k!==CACHE)" in worker
+
+
+def test_role_filter_supports_multi_role_records():
+    source = assembled_app()
+    assert 'some(r=>String(r).split(",").some(v=>v.trim().toLowerCase()===roleFilter.toLowerCase()))' in source
+
+
+def test_library_tabs_are_handled_by_their_parent_view():
+    source = assembled_app()
+    assert '$("#view-library").onclick' in source
+    assert '"#library-content").onclick' not in source
+
+
+def test_library_emblems_and_spells_use_russian_explanations():
+    source = assembled_app()
+    assert 'const emblemDescriptions=' in source
+    assert 'Данные из сообщества; сверяй их с текущей версией игры.' in source
