@@ -26,3 +26,8 @@ def test_shared_hero_link_opens_after_data_load_and_browser_back_restores_state(
     assert 'window.addEventListener("popstate"' in source
     assert "history.back()" in source
     assert "history.replaceState" in source
+
+
+def test_service_worker_refreshes_cached_site_shell_after_release():
+    worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
+    assert 'const CACHE="mlbb-atlas-shell-v2"' in worker
