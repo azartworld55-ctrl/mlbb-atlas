@@ -30,7 +30,7 @@ def test_shared_hero_link_opens_after_data_load_and_browser_back_restores_state(
 
 def test_service_worker_refreshes_cached_site_shell_after_release():
     worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
-    assert 'const CACHE="mlbb-atlas-shell-v2"' in worker
+    assert 'const CACHE="mlbb-atlas-shell-v3"' in worker
 
 
 def test_service_worker_only_clears_previous_atlas_shell_caches():
