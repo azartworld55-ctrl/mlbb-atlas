@@ -42,6 +42,7 @@ jobs:
         run: |
           for f in site/data/*.json; do python -m json.tool "$f" > /dev/null; done
           node --check site/app.js
+          node --check scripts/build-ru-localization.mjs
           test -s site/index.html
           test -s site/styles.css
       - name: Configure Pages
