@@ -14,6 +14,7 @@ def test_hero_cards_have_shareable_deep_links():
     assert 'location.hash' in source
     assert 'id="mshare"' in source
     assert "navigator.clipboard.writeText" in source
+    assert "\\nif(" not in source
 
 
 def test_shared_hero_link_opens_after_data_load_and_browser_back_restores_state():
