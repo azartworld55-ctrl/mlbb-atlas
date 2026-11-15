@@ -105,11 +105,9 @@ async function main() {
   };
   await Promise.all(Array.from({ length: 2 }, worker));
 
-  const [spellRu, spellEn, itemRu, itemEn] = await Promise.all([
+  const [spellRu, spellEn] = await Promise.all([
     safe("/academy/spells?size=200&lang=ru"),
-    safe("/academy/spells?size=200&lang=en"),
-    safe("/academy/equipment/expanded?size=200&lang=ru"),
-    safe("/academy/equipment/expanded?size=200&lang=en")
+    safe("/academy/spells?size=200&lang=en")
   ]);
 
   if (spellRu && spellEn) {
@@ -127,27 +125,7 @@ async function main() {
     if (fallback) result.spells[spell.name] ??= { name: fallback, summary: spell.summary || "" };
   }
 
-  if (itemRu && itemEn) {
-    const ruById = new Map(records(itemRu).map((x) => [String(x.equipid), x]));
-    const normalizeName = (value) => String(value || "").toLocaleLowerCase("en").normalize("NFKD").replace(/[’'\u0060]/g, "").replace(/[^a-z0-9]/g, "");
-    const enByName = new Map();
-    for (const row of records(itemEn)) {
-      const key = normalizeName(row.equipname);
-      if (!key || enByName.has(key)) continue;
-      enByName.set(key, row);
-    }
-    for (const siteItem of items) {
-      const en = records(itemEn).find((row) => row.equipname === siteItem.name) || enByName.get(normalizeName(siteItem.name));
-      if (!en?.equipid) continue;
-      const ru = ruById.get(String(en.equipid));
-      if (!ru?.equipname) continue;
-      result.items[siteItem.name] = {
-        name: ru.equipname,
-        summary: ru.equiptips || "",
-        description: ru.equipskilldesc || ""
-      };
-    }
-  }
+
 
   // The seven current main emblem names use a stable local glossary.
   for (const emblem of emblems) {
@@ -158,14 +136,13 @@ async function main() {
   result.coverage = {
     heroes: Object.values(result.heroes).filter((x) => x.name).length,
     hero_skills: Object.values(result.heroes).reduce((sum, x) => sum + Object.keys(x.skills || {}).length, 0),
-    items: items.filter((x) => result.items[x.name]).length,
+    items: 0,
     spells: spells.filter((x) => result.spells[x.name]).length,
     emblems: emblems.filter((x) => result.emblems[x.name]).length
   };
   result.missing = {
     heroes: heroes.filter((x) => !result.heroes[x.slug || x.id]?.name).map((x) => x.name),
     hero_skills: heroes.flatMap((h) => (h.skills || []).filter((skill) => !result.heroes[h.slug || h.id]?.skills?.[skill.name]).map((skill) => h.name + ": " + skill.name)),
-    items: items.filter((x) => !result.items[x.name]).map((x) => x.name),
     spells: spells.filter((x) => !result.spells[x.name]).map((x) => x.name),
     emblems: emblems.filter((x) => !result.emblems[x.name]).map((x) => x.name)
   };
@@ -174,7 +151,6 @@ async function main() {
   await fs.mkdir("site/data", { recursive: true });
   await fs.writeFile("site/data/ru-localization.json", JSON.stringify(result, null, 2) + "\n");
   console.log("Russian localization coverage:", JSON.stringify(result.coverage));
-  console.log("Unmatched site items:", result.missing.items.join(" | ") || "none");
   console.log(`Source records: ${heroes.length} heroes, ${items.length} items, ${spells.length} spells, ${emblems.length} emblems.`);
   if (result.coverage.heroes === 0 && result.coverage.items === 0) {
     throw new Error("Localization coverage is zero for both heroes and items; refusing to publish an empty translation file.");
