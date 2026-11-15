@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "scripts/**"
       - "data/heroes/current.json"
       - "data/items/current.json"
       - "data/emblems/current.json"
