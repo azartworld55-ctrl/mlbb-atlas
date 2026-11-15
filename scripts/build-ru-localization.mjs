@@ -129,14 +129,22 @@ async function main() {
 
   if (itemRu && itemEn) {
     const ruById = new Map(records(itemRu).map((x) => [String(x.equipid), x]));
-    for (const en of records(itemEn)) {
+    const normalizeName = (value) => String(value || "").toLocaleLowerCase("en").normalize("NFKD").replace(/[’'\u0060]/g, "").replace(/[^a-z0-9]/g, "");
+    const enByName = new Map();
+    for (const row of records(itemEn)) {
+      const key = normalizeName(row.equipname);
+      if (!key || enByName.has(key)) continue;
+      enByName.set(key, row);
+    }
+    for (const siteItem of items) {
+      const en = records(itemEn).find((row) => row.equipname === siteItem.name) || enByName.get(normalizeName(siteItem.name));
+      if (!en?.equipid) continue;
       const ru = ruById.get(String(en.equipid));
-      if (!en?.equipname || !ru?.equipname) continue;
-      result.items[en.equipname] = {
+      if (!ru?.equipname) continue;
+      result.items[siteItem.name] = {
         name: ru.equipname,
         summary: ru.equiptips || "",
-        description: ru.equipskilldesc || "",
-        passive_names: [ru.equipskill1, ru.equipskill2, ru.equipskill3, ru.equipskill4, ru.equipskill5, ru.equipskill6, ru.equipskill7].filter(Boolean)
+        description: ru.equipskilldesc || ""
       };
     }
   }
@@ -166,6 +174,7 @@ async function main() {
   await fs.mkdir("site/data", { recursive: true });
   await fs.writeFile("site/data/ru-localization.json", JSON.stringify(result, null, 2) + "\n");
   console.log("Russian localization coverage:", JSON.stringify(result.coverage));
+  console.log("Unmatched site items:", result.missing.items.join(" | ") || "none");
   console.log(`Source records: ${heroes.length} heroes, ${items.length} items, ${spells.length} spells, ${emblems.length} emblems.`);
   if (result.coverage.heroes === 0 && result.coverage.items === 0) {
     throw new Error("Localization coverage is zero for both heroes and items; refusing to publish an empty translation file.");
