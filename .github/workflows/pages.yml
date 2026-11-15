@@ -35,6 +35,8 @@ jobs:
           cp data/emblems/current.json site/data/emblems.json
           cp data/spells/current.json site/data/spells.json
           cp data/skill_versions/current.json site/data/skills.json
+      - name: Build Russian game localization
+        run: node scripts/build-ru-localization.mjs
       - name: Validate datasets and JavaScript
         run: |
           for f in site/data/*.json; do python -m json.tool "$f" > /dev/null; done
