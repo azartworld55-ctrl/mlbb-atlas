@@ -1,42 +1,62 @@
-# MLBB Atlas
+# Land of Legends
 
-An open-source, community-maintained Mobile Legends: Bang Bang reference database, website and API.
+**Live website:** https://azartworld55-ctrl.github.io/mlbb-atlas/
 
-> **Unofficial project.** MLBB and related game assets belong to their respective owners. This project is not affiliated with or endorsed by Moonton.
+Land of Legends — независимый фанатский справочник Mobile Legends: Bang Bang с каталогом героев, записями навыков по патчам, эмблемами, боевыми заклинаниями и инструментами анализа.
 
-## Goals
+> **Неофициальный проект.** Land of Legends не связан с Moonton. Названия, игровые материалы и изображения принадлежат их правообладателям.
 
-- Version-aware catalogues for heroes, skills, equipment, emblems and battle spells.
-- A public REST API and browser interface.
-- Source attribution and confidence labels for every factual record.
-- Reproducible scaling and damage calculations, backed by tests.
-- Patch history and community corrections.
+## Что есть на сайте
 
-## Structure
+- Каталог героев с поиском, фильтрами по ролям и линиям, карточками и избранным.
+- Записи параметров навыков с привязкой к версии/каналу патча и отметкой достоверности.
+- Справочник эмблем и боевых заклинаний.
+- Раздел источников, показывающий ссылки, сохранённые в наборах данных.
+- Сравнение героев и личный тир-лист.
+- Локальный конструктор сборок и калькулятор для поддерживаемых записей.
+- Адаптивный интерфейс для телефона и компьютера; избранное, сборки и тир-лист хранятся в браузере.
+
+Данные сообщества могут быть неполными или не соответствовать последней версии клиента. Статусы и ссылки на источники следует проверять перед использованием результатов.
+
+## Репозиторий и сайт
+
+- **Сайт:** https://azartworld55-ctrl.github.io/mlbb-atlas/
+- **Исходный код:** https://github.com/azartworld55-ctrl/mlbb-atlas
+- **История изменений:** https://github.com/azartworld55-ctrl/mlbb-atlas/commits/main
+- **Проверки и публикации:** https://github.com/azartworld55-ctrl/mlbb-atlas/actions
+
+Имя репозитория оставлено `mlbb-atlas`, чтобы сохранить действующий адрес GitHub Pages. Название самого проекта и сайта — **Land of Legends**.
+
+## Структура
 
 ```text
-backend/          FastAPI application and domain logic
-data/             Versioned, source-attributed JSON datasets
-docs/             Data policy and research notes
-frontend/         Static web client
-tests/            Automated tests
+backend/       FastAPI-приложение и логика API
+data/          Наборы данных с версиями и источниками
+docs/          Модель данных, правила и исследовательские заметки
+site/          Статический сайт для GitHub Pages
+scripts/       Сборка локализации и проверки
+tests/         Автоматические тесты
+.github/       GitHub Actions для проверок и публикации
 ```
 
-## Quick start
+## Локальный запуск API
 
-Python 3.11+:
+Требуется Python 3.11+:
 
 ```bash
 python -m venv .venv
-# Windows: .venv\\Scripts\\activate
 source .venv/bin/activate
 pip install -e ".[dev]"
 uvicorn app.main:app --app-dir backend --reload
 ```
 
-Website: http://127.0.0.1:8000 · API docs: http://127.0.0.1:8000/docs
+API docs после запуска: http://127.0.0.1:8000/docs
 
-Run tests with `pytest`.
+Запуск тестов:
+
+```bash
+pytest
+```
 
 ## API v1
 
@@ -44,29 +64,18 @@ Run tests with `pytest`.
 - `GET /api/v1/meta`
 - `GET /api/v1/heroes`
 - `GET /api/v1/heroes/{hero_id}`
-- `GET /api/v1/items` and `GET /api/v1/items/{item_id}`
+- `GET /api/v1/items` и `GET /api/v1/items/{item_id}`
 - `GET /api/v1/emblems`
-- `GET /api/v1/spells` — 12 community-sourced battle spell entries with confidence labels
-- `GET /api/v1/skill-versions` — filter patch-scoped skill parameters by hero, skill, patch, channel or verification status
-- `GET /api/v1/skill-versions/{record_id}` — retrieve one exact versioned record
-- `POST /api/v1/calculator/evaluate` — evaluates a caller-supplied JSON formula without assuming unverified in-game mechanics
-- `POST /api/v1/calculator/matchup-preview` — compares two independently configured hero loadouts, items, emblems, battle spells and buff flags; skill damage is shown before and after mitigation when a supported single-component patch-scoped skill record is available
+- `GET /api/v1/spells`
+- `GET /api/v1/skill-versions`
+- `GET /api/v1/skill-versions/{record_id}`
+- `POST /api/v1/calculator/evaluate`
+- `POST /api/v1/calculator/matchup-preview`
 
-The current catalogue contains 133 heroes, 89 items, 7 emblems and 12 community-sourced battle spells. The website includes a patch-scoped skill-parameter browser. Published endpoints are displayed as endpoints, not expanded into invented rank values. The matchup workspace supports separate attacker and defender builds (six item slots, emblem, battle spell, and independent blue/red buff flags). The matchup calculator now applies the documented defense curve to supported single-component skill records: defense reduction, percentage penetration, flat penetration (with a -60 defense floor), then the 120/(120 + effective defense) multiplier and separately entered general damage reduction. Physical, magic and true damage can be selected. Buff and battle-spell flags are recorded but their combat modifiers are not applied yet because their exact current values/effects are not sufficiently verified in this dataset. Multi-component skills, conditional passives, shields and item passives remain outside the model; this is not yet a full in-game simulator. Imported values are labelled `reported`, not independently verified.
+## Источники и достоверность
 
-## Data quality
+Каждая запись должна сохранять источник, дату получения, версию игры и статус достоверности: `verified`, `reported` или `experimental`. Импортированные сведения не следует считать независимо проверенными. Подробности — в [политике данных](docs/data-policy.md), [модели данных](docs/canonical-data-model.md), [инструкции импорта](docs/data-import.md), [аудите источников навыков](docs/upstream-source-audit.md) и [уведомлениях о сторонних материалах](THIRD_PARTY_NOTICES.md).
 
-Every factual record must include a source, retrieval date, game version and confidence status (`verified`, `reported` or `experimental`). Exact skill scaling and damage formulas must not be inferred from descriptive text; mark them experimental until independently tested. See [data policy](docs/data-policy.md), [canonical data model](docs/canonical-data-model.md), [import workflow](docs/data-import.md), [formula format](docs/formula-format.md), [skill-source audit](docs/upstream-source-audit.md
-- [Live Moonton skill review (2026-11-14)](data/research/patch-conflicts/2026-11-14-moonton-review.json)), [Achedon catalogue comparison](data/research/skill-source-comparison-achedon.json), [local Moonton snapshot instructions](data/imports/moonton/README.md), [source register](data/sources/README.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+## Лицензия
 
-## Combining upstream projects
-
-The first normalized dataset import is derived from [p3hndrx/MLBB-API](https://github.com/p3hndrx/MLBB-API), under its MIT license, with source snapshots, blob SHAs and attribution retained in this repository. The [MLBB-Hero-Scraper](https://github.com/warungerik/MLBB-Hero-Scraper) is documented as a candidate metadata collection reference; its code is not copied. Every other source must be reviewed independently. The initial cross-source audit and the community-reported Original Server patch 2.2.23 record (2026-11-11) are documented separately; this does not mean all hero skills have been imported or verified. See [skill-source audit](docs/upstream-source-audit.md), [patch record](data/patches/2.2.23.json) and [third-party notices](THIRD_PARTY_NOTICES.md).
-
-## Contributing
-
-A useful report includes the game patch, source or repeatable test method, proposed change, and any uncertainty or mode/platform differences.
-
-## License
-
-Original code in this repository is MIT licensed. That license does not grant rights to MLBB trademarks, game content, images or third-party datasets.
+Исходный код проекта распространяется по MIT. Это не предоставляет прав на товарные знаки Mobile Legends, игровые материалы, изображения или сторонние наборы данных.
