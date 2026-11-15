@@ -105,12 +105,11 @@ async function main() {
   };
   await Promise.all(Array.from({ length: 2 }, worker));
 
-  const [spellRu, spellEn, itemRu, itemEn, roleRu] = await Promise.all([
+  const [spellRu, spellEn, itemRu, itemEn] = await Promise.all([
     safe("/academy/spells?size=200&lang=ru"),
     safe("/academy/spells?size=200&lang=en"),
     safe("/academy/equipment/expanded?size=200&lang=ru"),
-    safe("/academy/equipment/expanded?size=200&lang=en"),
-    safe("/academy/roles?size=200&lang=ru")
+    safe("/academy/equipment/expanded?size=200&lang=en")
   ]);
 
   if (spellRu && spellEn) {
@@ -142,23 +141,25 @@ async function main() {
     }
   }
 
-  // Main emblem names are stable; localize from the game's role/emblem catalog where possible.
-  for (const row of records(roleRu)) {
-    const enName = row.emblem_title ?? row.emblem_detail?.data?.emblemname;
-    const ruName = row.caption ?? row.emblem_detail?.data?.emblemname;
-    if (enName && ruName) result.emblems[enName] = ruName;
-  }
+  // The seven current main emblem names use a stable local glossary.
   for (const emblem of emblems) {
     const fallback = staticEmblems[emblem.name];
-    if (fallback) result.emblems[emblem.name] ??= fallback;
+    if (fallback) result.emblems[emblem.name] = fallback;
   }
 
   result.coverage = {
     heroes: Object.values(result.heroes).filter((x) => x.name).length,
     hero_skills: Object.values(result.heroes).reduce((sum, x) => sum + Object.keys(x.skills || {}).length, 0),
-    items: Object.keys(result.items).length,
-    spells: Object.keys(result.spells).length,
-    emblems: Object.keys(result.emblems).length
+    items: items.filter((x) => result.items[x.name]).length,
+    spells: spells.filter((x) => result.spells[x.name]).length,
+    emblems: emblems.filter((x) => result.emblems[x.name]).length
+  };
+  result.missing = {
+    heroes: heroes.filter((x) => !result.heroes[x.slug || x.id]?.name).map((x) => x.name),
+    hero_skills: heroes.flatMap((h) => (h.skills || []).filter((skill) => !result.heroes[h.slug || h.id]?.skills?.[skill.name]).map((skill) => h.name + ": " + skill.name)),
+    items: items.filter((x) => !result.items[x.name]).map((x) => x.name),
+    spells: spells.filter((x) => !result.spells[x.name]).map((x) => x.name),
+    emblems: emblems.filter((x) => !result.emblems[x.name]).map((x) => x.name)
   };
   result.generated_at = new Date().toISOString();
   result.source = "Rone Arena API v1.6.2, lang=ru; API is community-maintained and relays publicly available MLBB game data. Static spell/emblem fallbacks are marked in source code.";
