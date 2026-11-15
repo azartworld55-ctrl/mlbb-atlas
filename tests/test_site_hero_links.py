@@ -30,12 +30,12 @@ def test_shared_hero_link_opens_after_data_load_and_browser_back_restores_state(
 
 def test_service_worker_refreshes_cached_site_shell_after_release():
     worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
-    assert 'const CACHE="mlbb-atlas-shell-v5"' in worker
+    assert 'const CACHE="mlbb-atlas-shell-v6"' in worker
 
 
 def test_service_worker_only_clears_previous_atlas_shell_caches():
     worker = (ROOT / "site" / "sw.js").read_text(encoding="utf-8")
-    assert 'const CACHE="mlbb-atlas-shell-v5"' in worker
+    assert 'const CACHE="mlbb-atlas-shell-v6"' in worker
     assert 'const CACHE_PREFIX="mlbb-atlas-shell-"' in worker
     assert "keys.filter(k=>k.startsWith(CACHE_PREFIX)&&k!==CACHE)" in worker
 
@@ -55,3 +55,15 @@ def test_library_emblems_and_spells_use_russian_explanations():
     source = assembled_app()
     assert 'const emblemDescriptions=' in source
     assert 'Данные из сообщества; сверяй их с текущей версией игры.' in source
+
+
+def test_hero_lane_filter_supports_multi_lane_records():
+    source = assembled_app()
+    assert "hasFilterValue(h.lanes,laneFilter)" in source
+    assert '.split(",")' in source
+
+
+def test_filter_active_state_updates_all_role_and_lane_buttons():
+    source = assembled_app()
+    assert '$$("#role-filters [data-role]")' in source
+    assert '$$("#lane-filters [data-lane]")' in source
