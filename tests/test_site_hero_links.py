@@ -42,7 +42,7 @@ def test_service_worker_only_clears_previous_atlas_shell_caches():
 
 def test_role_filter_supports_multi_role_records():
     source = assembled_app()
-    assert 'some(r=>String(r).split(",").some(v=>v.trim().toLowerCase()===roleFilter.toLowerCase()))' in source
+    assert "hasFilterValue(h.roles,roleFilter)" in source
 
 
 def test_library_tabs_are_handled_by_their_parent_view():
